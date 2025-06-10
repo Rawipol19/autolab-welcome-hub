@@ -116,31 +116,34 @@ const Index = () => {
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             {/* Steps Navigation */}
             <div className="space-y-4">
-              {steps.map((step, index) => (
-                <Card 
-                  key={index}
-                  className={`cursor-pointer transition-all duration-300 ${
-                    selectedStep === index 
-                      ? 'border-primary shadow-lg scale-105' 
-                      : 'hover:border-primary/50 hover:shadow-md'
-                  }`}
-                  onClick={() => setSelectedStep(index)}
-                >
-                  <CardHeader className="pb-3">
-                    <div className="flex items-center gap-4">
-                      <div className={`p-2 rounded-lg ${
-                        selectedStep === index ? 'bg-primary text-primary-foreground' : 'bg-secondary'
-                      }`}>
-                        <step.icon className="h-6 w-6" />
+              {steps.map((step, index) => {
+                const StepIcon = step.icon;
+                return (
+                  <Card 
+                    key={index}
+                    className={`cursor-pointer transition-all duration-300 ${
+                      selectedStep === index 
+                        ? 'border-primary shadow-lg scale-105' 
+                        : 'hover:border-primary/50 hover:shadow-md'
+                    }`}
+                    onClick={() => setSelectedStep(index)}
+                  >
+                    <CardHeader className="pb-3">
+                      <div className="flex items-center gap-4">
+                        <div className={`p-2 rounded-lg ${
+                          selectedStep === index ? 'bg-primary text-primary-foreground' : 'bg-secondary'
+                        }`}>
+                          <StepIcon className="h-6 w-6" />
+                        </div>
+                        <div>
+                          <CardTitle className="text-lg">{step.title}</CardTitle>
+                          <CardDescription>{step.description}</CardDescription>
+                        </div>
                       </div>
-                      <div>
-                        <CardTitle className="text-lg">{step.title}</CardTitle>
-                        <CardDescription>{step.description}</CardDescription>
-                      </div>
-                    </div>
-                  </CardHeader>
-                </Card>
-              ))}
+                    </CardHeader>
+                  </Card>
+                );
+              })}
             </div>
 
             {/* Step Detail */}
@@ -149,7 +152,10 @@ const Index = () => {
                 <CardHeader>
                   <div className="flex items-center gap-4 mb-4">
                     <div className="p-3 bg-primary rounded-xl">
-                      {steps[selectedStep] && <steps[selectedStep].icon className="h-8 w-8 text-primary-foreground" />}
+                      {steps[selectedStep] && (() => {
+                        const SelectedStepIcon = steps[selectedStep].icon;
+                        return <SelectedStepIcon className="h-8 w-8 text-primary-foreground" />;
+                      })()}
                     </div>
                     <div>
                       <CardTitle className="text-xl">{steps[selectedStep]?.title}</CardTitle>
@@ -223,21 +229,24 @@ const Index = () => {
           </div>
 
           <div className="grid md:grid-cols-3 gap-8">
-            {features.map((feature, index) => (
-              <Card key={index} className="text-center hover:shadow-lg transition-all duration-300 hover:scale-105">
-                <CardHeader>
-                  <div className="w-16 h-16 bg-primary rounded-2xl flex items-center justify-center mx-auto mb-4">
-                    <feature.icon className="h-8 w-8 text-primary-foreground" />
-                  </div>
-                  <CardTitle className="text-xl">{feature.title}</CardTitle>
-                </CardHeader>
-                <CardContent>
-                  <CardDescription className="text-base">
-                    {feature.description}
-                  </CardDescription>
-                </CardContent>
-              </Card>
-            ))}
+            {features.map((feature, index) => {
+              const FeatureIcon = feature.icon;
+              return (
+                <Card key={index} className="text-center hover:shadow-lg transition-all duration-300 hover:scale-105">
+                  <CardHeader>
+                    <div className="w-16 h-16 bg-primary rounded-2xl flex items-center justify-center mx-auto mb-4">
+                      <FeatureIcon className="h-8 w-8 text-primary-foreground" />
+                    </div>
+                    <CardTitle className="text-xl">{feature.title}</CardTitle>
+                  </CardHeader>
+                  <CardContent>
+                    <CardDescription className="text-base">
+                      {feature.description}
+                    </CardDescription>
+                  </CardContent>
+                </Card>
+              );
+            })}
           </div>
         </div>
       </section>
