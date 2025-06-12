@@ -47,7 +47,9 @@ const Index = () => {
         { name: "ZIP Archive", extension: ".zip", color: "bg-purple-500" },
         { name: "TAR Archive", extension: ".tar", color: "bg-indigo-500" },
         { name: "PDF Document", extension: ".pdf", color: "bg-red-500" },
-        { name: "Text File", extension: ".txt", color: "bg-gray-400" }
+        { name: "Text File", extension: ".txt", color: "bg-gray-400" },
+        { name: "YAML File", extension: ".yml", color: "bg-teal-500" },
+        { name: "Log File", extension: ".log", color: "bg-amber-500" }
       ]
     }
   ];
