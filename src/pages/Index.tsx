@@ -1,6 +1,5 @@
-
 import { useState } from 'react';
-import { Upload, CheckCircle, FileText, Code, Archive, BookOpen, Zap, Shield, Users } from 'lucide-react';
+import { Upload, CheckCircle, FileText, Code, Archive, BookOpen, Zap, Shield, Users, Brain, Eye, Target } from 'lucide-react';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
 import { Button } from '@/components/ui/button';
@@ -26,6 +25,42 @@ const Index = () => {
       title: "Instant Feedback",
       description: "Receive detailed results and feedback immediately",
       detail: "Get comprehensive reports including test results, performance metrics, code quality analysis, and actionable improvement suggestions."
+    }
+  ];
+
+  const raiFeatures = [
+    {
+      icon: Brain,
+      title: "Intelligent Code Analysis",
+      description: "AI-powered analysis provides deeper insights into code quality, structure, and potential improvements beyond traditional testing.",
+      benefits: [
+        "Detects code patterns and anti-patterns",
+        "Suggests optimization opportunities",
+        "Identifies potential security vulnerabilities",
+        "Analyzes code complexity and maintainability"
+      ]
+    },
+    {
+      icon: Eye,
+      title: "Fair & Unbiased Assessment",
+      description: "RAI ensures equitable evaluation by removing human bias and providing consistent, transparent grading criteria.",
+      benefits: [
+        "Standardized evaluation across all submissions",
+        "Eliminates subjective grading variations",
+        "Provides detailed justification for scores",
+        "Ensures equal opportunity for all students"
+      ]
+    },
+    {
+      icon: Target,
+      title: "Personalized Learning Insights",
+      description: "Advanced analytics identify individual learning patterns and provide targeted recommendations for improvement.",
+      benefits: [
+        "Tracks learning progress over time",
+        "Identifies knowledge gaps and strengths",
+        "Suggests personalized study materials",
+        "Adapts difficulty based on student performance"
+      ]
     }
   ];
 
@@ -130,6 +165,101 @@ const Index = () => {
               <Button variant="outline" size="lg">
                 Learn More
               </Button>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* RAI Section */}
+      <section className="py-24 bg-gradient-to-br from-primary/5 to-secondary/10">
+        <div className="mx-auto max-w-7xl px-6 lg:px-8">
+          <div className="text-center mb-16">
+            <div className="flex items-center justify-center mb-6">
+              <div className="p-4 bg-gradient-to-r from-primary to-primary/80 rounded-2xl">
+                <Brain className="h-12 w-12 text-primary-foreground" />
+              </div>
+            </div>
+            <h2 className="text-3xl font-bold tracking-tight text-foreground sm:text-4xl">
+              Responsible AI (RAI) Integration
+            </h2>
+            <p className="mt-4 text-lg text-muted-foreground max-w-3xl mx-auto">
+              AutoLab leverages cutting-edge Responsible AI technology to provide fair, intelligent, and comprehensive 
+              code assessment that goes beyond traditional automated testing.
+            </p>
+          </div>
+
+          <div className="grid lg:grid-cols-3 gap-8 mb-16">
+            {raiFeatures.map((feature, index) => {
+              const FeatureIcon = feature.icon;
+              return (
+                <Card key={index} className="h-full hover:shadow-lg transition-all duration-300 hover:scale-105 bg-card/50 backdrop-blur-sm">
+                  <CardHeader>
+                    <div className="w-16 h-16 bg-primary rounded-2xl flex items-center justify-center mb-4">
+                      <FeatureIcon className="h-8 w-8 text-primary-foreground" />
+                    </div>
+                    <CardTitle className="text-xl">{feature.title}</CardTitle>
+                    <CardDescription className="text-base">
+                      {feature.description}
+                    </CardDescription>
+                  </CardHeader>
+                  <CardContent>
+                    <ul className="space-y-2">
+                      {feature.benefits.map((benefit, benefitIndex) => (
+                        <li key={benefitIndex} className="flex items-start gap-2 text-sm text-muted-foreground">
+                          <CheckCircle className="h-4 w-4 text-primary mt-0.5 flex-shrink-0" />
+                          <span>{benefit}</span>
+                        </li>
+                      ))}
+                    </ul>
+                  </CardContent>
+                </Card>
+              );
+            })}
+          </div>
+
+          <div className="bg-card rounded-2xl p-8 border shadow-lg">
+            <h3 className="text-2xl font-bold text-foreground mb-6 text-center">
+              How RAI Enhances AutoLab
+            </h3>
+            <div className="grid md:grid-cols-2 gap-8">
+              <div>
+                <h4 className="text-lg font-semibold text-foreground mb-4">Traditional Autograding vs RAI-Enhanced</h4>
+                <div className="space-y-4">
+                  <div className="p-4 bg-secondary/50 rounded-lg">
+                    <p className="text-sm font-medium text-foreground mb-2">Traditional Approach:</p>
+                    <p className="text-sm text-muted-foreground">
+                      Basic pass/fail testing with limited feedback on code structure and quality.
+                    </p>
+                  </div>
+                  <div className="p-4 bg-primary/10 rounded-lg border border-primary/20">
+                    <p className="text-sm font-medium text-primary mb-2">RAI-Enhanced AutoLab:</p>
+                    <p className="text-sm text-muted-foreground">
+                      Comprehensive analysis including code quality, style, efficiency, and personalized improvement suggestions.
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <div>
+                <h4 className="text-lg font-semibold text-foreground mb-4">Key RAI Benefits</h4>
+                <div className="space-y-3">
+                  <div className="flex items-center gap-3">
+                    <div className="w-2 h-2 bg-primary rounded-full"></div>
+                    <span className="text-sm text-muted-foreground">Reduces grading time by 80% while improving feedback quality</span>
+                  </div>
+                  <div className="flex items-center gap-3">
+                    <div className="w-2 h-2 bg-primary rounded-full"></div>
+                    <span className="text-sm text-muted-foreground">Ensures consistent evaluation standards across all submissions</span>
+                  </div>
+                  <div className="flex items-center gap-3">
+                    <div className="w-2 h-2 bg-primary rounded-full"></div>
+                    <span className="text-sm text-muted-foreground">Provides actionable insights for student improvement</span>
+                  </div>
+                  <div className="flex items-center gap-3">
+                    <div className="w-2 h-2 bg-primary rounded-full"></div>
+                    <span className="text-sm text-muted-foreground">Adapts to different programming styles and approaches</span>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
         </div>
