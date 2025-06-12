@@ -1,3 +1,4 @@
+
 import { useState } from 'react';
 import { Upload, CheckCircle, FileText, Code, Archive, BookOpen, Zap, Shield, Users } from 'lucide-react';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
@@ -110,8 +111,14 @@ const Index = () => {
               </div>
             </div>
             <h1 className="text-4xl font-bold tracking-tight text-foreground sm:text-6xl bg-gradient-to-r from-primary to-primary/60 bg-clip-text text-transparent">
-              AutoLab
+              AutoLab by UB
             </h1>
+            <p className="mt-2 text-xl text-muted-foreground">
+              University at Buffalo
+            </p>
+            <p className="mt-4 text-lg font-medium text-primary">
+              RAI based Autolab
+            </p>
             <p className="mt-6 text-lg leading-8 text-muted-foreground max-w-3xl mx-auto">
               The intelligent autograding system that revolutionizes how educators assess programming assignments. 
               Fast, secure, and comprehensive feedback for students and instructors.
