@@ -1,4 +1,3 @@
-
 import { useState } from 'react';
 import { Upload, CheckCircle, FileText, Code, Archive, BookOpen, Zap, Shield, Users } from 'lucide-react';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
@@ -71,6 +70,32 @@ const Index = () => {
       description: "Built for classrooms with comprehensive user management"
     }
   ];
+
+  const handleFileTypeClick = (fileName: string, category: string) => {
+    // Convert file name to route-friendly format
+    const routeName = fileName.toLowerCase().replace(/[^a-z0-9]/g, '');
+    
+    // Map specific file types to their routes
+    const routeMap: { [key: string]: string } = {
+      'python': '/file-types/python',
+      'java': '/file-types/java',
+      'c++': '/file-types/cpp',
+      'javascript': '/file-types/javascript',
+      'c': '/file-types/c',
+      'go': '/file-types/go',
+      'ziparchive': '/file-types/zip',
+      'tararchive': '/file-types/tar',
+      'pdfdocument': '/file-types/pdf',
+      'textfile': '/file-types/txt',
+      'yamlfile': '/file-types/yml',
+      'logfile': '/file-types/log'
+    };
+
+    const route = routeMap[routeName];
+    if (route) {
+      window.location.href = route;
+    }
+  };
 
   return (
     <div className="min-h-screen bg-background">
@@ -201,6 +226,7 @@ const Index = () => {
                     <Card 
                       key={index}
                       className="group hover:shadow-lg transition-all duration-300 hover:scale-105 cursor-pointer"
+                      onClick={() => handleFileTypeClick(file.name, category.category)}
                     >
                       <CardContent className="p-6 text-center">
                         <div className={`w-12 h-12 rounded-lg ${file.color} flex items-center justify-center mx-auto mb-3 group-hover:scale-110 transition-transform`}>
