@@ -1,6 +1,5 @@
-
 import { useState } from 'react';
-import { Upload, CheckCircle, FileText, Code, Archive, Zap, Shield, Users, Brain, Eye, Target } from 'lucide-react';
+import { Upload, CheckCircle, FileText, Code, Archive, Zap, Shield, Users, Brain, Eye, Target, Github, MapPin, Mail } from 'lucide-react';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
 import { Button } from '@/components/ui/button';
@@ -81,11 +80,7 @@ const Index = () => {
       category: "Archives & Documents",
       files: [
         { name: "ZIP Archive", extension: ".zip", color: "bg-purple-500" },
-        { name: "TAR Archive", extension: ".tar", color: "bg-indigo-500" },
-        { name: "PDF Document", extension: ".pdf", color: "bg-red-500" },
-        { name: "Text File", extension: ".txt", color: "bg-gray-400" },
-        { name: "YAML File", extension: ".yml", color: "bg-teal-500" },
-        { name: "Log File", extension: ".log", color: "bg-amber-500" }
+        { name: "TAR Archive", extension: ".tar", color: "bg-indigo-500" }
       ]
     }
   ];
@@ -121,11 +116,7 @@ const Index = () => {
       'c': '/file-types/c',
       'go': '/file-types/go',
       'ziparchive': '/file-types/zip',
-      'tararchive': '/file-types/tar',
-      'pdfdocument': '/file-types/pdf',
-      'textfile': '/file-types/txt',
-      'yamlfile': '/file-types/yml',
-      'logfile': '/file-types/log'
+      'tararchive': '/file-types/tar'
     };
 
     const route = routeMap[routeName];
@@ -437,6 +428,85 @@ const Index = () => {
             <Button size="lg" variant="outline" className="text-primary-foreground border-primary-foreground hover:bg-primary-foreground hover:text-primary">
               Schedule Demo
             </Button>
+          </div>
+        </div>
+      </section>
+
+      {/* Contact Section */}
+      <section className="py-24 bg-gradient-to-r from-primary to-accent">
+        <div className="mx-auto max-w-4xl text-center px-6 lg:px-8">
+          <h2 className="text-3xl font-bold tracking-tight text-primary-foreground sm:text-4xl">
+            Get in Touch
+          </h2>
+          <p className="mt-6 text-lg leading-8 text-primary-foreground/90">
+            Connect with us to learn more about AutoLab or contribute to the project
+          </p>
+          
+          <div className="mt-12 grid md:grid-cols-3 gap-8">
+            <Card className="bg-white/10 border-white/20 backdrop-blur-sm">
+              <CardHeader className="text-center">
+                <div className="w-16 h-16 bg-white rounded-2xl flex items-center justify-center mx-auto mb-4">
+                  <Github className="h-8 w-8 text-primary" />
+                </div>
+                <CardTitle className="text-primary-foreground">GitHub Repository</CardTitle>
+              </CardHeader>
+              <CardContent>
+                <p className="text-primary-foreground/80 mb-4">
+                  View the source code and contribute to the project
+                </p>
+                <Button 
+                  variant="secondary" 
+                  className="w-full bg-white text-primary hover:bg-gray-100"
+                  onClick={() => window.open('https://github.com', '_blank')}
+                >
+                  View on GitHub
+                </Button>
+              </CardContent>
+            </Card>
+
+            <Card className="bg-white/10 border-white/20 backdrop-blur-sm">
+              <CardHeader className="text-center">
+                <div className="w-16 h-16 bg-white rounded-2xl flex items-center justify-center mx-auto mb-4">
+                  <MapPin className="h-8 w-8 text-primary" />
+                </div>
+                <CardTitle className="text-primary-foreground">University Location</CardTitle>
+              </CardHeader>
+              <CardContent>
+                <p className="text-primary-foreground/80 mb-4">
+                  University at Buffalo<br />
+                  Buffalo, NY 14260<br />
+                  United States
+                </p>
+                <Button 
+                  variant="secondary" 
+                  className="w-full bg-white text-primary hover:bg-gray-100"
+                  onClick={() => window.open('https://maps.google.com/?q=University+at+Buffalo', '_blank')}
+                >
+                  View on Map
+                </Button>
+              </CardContent>
+            </Card>
+
+            <Card className="bg-white/10 border-white/20 backdrop-blur-sm">
+              <CardHeader className="text-center">
+                <div className="w-16 h-16 bg-white rounded-2xl flex items-center justify-center mx-auto mb-4">
+                  <Mail className="h-8 w-8 text-primary" />
+                </div>
+                <CardTitle className="text-primary-foreground">Contact Support</CardTitle>
+              </CardHeader>
+              <CardContent>
+                <p className="text-primary-foreground/80 mb-4">
+                  Need help or have questions about AutoLab?
+                </p>
+                <Button 
+                  variant="secondary" 
+                  className="w-full bg-white text-primary hover:bg-gray-100"
+                  onClick={() => window.location.href = 'mailto:support@buffalo.edu'}
+                >
+                  Send Email
+                </Button>
+              </CardContent>
+            </Card>
           </div>
         </div>
       </section>
