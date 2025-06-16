@@ -5,7 +5,7 @@ import { Button } from '@/components/ui/button';
 import { Badge } from '@/components/ui/badge';
 import { Link } from 'react-router-dom';
 
-const JavaPage = () => {
+const JsPage = () => {
   return (
     <div className="min-h-screen bg-background">
       <div className="mx-auto max-w-4xl px-6 py-12">
@@ -18,12 +18,12 @@ const JavaPage = () => {
           </Link>
           
           <div className="flex items-center gap-4 mb-6">
-            <div className="w-16 h-16 rounded-lg bg-orange-500 flex items-center justify-center">
-              <span className="text-white font-bold text-sm">.java</span>
+            <div className="w-16 h-16 rounded-lg bg-yellow-500 flex items-center justify-center">
+              <span className="text-white font-bold text-xl">.js</span>
             </div>
             <div>
-              <h1 className="text-3xl font-bold text-foreground">Java Files</h1>
-              <p className="text-muted-foreground">Learn how to submit Java assignments</p>
+              <h1 className="text-3xl font-bold text-foreground">JavaScript Files</h1>
+              <p className="text-muted-foreground">Learn how to submit JavaScript assignments</p>
             </div>
           </div>
         </div>
@@ -33,30 +33,31 @@ const JavaPage = () => {
             <CardHeader>
               <CardTitle className="flex items-center gap-2">
                 <Upload className="h-5 w-5" />
-                How to Submit Java Files
+                How to Submit JavaScript Files
               </CardTitle>
             </CardHeader>
             <CardContent className="space-y-4">
               <p className="text-muted-foreground">
-                Java files (.java) are fully supported in AutoLab with comprehensive compilation and testing capabilities.
+                JavaScript files are executed and tested with Node.js runtime environment and comprehensive testing frameworks.
               </p>
               
               <div className="space-y-3">
                 <h4 className="font-semibold">Supported File Types:</h4>
                 <div className="flex flex-wrap gap-2">
-                  <Badge variant="secondary">.java</Badge>
-                  <Badge variant="secondary">.jar</Badge>
-                  <Badge variant="secondary">.class</Badge>
+                  <Badge variant="secondary">.js</Badge>
+                  <Badge variant="secondary">.mjs</Badge>
+                  <Badge variant="secondary">.json</Badge>
+                  <Badge variant="secondary">package.json</Badge>
                 </div>
               </div>
 
               <div className="space-y-3">
                 <h4 className="font-semibold">Submission Methods:</h4>
                 <ul className="list-disc list-inside space-y-2 text-muted-foreground">
-                  <li>Single .java source file</li>
-                  <li>Multiple Java files in a package structure</li>
-                  <li>JAR archives with compiled classes</li>
-                  <li>Maven/Gradle projects with build files</li>
+                  <li>Single .js source file</li>
+                  <li>Multiple JavaScript files with modules</li>
+                  <li>Node.js projects with package.json</li>
+                  <li>Frontend JavaScript with HTML/CSS</li>
                 </ul>
               </div>
             </CardContent>
@@ -66,7 +67,7 @@ const JavaPage = () => {
             <CardHeader>
               <CardTitle className="flex items-center gap-2">
                 <Play className="h-5 w-5" />
-                Compilation & Testing Process
+                Execution & Testing Process
               </CardTitle>
             </CardHeader>
             <CardContent className="space-y-4">
@@ -74,32 +75,32 @@ const JavaPage = () => {
                 <div className="flex items-start gap-3">
                   <div className="w-6 h-6 rounded-full bg-primary text-primary-foreground flex items-center justify-center text-sm font-bold">1</div>
                   <div>
-                    <h5 className="font-semibold">Compilation Check</h5>
-                    <p className="text-sm text-muted-foreground">Compile Java source files using javac compiler</p>
+                    <h5 className="font-semibold">Syntax Validation</h5>
+                    <p className="text-sm text-muted-foreground">Parse JavaScript syntax and check for errors</p>
                   </div>
                 </div>
                 
                 <div className="flex items-start gap-3">
                   <div className="w-6 h-6 rounded-full bg-primary text-primary-foreground flex items-center justify-center text-sm font-bold">2</div>
                   <div>
-                    <h5 className="font-semibold">Classpath Setup</h5>
-                    <p className="text-sm text-muted-foreground">Configure classpath for external libraries and dependencies</p>
+                    <h5 className="font-semibold">Dependency Installation</h5>
+                    <p className="text-sm text-muted-foreground">Install npm packages from package.json if provided</p>
                   </div>
                 </div>
                 
                 <div className="flex items-start gap-3">
                   <div className="w-6 h-6 rounded-full bg-primary text-primary-foreground flex items-center justify-center text-sm font-bold">3</div>
                   <div>
-                    <h5 className="font-semibold">Unit Testing</h5>
-                    <p className="text-sm text-muted-foreground">Execute JUnit tests and custom test cases</p>
+                    <h5 className="font-semibold">Test Execution</h5>
+                    <p className="text-sm text-muted-foreground">Run Jest/Mocha tests and custom test cases</p>
                   </div>
                 </div>
                 
                 <div className="flex items-start gap-3">
                   <div className="w-6 h-6 rounded-full bg-primary text-primary-foreground flex items-center justify-center text-sm font-bold">4</div>
                   <div>
-                    <h5 className="font-semibold">Code Quality Analysis</h5>
-                    <p className="text-sm text-muted-foreground">Check coding standards and detect potential issues</p>
+                    <h5 className="font-semibold">Performance Analysis</h5>
+                    <p className="text-sm text-muted-foreground">Measure execution time and memory usage</p>
                   </div>
                 </div>
               </div>
@@ -115,7 +116,7 @@ const JavaPage = () => {
             </CardHeader>
             <CardContent className="space-y-4">
               <p className="text-muted-foreground">
-                After compilation and testing, AutoLab generates various output files:
+                After execution and testing, AutoLab generates various output files:
               </p>
               
               <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
@@ -126,7 +127,7 @@ const JavaPage = () => {
                     </div>
                     <div>
                       <h5 className="font-semibold">Test Report</h5>
-                      <p className="text-sm text-muted-foreground">Comprehensive compilation and test results</p>
+                      <p className="text-sm text-muted-foreground">Comprehensive test results and analysis</p>
                     </div>
                   </div>
                 </div>
@@ -137,8 +138,8 @@ const JavaPage = () => {
                       <span className="text-white font-bold text-xs">TXT</span>
                     </div>
                     <div>
-                      <h5 className="font-semibold">Program Output</h5>
-                      <p className="text-sm text-muted-foreground">Console output and execution results</p>
+                      <h5 className="font-semibold">Console Output</h5>
+                      <p className="text-sm text-muted-foreground">Program output and console logs</p>
                     </div>
                   </div>
                 </div>
@@ -149,8 +150,8 @@ const JavaPage = () => {
                       <span className="text-white font-bold text-xs">LOG</span>
                     </div>
                     <div>
-                      <h5 className="font-semibold">Compilation Logs</h5>
-                      <p className="text-sm text-muted-foreground">Detailed compilation and error logs</p>
+                      <h5 className="font-semibold">Execution Logs</h5>
+                      <p className="text-sm text-muted-foreground">Detailed execution and error logs</p>
                     </div>
                   </div>
                 </div>
@@ -162,7 +163,7 @@ const JavaPage = () => {
                     </div>
                     <div>
                       <h5 className="font-semibold">Test Configuration</h5>
-                      <p className="text-sm text-muted-foreground">Build and test configurations</p>
+                      <p className="text-sm text-muted-foreground">Test parameters and environment settings</p>
                     </div>
                   </div>
                 </div>
@@ -179,12 +180,12 @@ const JavaPage = () => {
             </CardHeader>
             <CardContent>
               <ul className="space-y-2 text-muted-foreground">
-                <li>• Follow Java naming conventions (camelCase for methods, PascalCase for classes)</li>
-                <li>• Include proper package declarations</li>
-                <li>• Use meaningful class and method names</li>
-                <li>• Add comprehensive Javadoc comments</li>
-                <li>• Handle exceptions appropriately</li>
-                <li>• Include a main method if required for execution</li>
+                <li>• Use const/let instead of var for variable declarations</li>
+                <li>• Follow consistent naming conventions (camelCase)</li>
+                <li>• Add proper error handling with try-catch blocks</li>
+                <li>• Include JSDoc comments for functions</li>
+                <li>• Use modern ES6+ features appropriately</li>
+                <li>• Include package.json for npm dependencies</li>
               </ul>
             </CardContent>
           </Card>
@@ -194,4 +195,4 @@ const JavaPage = () => {
   );
 };
 
-export default JavaPage;
+export default JsPage;

@@ -5,7 +5,7 @@ import { Button } from '@/components/ui/button';
 import { Badge } from '@/components/ui/badge';
 import { Link } from 'react-router-dom';
 
-const JavaPage = () => {
+const CPage = () => {
   return (
     <div className="min-h-screen bg-background">
       <div className="mx-auto max-w-4xl px-6 py-12">
@@ -18,12 +18,12 @@ const JavaPage = () => {
           </Link>
           
           <div className="flex items-center gap-4 mb-6">
-            <div className="w-16 h-16 rounded-lg bg-orange-500 flex items-center justify-center">
-              <span className="text-white font-bold text-sm">.java</span>
+            <div className="w-16 h-16 rounded-lg bg-gray-600 flex items-center justify-center">
+              <span className="text-white font-bold text-xl">.c</span>
             </div>
             <div>
-              <h1 className="text-3xl font-bold text-foreground">Java Files</h1>
-              <p className="text-muted-foreground">Learn how to submit Java assignments</p>
+              <h1 className="text-3xl font-bold text-foreground">C Files</h1>
+              <p className="text-muted-foreground">Learn how to submit C programming assignments</p>
             </div>
           </div>
         </div>
@@ -33,30 +33,30 @@ const JavaPage = () => {
             <CardHeader>
               <CardTitle className="flex items-center gap-2">
                 <Upload className="h-5 w-5" />
-                How to Submit Java Files
+                How to Submit C Files
               </CardTitle>
             </CardHeader>
             <CardContent className="space-y-4">
               <p className="text-muted-foreground">
-                Java files (.java) are fully supported in AutoLab with comprehensive compilation and testing capabilities.
+                C files are compiled and tested with gcc compiler, supporting both single files and complex multi-file projects.
               </p>
               
               <div className="space-y-3">
                 <h4 className="font-semibold">Supported File Types:</h4>
                 <div className="flex flex-wrap gap-2">
-                  <Badge variant="secondary">.java</Badge>
-                  <Badge variant="secondary">.jar</Badge>
-                  <Badge variant="secondary">.class</Badge>
+                  <Badge variant="secondary">.c</Badge>
+                  <Badge variant="secondary">.h</Badge>
+                  <Badge variant="secondary">Makefile</Badge>
                 </div>
               </div>
 
               <div className="space-y-3">
                 <h4 className="font-semibold">Submission Methods:</h4>
                 <ul className="list-disc list-inside space-y-2 text-muted-foreground">
-                  <li>Single .java source file</li>
-                  <li>Multiple Java files in a package structure</li>
-                  <li>JAR archives with compiled classes</li>
-                  <li>Maven/Gradle projects with build files</li>
+                  <li>Single .c source file</li>
+                  <li>Multiple C files with header files</li>
+                  <li>Makefile-based projects</li>
+                  <li>Static and dynamic library projects</li>
                 </ul>
               </div>
             </CardContent>
@@ -75,15 +75,15 @@ const JavaPage = () => {
                   <div className="w-6 h-6 rounded-full bg-primary text-primary-foreground flex items-center justify-center text-sm font-bold">1</div>
                   <div>
                     <h5 className="font-semibold">Compilation Check</h5>
-                    <p className="text-sm text-muted-foreground">Compile Java source files using javac compiler</p>
+                    <p className="text-sm text-muted-foreground">Compile C source files using gcc with appropriate flags</p>
                   </div>
                 </div>
                 
                 <div className="flex items-start gap-3">
                   <div className="w-6 h-6 rounded-full bg-primary text-primary-foreground flex items-center justify-center text-sm font-bold">2</div>
                   <div>
-                    <h5 className="font-semibold">Classpath Setup</h5>
-                    <p className="text-sm text-muted-foreground">Configure classpath for external libraries and dependencies</p>
+                    <h5 className="font-semibold">Memory Testing</h5>
+                    <p className="text-sm text-muted-foreground">Check for memory leaks and buffer overflows using valgrind</p>
                   </div>
                 </div>
                 
@@ -91,15 +91,15 @@ const JavaPage = () => {
                   <div className="w-6 h-6 rounded-full bg-primary text-primary-foreground flex items-center justify-center text-sm font-bold">3</div>
                   <div>
                     <h5 className="font-semibold">Unit Testing</h5>
-                    <p className="text-sm text-muted-foreground">Execute JUnit tests and custom test cases</p>
+                    <p className="text-sm text-muted-foreground">Execute test cases with input validation and output checking</p>
                   </div>
                 </div>
                 
                 <div className="flex items-start gap-3">
                   <div className="w-6 h-6 rounded-full bg-primary text-primary-foreground flex items-center justify-center text-sm font-bold">4</div>
                   <div>
-                    <h5 className="font-semibold">Code Quality Analysis</h5>
-                    <p className="text-sm text-muted-foreground">Check coding standards and detect potential issues</p>
+                    <h5 className="font-semibold">Performance Analysis</h5>
+                    <p className="text-sm text-muted-foreground">Measure execution time and memory usage</p>
                   </div>
                 </div>
               </div>
@@ -125,8 +125,8 @@ const JavaPage = () => {
                       <span className="text-white font-bold text-xs">PDF</span>
                     </div>
                     <div>
-                      <h5 className="font-semibold">Test Report</h5>
-                      <p className="text-sm text-muted-foreground">Comprehensive compilation and test results</p>
+                      <h5 className="font-semibold">Compilation Report</h5>
+                      <p className="text-sm text-muted-foreground">Detailed compilation and test results</p>
                     </div>
                   </div>
                 </div>
@@ -150,7 +150,7 @@ const JavaPage = () => {
                     </div>
                     <div>
                       <h5 className="font-semibold">Compilation Logs</h5>
-                      <p className="text-sm text-muted-foreground">Detailed compilation and error logs</p>
+                      <p className="text-sm text-muted-foreground">Detailed compilation warnings and errors</p>
                     </div>
                   </div>
                 </div>
@@ -162,7 +162,7 @@ const JavaPage = () => {
                     </div>
                     <div>
                       <h5 className="font-semibold">Test Configuration</h5>
-                      <p className="text-sm text-muted-foreground">Build and test configurations</p>
+                      <p className="text-sm text-muted-foreground">Test case configurations and build settings</p>
                     </div>
                   </div>
                 </div>
@@ -179,12 +179,12 @@ const JavaPage = () => {
             </CardHeader>
             <CardContent>
               <ul className="space-y-2 text-muted-foreground">
-                <li>• Follow Java naming conventions (camelCase for methods, PascalCase for classes)</li>
-                <li>• Include proper package declarations</li>
-                <li>• Use meaningful class and method names</li>
-                <li>• Add comprehensive Javadoc comments</li>
-                <li>• Handle exceptions appropriately</li>
-                <li>• Include a main method if required for execution</li>
+                <li>• Follow consistent indentation and formatting</li>
+                <li>• Include proper header guards in .h files</li>
+                <li>• Use meaningful variable and function names</li>
+                <li>• Add clear comments explaining logic</li>
+                <li>• Handle memory allocation and deallocation properly</li>
+                <li>• Check return values and handle errors appropriately</li>
               </ul>
             </CardContent>
           </Card>
@@ -194,4 +194,4 @@ const JavaPage = () => {
   );
 };
 
-export default JavaPage;
+export default CPage;

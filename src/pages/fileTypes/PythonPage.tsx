@@ -1,5 +1,5 @@
 
-import { ArrowLeft, Upload, Play, CheckCircle } from 'lucide-react';
+import { ArrowLeft, Upload, Play, CheckCircle, FileText } from 'lucide-react';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import { Badge } from '@/components/ui/badge';
@@ -105,6 +105,70 @@ const PythonPage = () => {
                   <div>
                     <h5 className="font-semibold">Performance Analysis</h5>
                     <p className="text-sm text-muted-foreground">Measure execution time and memory usage</p>
+                  </div>
+                </div>
+              </div>
+            </CardContent>
+          </Card>
+
+          <Card>
+            <CardHeader>
+              <CardTitle className="flex items-center gap-2">
+                <FileText className="h-5 w-5" />
+                Output Files Generated
+              </CardTitle>
+            </CardHeader>
+            <CardContent className="space-y-4">
+              <p className="text-muted-foreground">
+                After execution and testing, AutoLab generates various output files:
+              </p>
+              
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                <div className="space-y-2">
+                  <div className="flex items-center gap-2">
+                    <div className="w-8 h-8 rounded bg-red-500 flex items-center justify-center">
+                      <span className="text-white font-bold text-xs">PDF</span>
+                    </div>
+                    <div>
+                      <h5 className="font-semibold">Test Report</h5>
+                      <p className="text-sm text-muted-foreground">Comprehensive test results and analysis</p>
+                    </div>
+                  </div>
+                </div>
+                
+                <div className="space-y-2">
+                  <div className="flex items-center gap-2">
+                    <div className="w-8 h-8 rounded bg-gray-400 flex items-center justify-center">
+                      <span className="text-white font-bold text-xs">TXT</span>
+                    </div>
+                    <div>
+                      <h5 className="font-semibold">Program Output</h5>
+                      <p className="text-sm text-muted-foreground">Console output and execution results</p>
+                    </div>
+                  </div>
+                </div>
+                
+                <div className="space-y-2">
+                  <div className="flex items-center gap-2">
+                    <div className="w-8 h-8 rounded bg-amber-500 flex items-center justify-center">
+                      <span className="text-white font-bold text-xs">LOG</span>
+                    </div>
+                    <div>
+                      <h5 className="font-semibold">Execution Logs</h5>
+                      <p className="text-sm text-muted-foreground">Detailed execution and error logs</p>
+                    </div>
+                  </div>
+                </div>
+                
+                <div className="space-y-2">
+                  <div className="flex items-center gap-2">
+                    <div className="w-8 h-8 rounded bg-teal-500 flex items-center justify-center">
+                      <span className="text-white font-bold text-xs">YML</span>
+                    </div>
+                    <div>
+                      <h5 className="font-semibold">Test Configuration</h5>
+                      <p className="text-sm text-muted-foreground">Test parameters and environment settings</p>
+                    </div>
                   </div>
                 </div>
               </div>

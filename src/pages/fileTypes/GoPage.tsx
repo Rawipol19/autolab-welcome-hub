@@ -5,7 +5,7 @@ import { Button } from '@/components/ui/button';
 import { Badge } from '@/components/ui/badge';
 import { Link } from 'react-router-dom';
 
-const JavaPage = () => {
+const GoPage = () => {
   return (
     <div className="min-h-screen bg-background">
       <div className="mx-auto max-w-4xl px-6 py-12">
@@ -18,12 +18,12 @@ const JavaPage = () => {
           </Link>
           
           <div className="flex items-center gap-4 mb-6">
-            <div className="w-16 h-16 rounded-lg bg-orange-500 flex items-center justify-center">
-              <span className="text-white font-bold text-sm">.java</span>
+            <div className="w-16 h-16 rounded-lg bg-cyan-500 flex items-center justify-center">
+              <span className="text-white font-bold text-xl">.go</span>
             </div>
             <div>
-              <h1 className="text-3xl font-bold text-foreground">Java Files</h1>
-              <p className="text-muted-foreground">Learn how to submit Java assignments</p>
+              <h1 className="text-3xl font-bold text-foreground">Go Files</h1>
+              <p className="text-muted-foreground">Learn how to submit Go programming assignments</p>
             </div>
           </div>
         </div>
@@ -33,30 +33,30 @@ const JavaPage = () => {
             <CardHeader>
               <CardTitle className="flex items-center gap-2">
                 <Upload className="h-5 w-5" />
-                How to Submit Java Files
+                How to Submit Go Files
               </CardTitle>
             </CardHeader>
             <CardContent className="space-y-4">
               <p className="text-muted-foreground">
-                Java files (.java) are fully supported in AutoLab with comprehensive compilation and testing capabilities.
+                Go files are compiled and tested with the Go toolchain, supporting both single files and module-based projects.
               </p>
               
               <div className="space-y-3">
                 <h4 className="font-semibold">Supported File Types:</h4>
                 <div className="flex flex-wrap gap-2">
-                  <Badge variant="secondary">.java</Badge>
-                  <Badge variant="secondary">.jar</Badge>
-                  <Badge variant="secondary">.class</Badge>
+                  <Badge variant="secondary">.go</Badge>
+                  <Badge variant="secondary">go.mod</Badge>
+                  <Badge variant="secondary">go.sum</Badge>
                 </div>
               </div>
 
               <div className="space-y-3">
                 <h4 className="font-semibold">Submission Methods:</h4>
                 <ul className="list-disc list-inside space-y-2 text-muted-foreground">
-                  <li>Single .java source file</li>
-                  <li>Multiple Java files in a package structure</li>
-                  <li>JAR archives with compiled classes</li>
-                  <li>Maven/Gradle projects with build files</li>
+                  <li>Single .go source file</li>
+                  <li>Multiple Go files in a package</li>
+                  <li>Go modules with go.mod file</li>
+                  <li>Projects with external dependencies</li>
                 </ul>
               </div>
             </CardContent>
@@ -75,15 +75,15 @@ const JavaPage = () => {
                   <div className="w-6 h-6 rounded-full bg-primary text-primary-foreground flex items-center justify-center text-sm font-bold">1</div>
                   <div>
                     <h5 className="font-semibold">Compilation Check</h5>
-                    <p className="text-sm text-muted-foreground">Compile Java source files using javac compiler</p>
+                    <p className="text-sm text-muted-foreground">Compile Go source files using go build command</p>
                   </div>
                 </div>
                 
                 <div className="flex items-start gap-3">
                   <div className="w-6 h-6 rounded-full bg-primary text-primary-foreground flex items-center justify-center text-sm font-bold">2</div>
                   <div>
-                    <h5 className="font-semibold">Classpath Setup</h5>
-                    <p className="text-sm text-muted-foreground">Configure classpath for external libraries and dependencies</p>
+                    <h5 className="font-semibold">Dependency Management</h5>
+                    <p className="text-sm text-muted-foreground">Download and verify module dependencies</p>
                   </div>
                 </div>
                 
@@ -91,15 +91,15 @@ const JavaPage = () => {
                   <div className="w-6 h-6 rounded-full bg-primary text-primary-foreground flex items-center justify-center text-sm font-bold">3</div>
                   <div>
                     <h5 className="font-semibold">Unit Testing</h5>
-                    <p className="text-sm text-muted-foreground">Execute JUnit tests and custom test cases</p>
+                    <p className="text-sm text-muted-foreground">Execute go test with comprehensive test coverage</p>
                   </div>
                 </div>
                 
                 <div className="flex items-start gap-3">
                   <div className="w-6 h-6 rounded-full bg-primary text-primary-foreground flex items-center justify-center text-sm font-bold">4</div>
                   <div>
-                    <h5 className="font-semibold">Code Quality Analysis</h5>
-                    <p className="text-sm text-muted-foreground">Check coding standards and detect potential issues</p>
+                    <h5 className="font-semibold">Performance Benchmarking</h5>
+                    <p className="text-sm text-muted-foreground">Run benchmark tests and performance analysis</p>
                   </div>
                 </div>
               </div>
@@ -126,7 +126,7 @@ const JavaPage = () => {
                     </div>
                     <div>
                       <h5 className="font-semibold">Test Report</h5>
-                      <p className="text-sm text-muted-foreground">Comprehensive compilation and test results</p>
+                      <p className="text-sm text-muted-foreground">Comprehensive test results and coverage report</p>
                     </div>
                   </div>
                 </div>
@@ -149,8 +149,8 @@ const JavaPage = () => {
                       <span className="text-white font-bold text-xs">LOG</span>
                     </div>
                     <div>
-                      <h5 className="font-semibold">Compilation Logs</h5>
-                      <p className="text-sm text-muted-foreground">Detailed compilation and error logs</p>
+                      <h5 className="font-semibold">Build Logs</h5>
+                      <p className="text-sm text-muted-foreground">Detailed build process and error logs</p>
                     </div>
                   </div>
                 </div>
@@ -162,7 +162,7 @@ const JavaPage = () => {
                     </div>
                     <div>
                       <h5 className="font-semibold">Test Configuration</h5>
-                      <p className="text-sm text-muted-foreground">Build and test configurations</p>
+                      <p className="text-sm text-muted-foreground">Test parameters and build configurations</p>
                     </div>
                   </div>
                 </div>
@@ -179,12 +179,12 @@ const JavaPage = () => {
             </CardHeader>
             <CardContent>
               <ul className="space-y-2 text-muted-foreground">
-                <li>• Follow Java naming conventions (camelCase for methods, PascalCase for classes)</li>
-                <li>• Include proper package declarations</li>
-                <li>• Use meaningful class and method names</li>
-                <li>• Add comprehensive Javadoc comments</li>
-                <li>• Handle exceptions appropriately</li>
-                <li>• Include a main method if required for execution</li>
+                <li>• Follow Go naming conventions and formatting (use gofmt)</li>
+                <li>• Write comprehensive unit tests with good coverage</li>
+                <li>• Use go.mod for dependency management</li>
+                <li>• Add clear documentation comments for exported functions</li>
+                <li>• Handle errors explicitly with proper error checking</li>
+                <li>• Use goroutines and channels appropriately for concurrency</li>
               </ul>
             </CardContent>
           </Card>
@@ -194,4 +194,4 @@ const JavaPage = () => {
   );
 };
 
-export default JavaPage;
+export default GoPage;
