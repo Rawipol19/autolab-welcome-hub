@@ -14,6 +14,10 @@ import JsPage from "./pages/fileTypes/JsPage";
 import GoPage from "./pages/fileTypes/GoPage";
 import ZipPage from "./pages/fileTypes/ZipPage";
 import TarPage from "./pages/fileTypes/TarPage";
+import PdfPage from "./pages/fileTypes/outputFiles/PdfPage";
+import TxtPage from "./pages/fileTypes/outputFiles/TxtPage";
+import LogPage from "./pages/fileTypes/outputFiles/LogPage";
+import YmlPage from "./pages/fileTypes/outputFiles/YmlPage";
 
 const queryClient = new QueryClient();
 
@@ -33,6 +37,10 @@ const App = () => (
           <Route path="/file-types/go" element={<GoPage />} />
           <Route path="/file-types/zip" element={<ZipPage />} />
           <Route path="/file-types/tar" element={<TarPage />} />
+          <Route path="/file-types/output/pdf" element={<PdfPage />} />
+          <Route path="/file-types/output/txt" element={<TxtPage />} />
+          <Route path="/file-types/output/log" element={<LogPage />} />
+          <Route path="/file-types/output/yml" element={<YmlPage />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
         </Routes>

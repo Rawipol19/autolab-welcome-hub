@@ -1,4 +1,3 @@
-
 import { ArrowLeft, Upload, Play, CheckCircle, FileText } from 'lucide-react';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
@@ -119,53 +118,61 @@ const CPage = () => {
               </p>
               
               <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                <div className="space-y-2">
-                  <div className="flex items-center gap-2">
-                    <div className="w-8 h-8 rounded bg-red-500 flex items-center justify-center">
-                      <span className="text-white font-bold text-xs">PDF</span>
-                    </div>
-                    <div>
-                      <h5 className="font-semibold">Compilation Report</h5>
-                      <p className="text-sm text-muted-foreground">Detailed compilation and test results</p>
+                <Link to="/file-types/output/pdf">
+                  <div className="space-y-2 p-4 rounded-lg border hover:bg-muted/50 transition-colors cursor-pointer">
+                    <div className="flex items-center gap-2">
+                      <div className="w-8 h-8 rounded bg-red-500 flex items-center justify-center">
+                        <span className="text-white font-bold text-xs">PDF</span>
+                      </div>
+                      <div>
+                        <h5 className="font-semibold">Compilation Report</h5>
+                        <p className="text-sm text-muted-foreground">Detailed compilation and test results</p>
+                      </div>
                     </div>
                   </div>
-                </div>
+                </Link>
                 
-                <div className="space-y-2">
-                  <div className="flex items-center gap-2">
-                    <div className="w-8 h-8 rounded bg-gray-400 flex items-center justify-center">
-                      <span className="text-white font-bold text-xs">TXT</span>
-                    </div>
-                    <div>
-                      <h5 className="font-semibold">Program Output</h5>
-                      <p className="text-sm text-muted-foreground">Console output and execution results</p>
+                <Link to="/file-types/output/txt">
+                  <div className="space-y-2 p-4 rounded-lg border hover:bg-muted/50 transition-colors cursor-pointer">
+                    <div className="flex items-center gap-2">
+                      <div className="w-8 h-8 rounded bg-gray-400 flex items-center justify-center">
+                        <span className="text-white font-bold text-xs">TXT</span>
+                      </div>
+                      <div>
+                        <h5 className="font-semibold">Program Output</h5>
+                        <p className="text-sm text-muted-foreground">Console output and execution results</p>
+                      </div>
                     </div>
                   </div>
-                </div>
+                </Link>
                 
-                <div className="space-y-2">
-                  <div className="flex items-center gap-2">
-                    <div className="w-8 h-8 rounded bg-amber-500 flex items-center justify-center">
-                      <span className="text-white font-bold text-xs">LOG</span>
-                    </div>
-                    <div>
-                      <h5 className="font-semibold">Compilation Logs</h5>
-                      <p className="text-sm text-muted-foreground">Detailed compilation warnings and errors</p>
+                <Link to="/file-types/output/log">
+                  <div className="space-y-2 p-4 rounded-lg border hover:bg-muted/50 transition-colors cursor-pointer">
+                    <div className="flex items-center gap-2">
+                      <div className="w-8 h-8 rounded bg-amber-500 flex items-center justify-center">
+                        <span className="text-white font-bold text-xs">LOG</span>
+                      </div>
+                      <div>
+                        <h5 className="font-semibold">Compilation Logs</h5>
+                        <p className="text-sm text-muted-foreground">Detailed compilation warnings and errors</p>
+                      </div>
                     </div>
                   </div>
-                </div>
+                </Link>
                 
-                <div className="space-y-2">
-                  <div className="flex items-center gap-2">
-                    <div className="w-8 h-8 rounded bg-teal-500 flex items-center justify-center">
-                      <span className="text-white font-bold text-xs">YML</span>
-                    </div>
-                    <div>
-                      <h5 className="font-semibold">Test Configuration</h5>
-                      <p className="text-sm text-muted-foreground">Test case configurations and build settings</p>
+                <Link to="/file-types/output/yml">
+                  <div className="space-y-2 p-4 rounded-lg border hover:bg-muted/50 transition-colors cursor-pointer">
+                    <div className="flex items-center gap-2">
+                      <div className="w-8 h-8 rounded bg-teal-500 flex items-center justify-center">
+                        <span className="text-white font-bold text-xs">YML</span>
+                      </div>
+                      <div>
+                        <h5 className="font-semibold">Test Configuration</h5>
+                        <p className="text-sm text-muted-foreground">Test case configurations and build settings</p>
+                      </div>
                     </div>
                   </div>
-                </div>
+                </Link>
               </div>
             </CardContent>
           </Card>
