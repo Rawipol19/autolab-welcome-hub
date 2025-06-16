@@ -1,5 +1,6 @@
+
 import { useState } from 'react';
-import { Upload, CheckCircle, FileText, Code, Archive, BookOpen, Zap, Shield, Users, Brain, Eye, Target } from 'lucide-react';
+import { Upload, CheckCircle, FileText, Code, Archive, Zap, Shield, Users, Brain, Eye, Target } from 'lucide-react';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
 import { Button } from '@/components/ui/button';
@@ -141,17 +142,21 @@ const Index = () => {
         <div className="relative mx-auto max-w-7xl px-6 py-24 sm:py-32 lg:px-8">
           <div className="text-center">
             <div className="flex items-center justify-center mb-8">
-              <div className="p-3 bg-primary rounded-2xl">
-                <BookOpen className="h-12 w-12 text-primary-foreground" />
+              <div className="p-3 bg-white rounded-2xl shadow-lg">
+                <img 
+                  src="/lovable-uploads/d73a6f39-361f-4c1f-8cf4-a7419e7ce0a8.png" 
+                  alt="University at Buffalo Logo" 
+                  className="h-12 w-12"
+                />
               </div>
             </div>
-            <h1 className="text-4xl font-bold tracking-tight text-foreground sm:text-6xl bg-gradient-to-r from-primary to-primary/60 bg-clip-text text-transparent">
+            <h1 className="text-4xl font-bold tracking-tight text-foreground sm:text-6xl bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">
               AutoLab by UB
             </h1>
-            <p className="mt-2 text-xl text-muted-foreground">
+            <p className="mt-2 text-xl text-primary font-semibold">
               University at Buffalo
             </p>
-            <p className="mt-4 text-lg font-medium text-primary">
+            <p className="mt-4 text-lg font-medium text-secondary">
               RAI based Autolab
             </p>
             <p className="mt-6 text-lg leading-8 text-muted-foreground max-w-3xl mx-auto">
@@ -159,10 +164,10 @@ const Index = () => {
               Fast, secure, and comprehensive feedback for students and instructors.
             </p>
             <div className="mt-10 flex items-center justify-center gap-x-6">
-              <Button size="lg" className="bg-primary hover:bg-primary/90">
+              <Button size="lg" className="bg-primary hover:bg-primary/90 text-primary-foreground">
                 Get Started
               </Button>
-              <Button variant="outline" size="lg">
+              <Button variant="outline" size="lg" className="border-primary text-primary hover:bg-primary hover:text-primary-foreground">
                 Learn More
               </Button>
             </div>
@@ -171,11 +176,11 @@ const Index = () => {
       </section>
 
       {/* RAI Section */}
-      <section className="py-24 bg-gradient-to-br from-primary/5 to-secondary/10">
+      <section className="py-24 bg-gradient-to-br from-accent/10 to-primary/5">
         <div className="mx-auto max-w-7xl px-6 lg:px-8">
           <div className="text-center mb-16">
             <div className="flex items-center justify-center mb-6">
-              <div className="p-4 bg-gradient-to-r from-primary to-primary/80 rounded-2xl">
+              <div className="p-4 bg-gradient-to-r from-primary to-accent rounded-2xl">
                 <Brain className="h-12 w-12 text-primary-foreground" />
               </div>
             </div>
@@ -192,12 +197,12 @@ const Index = () => {
             {raiFeatures.map((feature, index) => {
               const FeatureIcon = feature.icon;
               return (
-                <Card key={index} className="h-full hover:shadow-lg transition-all duration-300 hover:scale-105 bg-card/50 backdrop-blur-sm">
+                <Card key={index} className="h-full hover:shadow-lg transition-all duration-300 hover:scale-105 bg-card/50 backdrop-blur-sm border-primary/20">
                   <CardHeader>
                     <div className="w-16 h-16 bg-primary rounded-2xl flex items-center justify-center mb-4">
                       <FeatureIcon className="h-8 w-8 text-primary-foreground" />
                     </div>
-                    <CardTitle className="text-xl">{feature.title}</CardTitle>
+                    <CardTitle className="text-xl text-primary">{feature.title}</CardTitle>
                     <CardDescription className="text-base">
                       {feature.description}
                     </CardDescription>
@@ -217,16 +222,16 @@ const Index = () => {
             })}
           </div>
 
-          <div className="bg-card rounded-2xl p-8 border shadow-lg">
-            <h3 className="text-2xl font-bold text-foreground mb-6 text-center">
+          <div className="bg-card rounded-2xl p-8 border border-primary/20 shadow-lg">
+            <h3 className="text-2xl font-bold text-primary mb-6 text-center">
               How RAI Enhances AutoLab
             </h3>
             <div className="grid md:grid-cols-2 gap-8">
               <div>
                 <h4 className="text-lg font-semibold text-foreground mb-4">Traditional Autograding vs RAI-Enhanced</h4>
                 <div className="space-y-4">
-                  <div className="p-4 bg-secondary/50 rounded-lg">
-                    <p className="text-sm font-medium text-foreground mb-2">Traditional Approach:</p>
+                  <div className="p-4 bg-secondary/10 rounded-lg border border-secondary/20">
+                    <p className="text-sm font-medium text-secondary mb-2">Traditional Approach:</p>
                     <p className="text-sm text-muted-foreground">
                       Basic pass/fail testing with limited feedback on code structure and quality.
                     </p>
@@ -417,7 +422,7 @@ const Index = () => {
       </section>
 
       {/* CTA Section */}
-      <section className="py-24 bg-gradient-to-r from-primary to-primary/80">
+      <section className="py-24 bg-gradient-to-r from-primary to-accent">
         <div className="mx-auto max-w-4xl text-center px-6 lg:px-8">
           <h2 className="text-3xl font-bold tracking-tight text-primary-foreground sm:text-4xl">
             Ready to Transform Your Grading?
@@ -426,7 +431,7 @@ const Index = () => {
             Join thousands of educators already using AutoLab to streamline their assessment process
           </p>
           <div className="mt-10 flex items-center justify-center gap-x-6">
-            <Button size="lg" variant="secondary">
+            <Button size="lg" variant="secondary" className="bg-white text-primary hover:bg-gray-100">
               Start Free Trial
             </Button>
             <Button size="lg" variant="outline" className="text-primary-foreground border-primary-foreground hover:bg-primary-foreground hover:text-primary">
