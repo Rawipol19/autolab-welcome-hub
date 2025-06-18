@@ -1,3 +1,4 @@
+
 import { useState } from 'react';
 import { Upload, CheckCircle, FileText, Code, Archive, Zap, Shield, Users, Brain, Eye, Target, Github, MapPin, Mail } from 'lucide-react';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
@@ -412,104 +413,74 @@ const Index = () => {
         </div>
       </section>
 
-      {/* CTA Section */}
-      <section className="py-24 bg-gradient-to-r from-primary to-accent">
-        <div className="mx-auto max-w-4xl text-center px-6 lg:px-8">
-          <h2 className="text-3xl font-bold tracking-tight text-primary-foreground sm:text-4xl">
-            Ready to Transform Your Grading?
-          </h2>
-          <p className="mt-6 text-lg leading-8 text-primary-foreground/90">
-            Join thousands of educators already using AutoLab to streamline their assessment process
-          </p>
-          <div className="mt-10 flex items-center justify-center gap-x-6">
-            <Button size="lg" variant="secondary" className="bg-white text-primary hover:bg-gray-100">
-              Start Free Trial
-            </Button>
-            <Button size="lg" variant="outline" className="text-primary-foreground border-primary-foreground hover:bg-primary-foreground hover:text-primary">
-              Schedule Demo
-            </Button>
+      {/* Footer Section */}
+      <footer className="bg-primary text-primary-foreground">
+        <div className="mx-auto max-w-7xl px-6 py-16 lg:px-8">
+          <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
+            {/* RAI Based AutoLab */}
+            <div>
+              <h3 className="text-lg font-semibold mb-4">RAI Based AutoLab</h3>
+              <div className="space-y-2 text-sm text-primary-foreground/80">
+                <p>University at Buffalo</p>
+                <p>Computer Science &amp; Engineering</p>
+                <p>Buffalo, NY 14260</p>
+              </div>
+            </div>
+
+            {/* Quick Links */}
+            <div>
+              <h3 className="text-lg font-semibold mb-4">Quick Links</h3>
+              <div className="space-y-2 text-sm">
+                <a href="/" className="block text-primary-foreground/80 hover:text-primary-foreground transition-colors">Home</a>
+                <a href="#features" className="block text-primary-foreground/80 hover:text-primary-foreground transition-colors">Features</a>
+                <a href="#how-it-works" className="block text-primary-foreground/80 hover:text-primary-foreground transition-colors">How It Works</a>
+                <a href="#about" className="block text-primary-foreground/80 hover:text-primary-foreground transition-colors">About</a>
+                <a href="#documentation" className="block text-primary-foreground/80 hover:text-primary-foreground transition-colors">Documentation</a>
+              </div>
+            </div>
+
+            {/* Resources */}
+            <div>
+              <h3 className="text-lg font-semibold mb-4">Resources</h3>
+              <div className="space-y-2 text-sm">
+                <a 
+                  href="https://github.com" 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  className="block text-primary-foreground/80 hover:text-primary-foreground transition-colors"
+                >
+                  GitHub Repository
+                </a>
+                <a href="#api" className="block text-primary-foreground/80 hover:text-primary-foreground transition-colors">API Documentation</a>
+                <a href="#guide" className="block text-primary-foreground/80 hover:text-primary-foreground transition-colors">User Guide</a>
+                <a href="#support" className="block text-primary-foreground/80 hover:text-primary-foreground transition-colors">Support</a>
+              </div>
+            </div>
+
+            {/* Connect */}
+            <div>
+              <h3 className="text-lg font-semibold mb-4">Connect</h3>
+              <div className="space-y-2 text-sm">
+                <a 
+                  href="mailto:support@buffalo.edu" 
+                  className="block text-primary-foreground/80 hover:text-primary-foreground transition-colors"
+                >
+                  Contact Us
+                </a>
+                <a href="#team" className="block text-primary-foreground/80 hover:text-primary-foreground transition-colors">Research Team</a>
+                <a href="#publications" className="block text-primary-foreground/80 hover:text-primary-foreground transition-colors">Publications</a>
+                <a href="#news" className="block text-primary-foreground/80 hover:text-primary-foreground transition-colors">News &amp; Updates</a>
+              </div>
+            </div>
+          </div>
+
+          <div className="border-t border-primary-foreground/20 pt-8 mt-12 text-center">
+            <p className="text-sm text-primary-foreground/60">
+              © 2025 RAI Based AutoLab - University at Buffalo. All rights reserved.
+            </p>
           </div>
         </div>
-      </section>
-
-      {/* Contact Section */}
-      <section className="py-24 bg-gradient-to-r from-primary to-accent">
-        <div className="mx-auto max-w-4xl text-center px-6 lg:px-8">
-          <h2 className="text-3xl font-bold tracking-tight text-primary-foreground sm:text-4xl">
-            Get in Touch
-          </h2>
-          <p className="mt-6 text-lg leading-8 text-primary-foreground/90">
-            Connect with us to learn more about AutoLab or contribute to the project
-          </p>
-          
-          <div className="mt-12 grid md:grid-cols-3 gap-8">
-            <Card className="bg-white/10 border-white/20 backdrop-blur-sm">
-              <CardHeader className="text-center">
-                <div className="w-16 h-16 bg-white rounded-2xl flex items-center justify-center mx-auto mb-4">
-                  <Github className="h-8 w-8 text-primary" />
-                </div>
-                <CardTitle className="text-primary-foreground">GitHub Repository</CardTitle>
-              </CardHeader>
-              <CardContent>
-                <p className="text-primary-foreground/80 mb-4">
-                  View the source code and contribute to the project
-                </p>
-                <Button 
-                  variant="secondary" 
-                  className="w-full bg-white text-primary hover:bg-gray-100"
-                  onClick={() => window.open('https://github.com', '_blank')}
-                >
-                  View on GitHub
-                </Button>
-              </CardContent>
-            </Card>
-
-            <Card className="bg-white/10 border-white/20 backdrop-blur-sm">
-              <CardHeader className="text-center">
-                <div className="w-16 h-16 bg-white rounded-2xl flex items-center justify-center mx-auto mb-4">
-                  <MapPin className="h-8 w-8 text-primary" />
-                </div>
-                <CardTitle className="text-primary-foreground">University Location</CardTitle>
-              </CardHeader>
-              <CardContent>
-                <p className="text-primary-foreground/80 mb-4">
-                  University at Buffalo<br />
-                  Buffalo, NY 14260<br />
-                  United States
-                </p>
-                <Button 
-                  variant="secondary" 
-                  className="w-full bg-white text-primary hover:bg-gray-100"
-                  onClick={() => window.open('https://maps.google.com/?q=University+at+Buffalo', '_blank')}
-                >
-                  View on Map
-                </Button>
-              </CardContent>
-            </Card>
-
-            <Card className="bg-white/10 border-white/20 backdrop-blur-sm">
-              <CardHeader className="text-center">
-                <div className="w-16 h-16 bg-white rounded-2xl flex items-center justify-center mx-auto mb-4">
-                  <Mail className="h-8 w-8 text-primary" />
-                </div>
-                <CardTitle className="text-primary-foreground">Contact Support</CardTitle>
-              </CardHeader>
-              <CardContent>
-                <p className="text-primary-foreground/80 mb-4">
-                  Need help or have questions about AutoLab?
-                </p>
-                <Button 
-                  variant="secondary" 
-                  className="w-full bg-white text-primary hover:bg-gray-100"
-                  onClick={() => window.location.href = 'mailto:support@buffalo.edu'}
-                >
-                  Send Email
-                </Button>
-              </CardContent>
-            </Card>
-          </div>
-        </div>
-      </section>
+      </footer>
     </div>
   );
 };
