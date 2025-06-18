@@ -1,199 +1,99 @@
-import { ArrowLeft, Upload, Play, CheckCircle, FileText } from 'lucide-react';
-import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
+import { ArrowLeft, FileText } from 'lucide-react';
+import { Card, CardContent } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
-import { Badge } from '@/components/ui/badge';
-import { Link } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 
 const JsPage = () => {
+  const navigate = useNavigate();
+
   return (
     <div className="min-h-screen bg-background">
       <div className="mx-auto max-w-4xl px-6 py-12">
         <div className="mb-8">
-          <Link to="/">
-            <Button variant="ghost" className="mb-4">
-              <ArrowLeft className="h-4 w-4 mr-2" />
-              Back to Home
-            </Button>
-          </Link>
+          <Button variant="ghost" className="mb-4" onClick={() => navigate(-1)}>
+            <ArrowLeft className="h-4 w-4 mr-2" />
+            Back to Previous Page
+          </Button>
           
           <div className="flex items-center gap-4 mb-6">
             <div className="w-16 h-16 rounded-lg bg-yellow-500 flex items-center justify-center">
-              <span className="text-white font-bold text-xl">.js</span>
+              <span className="text-white font-bold text-2xl">.js</span>
             </div>
             <div>
               <h1 className="text-3xl font-bold text-foreground">JavaScript Files</h1>
-              <p className="text-muted-foreground">Learn how to submit JavaScript assignments</p>
+              <p className="text-muted-foreground">Source code and scripts</p>
             </div>
           </div>
         </div>
 
         <div className="space-y-8">
           <Card>
-            <CardHeader>
-              <CardTitle className="flex items-center gap-2">
-                <Upload className="h-5 w-5" />
-                How to Submit JavaScript Files
-              </CardTitle>
-            </CardHeader>
-            <CardContent className="space-y-4">
-              <p className="text-muted-foreground">
-                JavaScript files are executed and tested with Node.js runtime environment and comprehensive testing frameworks.
-              </p>
-              
-              <div className="space-y-3">
-                <h4 className="font-semibold">Supported File Types:</h4>
-                <div className="flex flex-wrap gap-2">
-                  <Badge variant="secondary">.js</Badge>
-                  <Badge variant="secondary">.mjs</Badge>
-                  <Badge variant="secondary">.json</Badge>
-                  <Badge variant="secondary">package.json</Badge>
-                </div>
-              </div>
-
-              <div className="space-y-3">
-                <h4 className="font-semibold">Submission Methods:</h4>
-                <ul className="list-disc list-inside space-y-2 text-muted-foreground">
-                  <li>Single .js source file</li>
-                  <li>Multiple JavaScript files with modules</li>
-                  <li>Node.js projects with package.json</li>
-                  <li>Frontend JavaScript with HTML/CSS</li>
-                </ul>
-              </div>
-            </CardContent>
-          </Card>
-
-          <Card>
-            <CardHeader>
-              <CardTitle className="flex items-center gap-2">
-                <Play className="h-5 w-5" />
-                Execution & Testing Process
-              </CardTitle>
-            </CardHeader>
-            <CardContent className="space-y-4">
-              <div className="space-y-4">
-                <div className="flex items-start gap-3">
-                  <div className="w-6 h-6 rounded-full bg-primary text-primary-foreground flex items-center justify-center text-sm font-bold">1</div>
-                  <div>
-                    <h5 className="font-semibold">Syntax Validation</h5>
-                    <p className="text-sm text-muted-foreground">Parse JavaScript syntax and check for errors</p>
-                  </div>
-                </div>
-                
-                <div className="flex items-start gap-3">
-                  <div className="w-6 h-6 rounded-full bg-primary text-primary-foreground flex items-center justify-center text-sm font-bold">2</div>
-                  <div>
-                    <h5 className="font-semibold">Dependency Installation</h5>
-                    <p className="text-sm text-muted-foreground">Install npm packages from package.json if provided</p>
-                  </div>
-                </div>
-                
-                <div className="flex items-start gap-3">
-                  <div className="w-6 h-6 rounded-full bg-primary text-primary-foreground flex items-center justify-center text-sm font-bold">3</div>
-                  <div>
-                    <h5 className="font-semibold">Test Execution</h5>
-                    <p className="text-sm text-muted-foreground">Run Jest/Mocha tests and custom test cases</p>
-                  </div>
-                </div>
-                
-                <div className="flex items-start gap-3">
-                  <div className="w-6 h-6 rounded-full bg-primary text-primary-foreground flex items-center justify-center text-sm font-bold">4</div>
-                  <div>
-                    <h5 className="font-semibold">Performance Analysis</h5>
-                    <p className="text-sm text-muted-foreground">Measure execution time and memory usage</p>
-                  </div>
-                </div>
-              </div>
-            </CardContent>
-          </Card>
-
-          <Card>
-            <CardHeader>
-              <CardTitle className="flex items-center gap-2">
-                <FileText className="h-5 w-5" />
-                Output Files Generated
-              </CardTitle>
-            </CardHeader>
-            <CardContent className="space-y-4">
-              <p className="text-muted-foreground">
-                After execution and testing, AutoLab generates various output files:
-              </p>
-              
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                <Link to="/file-types/output/pdf">
-                  <div className="space-y-2 p-4 rounded-lg border hover:bg-muted/50 transition-colors cursor-pointer">
-                    <div className="flex items-center gap-2">
-                      <div className="w-8 h-8 rounded bg-red-500 flex items-center justify-center">
-                        <span className="text-white font-bold text-xs">PDF</span>
-                      </div>
-                      <div>
-                        <h5 className="font-semibold">Test Report</h5>
-                        <p className="text-sm text-muted-foreground">Comprehensive test results and analysis</p>
-                      </div>
-                    </div>
-                  </div>
-                </Link>
-                
-                <Link to="/file-types/output/txt">
-                  <div className="space-y-2 p-4 rounded-lg border hover:bg-muted/50 transition-colors cursor-pointer">
-                    <div className="flex items-center gap-2">
-                      <div className="w-8 h-8 rounded bg-gray-400 flex items-center justify-center">
-                        <span className="text-white font-bold text-xs">TXT</span>
-                      </div>
-                      <div>
-                        <h5 className="font-semibold">Console Output</h5>
-                        <p className="text-sm text-muted-foreground">Program output and console logs</p>
-                      </div>
-                    </div>
-                  </div>
-                </Link>
-                
-                <Link to="/file-types/output/log">
-                  <div className="space-y-2 p-4 rounded-lg border hover:bg-muted/50 transition-colors cursor-pointer">
-                    <div className="flex items-center gap-2">
-                      <div className="w-8 h-8 rounded bg-amber-500 flex items-center justify-center">
-                        <span className="text-white font-bold text-xs">LOG</span>
-                      </div>
-                      <div>
-                        <h5 className="font-semibold">Execution Logs</h5>
-                        <p className="text-sm text-muted-foreground">Detailed execution and error logs</p>
-                      </div>
-                    </div>
-                  </div>
-                </Link>
-                
-                <Link to="/file-types/output/yml">
-                  <div className="space-y-2 p-4 rounded-lg border hover:bg-muted/50 transition-colors cursor-pointer">
-                    <div className="flex items-center gap-2">
-                      <div className="w-8 h-8 rounded bg-teal-500 flex items-center justify-center">
-                        <span className="text-white font-bold text-xs">YML</span>
-                      </div>
-                      <div>
-                        <h5 className="font-semibold">Test Configuration</h5>
-                        <p className="text-sm text-muted-foreground">Test parameters and environment settings</p>
-                      </div>
-                    </div>
-                  </div>
-                </Link>
-              </div>
-            </CardContent>
-          </Card>
-
-          <Card>
-            <CardHeader>
-              <CardTitle className="flex items-center gap-2">
-                <CheckCircle className="h-5 w-5" />
-                Best Practices
-              </CardTitle>
-            </CardHeader>
             <CardContent>
-              <ul className="space-y-2 text-muted-foreground">
-                <li>• Use const/let instead of var for variable declarations</li>
-                <li>• Follow consistent naming conventions (camelCase)</li>
-                <li>• Add proper error handling with try-catch blocks</li>
-                <li>• Include JSDoc comments for functions</li>
-                <li>• Use modern ES6+ features appropriately</li>
-                <li>• Include package.json for npm dependencies</li>
+              <h2 className="text-2xl font-bold mb-4">JavaScript File Details</h2>
+              <p className="mb-4">
+                JavaScript (.js) files are essential for web development, adding interactivity and dynamic content to websites.
+                They contain code that is executed by web browsers to create engaging user experiences.
+              </p>
+              
+              <h3 className="text-xl font-semibold mb-3">Common Uses:</h3>
+              <ul className="list-disc list-inside space-y-2">
+                <li>Implementing interactive elements on websites</li>
+                <li>Handling user input and form validation</li>
+                <li>Making asynchronous requests to servers (AJAX)</li>
+                <li>Creating animations and visual effects</li>
+                <li>Building single-page applications (SPAs)</li>
               </ul>
+            </CardContent>
+          </Card>
+
+          <Card>
+            <CardContent>
+              <h2 className="text-2xl font-bold mb-4">Generated Output Files</h2>
+              <p className="mb-4">
+                When JavaScript code is executed, it can generate various output files that provide insights into the execution process,
+                testing results, and overall performance.
+              </p>
+
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+                <Card 
+                  className="group hover:shadow-lg transition-all duration-300 hover:scale-105 cursor-pointer"
+                  onClick={() => navigate('/file-types/output/pdf')}
+                >
+                  <CardContent className="p-6 text-center">
+                    <div className="w-12 h-12 rounded-lg bg-red-500 flex items-center justify-center mx-auto mb-3 group-hover:scale-110 transition-transform">
+                      <FileText className="h-6 w-6 text-white" />
+                    </div>
+                    <h4 className="font-semibold text-foreground">PDF Report</h4>
+                    <p className="text-sm text-muted-foreground font-mono">.pdf</p>
+                  </CardContent>
+                </Card>
+                
+                <Card 
+                  className="group hover:shadow-lg transition-all duration-300 hover:scale-105 cursor-pointer"
+                  onClick={() => navigate('/file-types/output/txt')}
+                >
+                  <CardContent className="p-6 text-center">
+                    <div className="w-12 h-12 rounded-lg bg-gray-500 flex items-center justify-center mx-auto mb-3 group-hover:scale-110 transition-transform">
+                      <FileText className="h-6 w-6 text-white" />
+                    </div>
+                    <h4 className="font-semibold text-foreground">Text Output</h4>
+                    <p className="text-sm text-muted-foreground font-mono">.txt</p>
+                  </CardContent>
+                </Card>
+                
+                <Card 
+                  className="group hover:shadow-lg transition-all duration-300 hover:scale-105 cursor-pointer"
+                  onClick={() => navigate('/file-types/output/log')}
+                >
+                  <CardContent className="p-6 text-center">
+                    <div className="w-12 h-12 rounded-lg bg-yellow-600 flex items-center justify-center mx-auto mb-3 group-hover:scale-110 transition-transform">
+                      <FileText className="h-6 w-6 text-white" />
+                    </div>
+                    <h4 className="font-semibold text-foreground">Log Files</h4>
+                    <p className="text-sm text-muted-foreground font-mono">.log</p>
+                  </CardContent>
+                </Card>
+              </div>
             </CardContent>
           </Card>
         </div>

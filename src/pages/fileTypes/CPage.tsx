@@ -117,62 +117,45 @@ const CPage = () => {
                 After compilation and testing, AutoLab generates various output files:
               </p>
               
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                <Link to="/file-types/output/pdf">
-                  <div className="space-y-2 p-4 rounded-lg border hover:bg-muted/50 transition-colors cursor-pointer">
-                    <div className="flex items-center gap-2">
-                      <div className="w-8 h-8 rounded bg-red-500 flex items-center justify-center">
-                        <span className="text-white font-bold text-xs">PDF</span>
-                      </div>
-                      <div>
-                        <h5 className="font-semibold">Compilation Report</h5>
-                        <p className="text-sm text-muted-foreground">Detailed compilation and test results</p>
-                      </div>
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+                <Card 
+                  className="group hover:shadow-lg transition-all duration-300 hover:scale-105 cursor-pointer"
+                  onClick={() => navigate('/file-types/output/pdf')}
+                >
+                  <CardContent className="p-6 text-center">
+                    <div className="w-12 h-12 rounded-lg bg-red-500 flex items-center justify-center mx-auto mb-3 group-hover:scale-110 transition-transform">
+                      <FileText className="h-6 w-6 text-white" />
                     </div>
-                  </div>
-                </Link>
+                    <h4 className="font-semibold text-foreground">PDF Report</h4>
+                    <p className="text-sm text-muted-foreground font-mono">.pdf</p>
+                  </CardContent>
+                </Card>
                 
-                <Link to="/file-types/output/txt">
-                  <div className="space-y-2 p-4 rounded-lg border hover:bg-muted/50 transition-colors cursor-pointer">
-                    <div className="flex items-center gap-2">
-                      <div className="w-8 h-8 rounded bg-gray-400 flex items-center justify-center">
-                        <span className="text-white font-bold text-xs">TXT</span>
-                      </div>
-                      <div>
-                        <h5 className="font-semibold">Program Output</h5>
-                        <p className="text-sm text-muted-foreground">Console output and execution results</p>
-                      </div>
+                <Card 
+                  className="group hover:shadow-lg transition-all duration-300 hover:scale-105 cursor-pointer"
+                  onClick={() => navigate('/file-types/output/txt')}
+                >
+                  <CardContent className="p-6 text-center">
+                    <div className="w-12 h-12 rounded-lg bg-gray-500 flex items-center justify-center mx-auto mb-3 group-hover:scale-110 transition-transform">
+                      <FileText className="h-6 w-6 text-white" />
                     </div>
-                  </div>
-                </Link>
+                    <h4 className="font-semibold text-foreground">Text Output</h4>
+                    <p className="text-sm text-muted-foreground font-mono">.txt</p>
+                  </CardContent>
+                </Card>
                 
-                <Link to="/file-types/output/log">
-                  <div className="space-y-2 p-4 rounded-lg border hover:bg-muted/50 transition-colors cursor-pointer">
-                    <div className="flex items-center gap-2">
-                      <div className="w-8 h-8 rounded bg-amber-500 flex items-center justify-center">
-                        <span className="text-white font-bold text-xs">LOG</span>
-                      </div>
-                      <div>
-                        <h5 className="font-semibold">Compilation Logs</h5>
-                        <p className="text-sm text-muted-foreground">Detailed compilation warnings and errors</p>
-                      </div>
+                <Card 
+                  className="group hover:shadow-lg transition-all duration-300 hover:scale-105 cursor-pointer"
+                  onClick={() => navigate('/file-types/output/log')}
+                >
+                  <CardContent className="p-6 text-center">
+                    <div className="w-12 h-12 rounded-lg bg-yellow-600 flex items-center justify-center mx-auto mb-3 group-hover:scale-110 transition-transform">
+                      <FileText className="h-6 w-6 text-white" />
                     </div>
-                  </div>
-                </Link>
-                
-                <Link to="/file-types/output/yml">
-                  <div className="space-y-2 p-4 rounded-lg border hover:bg-muted/50 transition-colors cursor-pointer">
-                    <div className="flex items-center gap-2">
-                      <div className="w-8 h-8 rounded bg-teal-500 flex items-center justify-center">
-                        <span className="text-white font-bold text-xs">YML</span>
-                      </div>
-                      <div>
-                        <h5 className="font-semibold">Test Configuration</h5>
-                        <p className="text-sm text-muted-foreground">Test case configurations and build settings</p>
-                      </div>
-                    </div>
-                  </div>
-                </Link>
+                    <h4 className="font-semibold text-foreground">Log Files</h4>
+                    <p className="text-sm text-muted-foreground font-mono">.log</p>
+                  </CardContent>
+                </Card>
               </div>
             </CardContent>
           </Card>
