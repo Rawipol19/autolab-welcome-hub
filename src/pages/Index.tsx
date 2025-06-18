@@ -81,7 +81,8 @@ const Index = () => {
       category: "Archives & Documents",
       files: [
         { name: "ZIP Archive", extension: ".zip", color: "bg-purple-500" },
-        { name: "TAR Archive", extension: ".tar", color: "bg-indigo-500" }
+        { name: "TAR Archive", extension: ".tar", color: "bg-indigo-500" },
+        { name: "YAML Configuration", extension: ".yml", color: "bg-teal-500" }
       ]
     }
   ];
@@ -117,7 +118,8 @@ const Index = () => {
       'c': '/file-types/c',
       'go': '/file-types/go',
       'ziparchive': '/file-types/zip',
-      'tararchive': '/file-types/tar'
+      'tararchive': '/file-types/tar',
+      'yamlconfiguration': '/file-types/yml'
     };
 
     const route = routeMap[routeName];

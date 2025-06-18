@@ -1,21 +1,21 @@
 
-import { ArrowLeft, FileText, Settings, Code } from 'lucide-react';
+import { ArrowLeft, Upload, Play, CheckCircle } from 'lucide-react';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import { Badge } from '@/components/ui/badge';
-import { useNavigate } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 
 const YmlPage = () => {
-  const navigate = useNavigate();
-
   return (
     <div className="min-h-screen bg-background">
       <div className="mx-auto max-w-4xl px-6 py-12">
         <div className="mb-8">
-          <Button variant="ghost" className="mb-4" onClick={() => navigate(-1)}>
-            <ArrowLeft className="h-4 w-4 mr-2" />
-            Back to Previous Page
-          </Button>
+          <Link to="/">
+            <Button variant="ghost" className="mb-4">
+              <ArrowLeft className="h-4 w-4 mr-2" />
+              Back to Home
+            </Button>
+          </Link>
           
           <div className="flex items-center gap-4 mb-6">
             <div className="w-16 h-16 rounded-lg bg-teal-500 flex items-center justify-center">
@@ -32,7 +32,7 @@ const YmlPage = () => {
           <Card>
             <CardHeader>
               <CardTitle className="flex items-center gap-2">
-                <Settings className="h-5 w-5" />
+                <Upload className="h-5 w-5" />
                 About YAML Configuration
               </CardTitle>
             </CardHeader>
@@ -58,7 +58,7 @@ const YmlPage = () => {
           <Card>
             <CardHeader>
               <CardTitle className="flex items-center gap-2">
-                <Code className="h-5 w-5" />
+                <Upload className="h-5 w-5" />
                 YAML Structure
               </CardTitle>
             </CardHeader>
@@ -102,7 +102,7 @@ const YmlPage = () => {
           <Card>
             <CardHeader>
               <CardTitle className="flex items-center gap-2">
-                <FileText className="h-5 w-5" />
+                <Play className="h-5 w-5" />
                 Common Configurations
               </CardTitle>
             </CardHeader>

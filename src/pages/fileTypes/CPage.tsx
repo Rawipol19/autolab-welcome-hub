@@ -159,20 +159,6 @@ const CPage = () => {
                     </div>
                   </div>
                 </Link>
-                
-                <Link to="/file-types/output/yml">
-                  <div className="space-y-2 p-4 rounded-lg border hover:bg-muted/50 transition-colors cursor-pointer">
-                    <div className="flex items-center gap-2">
-                      <div className="w-8 h-8 rounded bg-teal-500 flex items-center justify-center">
-                        <span className="text-white font-bold text-xs">YML</span>
-                      </div>
-                      <div>
-                        <h5 className="font-semibold">Test Configuration</h5>
-                        <p className="text-sm text-muted-foreground">Test case configurations and build settings</p>
-                      </div>
-                    </div>
-                  </div>
-                </Link>
               </div>
             </CardContent>
           </Card>
