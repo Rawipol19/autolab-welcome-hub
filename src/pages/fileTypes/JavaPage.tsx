@@ -11,9 +11,9 @@ const JavaPage = () => {
     <div className="min-h-screen bg-background">
       <div className="mx-auto max-w-4xl px-6 py-12">
         <div className="mb-8">
-          <Button variant="ghost" className="mb-4" onClick={() => navigate(-1)}>
+          <Button variant="ghost" className="mb-4" onClick={() => navigate('/')}>
             <ArrowLeft className="h-4 w-4 mr-2" />
-            Back to Previous Page
+            Back to Home
           </Button>
           
           <div className="flex items-center gap-4 mb-6">
@@ -41,7 +41,7 @@ const JavaPage = () => {
 
           <Card>
             <CardHeader>
-              <CardTitle>Common Operations</CardTitle>
+              <CardTitle>Common Output Files Generated</CardTitle>
             </CardHeader>
             <CardContent>
               <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
