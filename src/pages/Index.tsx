@@ -145,10 +145,10 @@ const Index = () => {
               </div>
             </div>
             <h1 className="text-4xl font-bold tracking-tight text-foreground sm:text-6xl bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">
-              AutoLab by UB
+              AUTOLAB
             </h1>
             <p className="mt-2 text-xl text-primary font-semibold">
-              University at Buffalo
+              by University at Buffalo
             </p>
             <p className="mt-4 text-lg font-medium text-secondary">
               RAI based Autolab
