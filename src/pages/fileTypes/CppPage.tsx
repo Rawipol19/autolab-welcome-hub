@@ -1,4 +1,5 @@
-import { ArrowLeft, FileText, Code } from 'lucide-react';
+
+import { ArrowLeft, FileText, Code, Cpu } from 'lucide-react';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import { Badge } from '@/components/ui/badge';
@@ -11,18 +12,18 @@ const CppPage = () => {
     <div className="min-h-screen bg-background">
       <div className="mx-auto max-w-4xl px-6 py-12">
         <div className="mb-8">
-          <Button variant="ghost" className="mb-4" onClick={() => navigate(-1)}>
+          <Button variant="ghost" className="mb-4" onClick={() => navigate('/')}>
             <ArrowLeft className="h-4 w-4 mr-2" />
-            Back to Previous Page
+            Back to Home
           </Button>
           
           <div className="flex items-center gap-4 mb-6">
             <div className="w-16 h-16 rounded-lg bg-green-500 flex items-center justify-center">
-              <span className="text-white font-bold text-sm">.cpp</span>
+              <Cpu className="h-8 w-8 text-white" />
             </div>
             <div>
               <h1 className="text-3xl font-bold text-foreground">C++ Source Files</h1>
-              <p className="text-muted-foreground">Source code written in C++</p>
+              <p className="text-muted-foreground">High-performance object-oriented programming</p>
             </div>
           </div>
         </div>
@@ -37,19 +38,33 @@ const CppPage = () => {
             </CardHeader>
             <CardContent className="space-y-4">
               <p className="text-muted-foreground">
-                C++ is a high-performance, general-purpose programming language. It is used for developing operating systems, 
-                games, and high-performance server and client applications.
+                C++ is a high-performance, general-purpose programming language created as an extension of C. 
+                It supports multiple programming paradigms, including procedural, object-oriented, and generic 
+                programming, making it suitable for a wide range of applications.
               </p>
               
               <div className="space-y-3">
                 <h4 className="font-semibold">Key Features:</h4>
                 <ul className="list-disc list-inside space-y-2 text-muted-foreground">
-                  <li>Object-oriented programming</li>
+                  <li>Object-oriented programming with classes and inheritance</li>
+                  <li>Template system for generic programming</li>
+                  <li>Manual memory management with smart pointers</li>
                   <li>High performance and efficiency</li>
-                  <li>Large standard library</li>
+                  <li>Large standard library (STL)</li>
                   <li>Support for low-level memory manipulation</li>
-                  <li>Cross-platform compatibility</li>
                 </ul>
+              </div>
+
+              <div className="space-y-3">
+                <h4 className="font-semibold">Common Use Cases:</h4>
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
+                  <Badge variant="secondary" className="justify-start p-3">Game Development</Badge>
+                  <Badge variant="secondary" className="justify-start p-3">System Software</Badge>
+                  <Badge variant="secondary" className="justify-start p-3">High-Performance Computing</Badge>
+                  <Badge variant="secondary" className="justify-start p-3">Desktop Applications</Badge>
+                  <Badge variant="secondary" className="justify-start p-3">Real-time Systems</Badge>
+                  <Badge variant="secondary" className="justify-start p-3">Financial Software</Badge>
+                </div>
               </div>
             </CardContent>
           </Card>
@@ -58,8 +73,36 @@ const CppPage = () => {
             <CardHeader>
               <CardTitle className="flex items-center gap-2">
                 <FileText className="h-5 w-5" />
-                Common Output Files
+                File Structure & Syntax
               </CardTitle>
+            </CardHeader>
+            <CardContent className="space-y-4">
+              <div className="space-y-4">
+                <div>
+                  <h5 className="font-semibold mb-2">Header Includes</h5>
+                  <code className="text-sm bg-muted p-2 rounded block">#include &lt;iostream&gt;<br/>#include &lt;vector&gt;<br/>#include "myheader.h"</code>
+                </div>
+                
+                <div>
+                  <h5 className="font-semibold mb-2">Class Declaration</h5>
+                  <code className="text-sm bg-muted p-2 rounded block">class MyClass &#123;<br/>private:<br/>    int member;<br/>public:<br/>    MyClass();<br/>    void method();<br/>&#125;;</code>
+                </div>
+                
+                <div>
+                  <h5 className="font-semibold mb-2">Common File Extensions</h5>
+                  <div className="flex gap-2 flex-wrap">
+                    <Badge variant="outline">.cpp (source)</Badge>
+                    <Badge variant="outline">.h (header)</Badge>
+                    <Badge variant="outline">.hpp (C++ header)</Badge>
+                  </div>
+                </div>
+              </div>
+            </CardContent>
+          </Card>
+
+          <Card>
+            <CardHeader>
+              <CardTitle>Common Output Files Generated</CardTitle>
             </CardHeader>
             <CardContent>
               <div className="grid grid-cols-1 md:grid-cols-3 gap-4">

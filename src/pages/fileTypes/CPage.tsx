@@ -1,7 +1,8 @@
 
-import { ArrowLeft, FileText } from 'lucide-react';
+import { ArrowLeft, FileText, Code, Cpu } from 'lucide-react';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
+import { Badge } from '@/components/ui/badge';
 import { useNavigate } from 'react-router-dom';
 
 const CPage = () => {
@@ -11,18 +12,18 @@ const CPage = () => {
     <div className="min-h-screen bg-background">
       <div className="mx-auto max-w-4xl px-6 py-12">
         <div className="mb-8">
-          <Button variant="ghost" className="mb-4" onClick={() => navigate(-1)}>
+          <Button variant="ghost" className="mb-4" onClick={() => navigate('/')}>
             <ArrowLeft className="h-4 w-4 mr-2" />
-            Back to Previous Page
+            Back to Home
           </Button>
           
           <div className="flex items-center gap-4 mb-6">
             <div className="w-16 h-16 rounded-lg bg-blue-600 flex items-center justify-center">
-              <span className="text-white font-bold text-3xl">C</span>
+              <Cpu className="h-8 w-8 text-white" />
             </div>
             <div>
               <h1 className="text-3xl font-bold text-foreground">C Programming Files</h1>
-              <p className="text-muted-foreground">Explore C programming language files</p>
+              <p className="text-muted-foreground">Low-level systems programming language</p>
             </div>
           </div>
         </div>
@@ -30,18 +31,77 @@ const CPage = () => {
         <div className="space-y-8">
           <Card>
             <CardHeader>
-              <CardTitle>About C Files</CardTitle>
+              <CardTitle className="flex items-center gap-2">
+                <Code className="h-5 w-5" />
+                About C Language
+              </CardTitle>
             </CardHeader>
-            <CardContent>
+            <CardContent className="space-y-4">
               <p className="text-muted-foreground">
-                C is a general-purpose programming language that provides low-level access to memory and language constructs that map efficiently to machine instructions.
+                C is a general-purpose programming language that provides low-level access to memory and 
+                language constructs that map efficiently to machine instructions. It's the foundation for 
+                many modern programming languages and operating systems.
               </p>
+              
+              <div className="space-y-3">
+                <h4 className="font-semibold">Key Features:</h4>
+                <ul className="list-disc list-inside space-y-2 text-muted-foreground">
+                  <li>Direct memory access and pointer manipulation</li>
+                  <li>Minimal runtime overhead and high performance</li>
+                  <li>Procedural programming paradigm</li>
+                  <li>Portable across different hardware platforms</li>
+                  <li>Rich set of operators and data types</li>
+                  <li>Extensive standard library functions</li>
+                </ul>
+              </div>
+
+              <div className="space-y-3">
+                <h4 className="font-semibold">Common Use Cases:</h4>
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
+                  <Badge variant="secondary" className="justify-start p-3">Operating Systems</Badge>
+                  <Badge variant="secondary" className="justify-start p-3">Embedded Systems</Badge>
+                  <Badge variant="secondary" className="justify-start p-3">Device Drivers</Badge>
+                  <Badge variant="secondary" className="justify-start p-3">System Software</Badge>
+                  <Badge variant="secondary" className="justify-start p-3">Compilers & Interpreters</Badge>
+                  <Badge variant="secondary" className="justify-start p-3">Real-time Systems</Badge>
+                </div>
+              </div>
             </CardContent>
           </Card>
 
           <Card>
             <CardHeader>
-              <CardTitle>Common Operations</CardTitle>
+              <CardTitle className="flex items-center gap-2">
+                <FileText className="h-5 w-5" />
+                File Structure & Syntax
+              </CardTitle>
+            </CardHeader>
+            <CardContent className="space-y-4">
+              <div className="space-y-4">
+                <div>
+                  <h5 className="font-semibold mb-2">Header Includes</h5>
+                  <code className="text-sm bg-muted p-2 rounded block">#include &lt;stdio.h&gt;<br/>#include &lt;stdlib.h&gt;</code>
+                </div>
+                
+                <div>
+                  <h5 className="font-semibold mb-2">Function Declaration</h5>
+                  <code className="text-sm bg-muted p-2 rounded block">int main(int argc, char *argv[]) &#123;<br/>    // program logic<br/>    return 0;<br/>&#125;</code>
+                </div>
+                
+                <div>
+                  <h5 className="font-semibold mb-2">Common File Extensions</h5>
+                  <div className="flex gap-2">
+                    <Badge variant="outline">.c (source files)</Badge>
+                    <Badge variant="outline">.h (header files)</Badge>
+                  </div>
+                </div>
+              </div>
+            </CardContent>
+          </Card>
+
+          <Card>
+            <CardHeader>
+              <CardTitle>Common Output Files Generated</CardTitle>
             </CardHeader>
             <CardContent>
               <div className="grid grid-cols-1 md:grid-cols-3 gap-4">

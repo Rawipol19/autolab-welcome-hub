@@ -1,6 +1,8 @@
-import { ArrowLeft, FileText } from 'lucide-react';
-import { Card, CardContent } from '@/components/ui/card';
+
+import { ArrowLeft, FileText, Code, Zap } from 'lucide-react';
+import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
+import { Badge } from '@/components/ui/badge';
 import { useNavigate } from 'react-router-dom';
 
 const JsPage = () => {
@@ -10,50 +12,95 @@ const JsPage = () => {
     <div className="min-h-screen bg-background">
       <div className="mx-auto max-w-4xl px-6 py-12">
         <div className="mb-8">
-          <Button variant="ghost" className="mb-4" onClick={() => navigate(-1)}>
+          <Button variant="ghost" className="mb-4" onClick={() => navigate('/')}>
             <ArrowLeft className="h-4 w-4 mr-2" />
-            Back to Previous Page
+            Back to Home
           </Button>
           
           <div className="flex items-center gap-4 mb-6">
             <div className="w-16 h-16 rounded-lg bg-yellow-500 flex items-center justify-center">
-              <span className="text-white font-bold text-2xl">.js</span>
+              <Zap className="h-8 w-8 text-white" />
             </div>
             <div>
               <h1 className="text-3xl font-bold text-foreground">JavaScript Files</h1>
-              <p className="text-muted-foreground">Source code and scripts</p>
+              <p className="text-muted-foreground">Dynamic web programming language</p>
             </div>
           </div>
         </div>
 
         <div className="space-y-8">
           <Card>
-            <CardContent>
-              <h2 className="text-2xl font-bold mb-4">JavaScript File Details</h2>
-              <p className="mb-4">
-                JavaScript (.js) files are essential for web development, adding interactivity and dynamic content to websites.
-                They contain code that is executed by web browsers to create engaging user experiences.
+            <CardHeader>
+              <CardTitle className="flex items-center gap-2">
+                <Code className="h-5 w-5" />
+                About JavaScript
+              </CardTitle>
+            </CardHeader>
+            <CardContent className="space-y-4">
+              <p className="text-muted-foreground">
+                JavaScript is a high-level, dynamic, interpreted programming language that is well-suited to 
+                object-oriented and functional programming styles. It is the programming language of the web, 
+                enabling interactive web pages and complex web applications.
               </p>
               
-              <h3 className="text-xl font-semibold mb-3">Common Uses:</h3>
-              <ul className="list-disc list-inside space-y-2">
-                <li>Implementing interactive elements on websites</li>
-                <li>Handling user input and form validation</li>
-                <li>Making asynchronous requests to servers (AJAX)</li>
-                <li>Creating animations and visual effects</li>
-                <li>Building single-page applications (SPAs)</li>
-              </ul>
+              <div className="space-y-3">
+                <h4 className="font-semibold">Key Features:</h4>
+                <ul className="list-disc list-inside space-y-2 text-muted-foreground">
+                  <li>Dynamic typing and first-class functions</li>
+                  <li>Prototype-based object orientation</li>
+                  <li>Event-driven programming model</li>
+                  <li>Asynchronous programming with promises and async/await</li>
+                  <li>Rich ecosystem with NPM packages</li>
+                  <li>Cross-platform development capabilities</li>
+                </ul>
+              </div>
+
+              <div className="space-y-3">
+                <h4 className="font-semibold">Common Use Cases:</h4>
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
+                  <Badge variant="secondary" className="justify-start p-3">Frontend Web Development</Badge>
+                  <Badge variant="secondary" className="justify-start p-3">Backend Development (Node.js)</Badge>
+                  <Badge variant="secondary" className="justify-start p-3">Mobile Apps (React Native)</Badge>
+                  <Badge variant="secondary" className="justify-start p-3">Desktop Applications (Electron)</Badge>
+                  <Badge variant="secondary" className="justify-start p-3">Progressive Web Apps</Badge>
+                  <Badge variant="secondary" className="justify-start p-3">Game Development</Badge>
+                </div>
+              </div>
             </CardContent>
           </Card>
 
           <Card>
-            <CardContent>
-              <h2 className="text-2xl font-bold mb-4">Generated Output Files</h2>
-              <p className="mb-4">
-                When JavaScript code is executed, it can generate various output files that provide insights into the execution process,
-                testing results, and overall performance.
-              </p>
+            <CardHeader>
+              <CardTitle className="flex items-center gap-2">
+                <FileText className="h-5 w-5" />
+                File Structure & Syntax
+              </CardTitle>
+            </CardHeader>
+            <CardContent className="space-y-4">
+              <div className="space-y-4">
+                <div>
+                  <h5 className="font-semibold mb-2">Variable Declaration</h5>
+                  <code className="text-sm bg-muted p-2 rounded block">const greeting = "Hello, World!";<br/>let counter = 0;<br/>var oldStyle = "deprecated";</code>
+                </div>
+                
+                <div>
+                  <h5 className="font-semibold mb-2">Function Declaration</h5>
+                  <code className="text-sm bg-muted p-2 rounded block">function myFunction(param) &#123;<br/>    return param * 2;<br/>&#125;<br/><br/>const arrowFunction = (param) => param * 2;</code>
+                </div>
+                
+                <div>
+                  <h5 className="font-semibold mb-2">Module Import/Export</h5>
+                  <code className="text-sm bg-muted p-2 rounded block">import &#123; module &#125; from './module.js';<br/>export default MyComponent;</code>
+                </div>
+              </div>
+            </CardContent>
+          </Card>
 
+          <Card>
+            <CardHeader>
+              <CardTitle>Common Output Files Generated</CardTitle>
+            </CardHeader>
+            <CardContent>
               <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
                 <Card 
                   className="group hover:shadow-lg transition-all duration-300 hover:scale-105 cursor-pointer"
