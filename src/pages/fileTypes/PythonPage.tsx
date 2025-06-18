@@ -1,29 +1,28 @@
-
-import { ArrowLeft, FileText, Code, Snake } from 'lucide-react';
+import { ArrowLeft, Upload, Play, CheckCircle, FileText } from 'lucide-react';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import { Badge } from '@/components/ui/badge';
-import { useNavigate } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 
 const PythonPage = () => {
-  const navigate = useNavigate();
-
   return (
     <div className="min-h-screen bg-background">
       <div className="mx-auto max-w-4xl px-6 py-12">
         <div className="mb-8">
-          <Button variant="ghost" className="mb-4" onClick={() => navigate('/')}>
-            <ArrowLeft className="h-4 w-4 mr-2" />
-            Back to Home
-          </Button>
+          <Link to="/">
+            <Button variant="ghost" className="mb-4">
+              <ArrowLeft className="h-4 w-4 mr-2" />
+              Back to Home
+            </Button>
+          </Link>
           
           <div className="flex items-center gap-4 mb-6">
             <div className="w-16 h-16 rounded-lg bg-blue-500 flex items-center justify-center">
-              <Snake className="h-8 w-8 text-white" />
+              <span className="text-white font-bold text-xl">.py</span>
             </div>
             <div>
               <h1 className="text-3xl font-bold text-foreground">Python Files</h1>
-              <p className="text-muted-foreground">Versatile and readable programming language</p>
+              <p className="text-muted-foreground">Learn how to submit Python assignments</p>
             </div>
           </div>
         </div>
@@ -32,38 +31,80 @@ const PythonPage = () => {
           <Card>
             <CardHeader>
               <CardTitle className="flex items-center gap-2">
-                <Code className="h-5 w-5" />
-                About Python
+                <Upload className="h-5 w-5" />
+                How to Submit Python Files
               </CardTitle>
             </CardHeader>
             <CardContent className="space-y-4">
               <p className="text-muted-foreground">
-                Python is a high-level, interpreted programming language with dynamic semantics. Its high-level 
-                built-in data structures, combined with dynamic typing and dynamic binding, make it very attractive 
-                for Rapid Application Development, as well as for use as a scripting or glue language.
+                Python files (.py) are one of the most commonly supported file types in AutoLab. 
+                Here's everything you need to know about submitting Python assignments:
               </p>
               
               <div className="space-y-3">
-                <h4 className="font-semibold">Key Features:</h4>
-                <ul className="list-disc list-inside space-y-2 text-muted-foreground">
-                  <li>Simple and readable syntax</li>
-                  <li>Dynamic typing and interpreted execution</li>
-                  <li>Extensive standard library and third-party packages</li>
-                  <li>Object-oriented programming support</li>
-                  <li>Cross-platform compatibility</li>
-                  <li>Strong community and ecosystem</li>
-                </ul>
+                <h4 className="font-semibold">Supported File Types:</h4>
+                <div className="flex flex-wrap gap-2">
+                  <Badge variant="secondary">.py</Badge>
+                  <Badge variant="secondary">.ipynb (Jupyter Notebooks)</Badge>
+                  <Badge variant="secondary">.pyw</Badge>
+                </div>
               </div>
 
               <div className="space-y-3">
-                <h4 className="font-semibold">Common Use Cases:</h4>
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
-                  <Badge variant="secondary" className="justify-start p-3">Web Development</Badge>
-                  <Badge variant="secondary" className="justify-start p-3">Data Science & Analytics</Badge>
-                  <Badge variant="secondary" className="justify-start p-3">Machine Learning & AI</Badge>
-                  <Badge variant="secondary" className="justify-start p-3">Automation & Scripting</Badge>
-                  <Badge variant="secondary" className="justify-start p-3">Scientific Computing</Badge>
-                  <Badge variant="secondary" className="justify-start p-3">Desktop Applications</Badge>
+                <h4 className="font-semibold">Submission Methods:</h4>
+                <ul className="list-disc list-inside space-y-2 text-muted-foreground">
+                  <li>Single .py file upload</li>
+                  <li>Multiple Python files as a ZIP archive</li>
+                  <li>Jupyter Notebook files (.ipynb)</li>
+                  <li>Python packages with requirements.txt</li>
+                </ul>
+              </div>
+            </CardContent>
+          </Card>
+
+          <Card>
+            <CardHeader>
+              <CardTitle className="flex items-center gap-2">
+                <Play className="h-5 w-5" />
+                Testing Process
+              </CardTitle>
+            </CardHeader>
+            <CardContent className="space-y-4">
+              <p className="text-muted-foreground">
+                When you submit Python files, AutoLab will:
+              </p>
+              
+              <div className="space-y-4">
+                <div className="flex items-start gap-3">
+                  <div className="w-6 h-6 rounded-full bg-primary text-primary-foreground flex items-center justify-center text-sm font-bold">1</div>
+                  <div>
+                    <h5 className="font-semibold">Syntax Validation</h5>
+                    <p className="text-sm text-muted-foreground">Check for Python syntax errors and basic code structure</p>
+                  </div>
+                </div>
+                
+                <div className="flex items-start gap-3">
+                  <div className="w-6 h-6 rounded-full bg-primary text-primary-foreground flex items-center justify-center text-sm font-bold">2</div>
+                  <div>
+                    <h5 className="font-semibold">Dependency Installation</h5>
+                    <p className="text-sm text-muted-foreground">Install required packages from requirements.txt (if provided)</p>
+                  </div>
+                </div>
+                
+                <div className="flex items-start gap-3">
+                  <div className="w-6 h-6 rounded-full bg-primary text-primary-foreground flex items-center justify-center text-sm font-bold">3</div>
+                  <div>
+                    <h5 className="font-semibold">Test Execution</h5>
+                    <p className="text-sm text-muted-foreground">Run your code against predefined test cases</p>
+                  </div>
+                </div>
+                
+                <div className="flex items-start gap-3">
+                  <div className="w-6 h-6 rounded-full bg-primary text-primary-foreground flex items-center justify-center text-sm font-bold">4</div>
+                  <div>
+                    <h5 className="font-semibold">Performance Analysis</h5>
+                    <p className="text-sm text-muted-foreground">Measure execution time and memory usage</p>
+                  </div>
                 </div>
               </div>
             </CardContent>
@@ -73,74 +114,90 @@ const PythonPage = () => {
             <CardHeader>
               <CardTitle className="flex items-center gap-2">
                 <FileText className="h-5 w-5" />
-                File Structure & Syntax
+                Output Files Generated
               </CardTitle>
             </CardHeader>
             <CardContent className="space-y-4">
-              <div className="space-y-4">
-                <div>
-                  <h5 className="font-semibold mb-2">Import Statements</h5>
-                  <code className="text-sm bg-muted p-2 rounded block">import os<br/>from datetime import datetime</code>
-                </div>
+              <p className="text-muted-foreground">
+                After execution and testing, AutoLab generates various output files:
+              </p>
+              
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                <Link to="/file-types/output/pdf">
+                  <div className="space-y-2 p-4 rounded-lg border hover:bg-muted/50 transition-colors cursor-pointer">
+                    <div className="flex items-center gap-2">
+                      <div className="w-8 h-8 rounded bg-red-500 flex items-center justify-center">
+                        <span className="text-white font-bold text-xs">PDF</span>
+                      </div>
+                      <div>
+                        <h5 className="font-semibold">Test Report</h5>
+                        <p className="text-sm text-muted-foreground">Comprehensive test results and analysis</p>
+                      </div>
+                    </div>
+                  </div>
+                </Link>
                 
-                <div>
-                  <h5 className="font-semibold mb-2">Function Definition</h5>
-                  <code className="text-sm bg-muted p-2 rounded block">def my_function(param):<br/>    """Function docstring"""<br/>    return param * 2</code>
-                </div>
+                <Link to="/file-types/output/txt">
+                  <div className="space-y-2 p-4 rounded-lg border hover:bg-muted/50 transition-colors cursor-pointer">
+                    <div className="flex items-center gap-2">
+                      <div className="w-8 h-8 rounded bg-gray-400 flex items-center justify-center">
+                        <span className="text-white font-bold text-xs">TXT</span>
+                      </div>
+                      <div>
+                        <h5 className="font-semibold">Program Output</h5>
+                        <p className="text-sm text-muted-foreground">Console output and execution results</p>
+                      </div>
+                    </div>
+                  </div>
+                </Link>
                 
-                <div>
-                  <h5 className="font-semibold mb-2">Class Definition</h5>
-                  <code className="text-sm bg-muted p-2 rounded block">class MyClass:<br/>    def __init__(self):<br/>        self.attribute = "value"</code>
-                </div>
+                <Link to="/file-types/output/log">
+                  <div className="space-y-2 p-4 rounded-lg border hover:bg-muted/50 transition-colors cursor-pointer">
+                    <div className="flex items-center gap-2">
+                      <div className="w-8 h-8 rounded bg-amber-500 flex items-center justify-center">
+                        <span className="text-white font-bold text-xs">LOG</span>
+                      </div>
+                      <div>
+                        <h5 className="font-semibold">Execution Logs</h5>
+                        <p className="text-sm text-muted-foreground">Detailed execution and error logs</p>
+                      </div>
+                    </div>
+                  </div>
+                </Link>
+                
+                <Link to="/file-types/output/yml">
+                  <div className="space-y-2 p-4 rounded-lg border hover:bg-muted/50 transition-colors cursor-pointer">
+                    <div className="flex items-center gap-2">
+                      <div className="w-8 h-8 rounded bg-teal-500 flex items-center justify-center">
+                        <span className="text-white font-bold text-xs">YML</span>
+                      </div>
+                      <div>
+                        <h5 className="font-semibold">Test Configuration</h5>
+                        <p className="text-sm text-muted-foreground">Test parameters and environment settings</p>
+                      </div>
+                    </div>
+                  </div>
+                </Link>
               </div>
             </CardContent>
           </Card>
 
           <Card>
             <CardHeader>
-              <CardTitle>Common Output Files Generated</CardTitle>
+              <CardTitle className="flex items-center gap-2">
+                <CheckCircle className="h-5 w-5" />
+                Best Practices
+              </CardTitle>
             </CardHeader>
             <CardContent>
-              <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
-                <Card 
-                  className="group hover:shadow-lg transition-all duration-300 hover:scale-105 cursor-pointer"
-                  onClick={() => navigate('/file-types/output/pdf')}
-                >
-                  <CardContent className="p-6 text-center">
-                    <div className="w-12 h-12 rounded-lg bg-red-500 flex items-center justify-center mx-auto mb-3 group-hover:scale-110 transition-transform">
-                      <FileText className="h-6 w-6 text-white" />
-                    </div>
-                    <h4 className="font-semibold text-foreground">PDF Report</h4>
-                    <p className="text-sm text-muted-foreground font-mono">.pdf</p>
-                  </CardContent>
-                </Card>
-                
-                <Card 
-                  className="group hover:shadow-lg transition-all duration-300 hover:scale-105 cursor-pointer"
-                  onClick={() => navigate('/file-types/output/txt')}
-                >
-                  <CardContent className="p-6 text-center">
-                    <div className="w-12 h-12 rounded-lg bg-gray-500 flex items-center justify-center mx-auto mb-3 group-hover:scale-110 transition-transform">
-                      <FileText className="h-6 w-6 text-white" />
-                    </div>
-                    <h4 className="font-semibold text-foreground">Text Output</h4>
-                    <p className="text-sm text-muted-foreground font-mono">.txt</p>
-                  </CardContent>
-                </Card>
-                
-                <Card 
-                  className="group hover:shadow-lg transition-all duration-300 hover:scale-105 cursor-pointer"
-                  onClick={() => navigate('/file-types/output/log')}
-                >
-                  <CardContent className="p-6 text-center">
-                    <div className="w-12 h-12 rounded-lg bg-yellow-600 flex items-center justify-center mx-auto mb-3 group-hover:scale-110 transition-transform">
-                      <FileText className="h-6 w-6 text-white" />
-                    </div>
-                    <h4 className="font-semibold text-foreground">Log Files</h4>
-                    <p className="text-sm text-muted-foreground font-mono">.log</p>
-                  </CardContent>
-                </Card>
-              </div>
+              <ul className="space-y-2 text-muted-foreground">
+                <li>• Include a requirements.txt file for external dependencies</li>
+                <li>• Follow PEP 8 style guidelines for better code readability</li>
+                <li>• Add proper docstrings and comments to your functions</li>
+                <li>• Test your code locally before submission</li>
+                <li>• Use meaningful variable and function names</li>
+                <li>• Handle edge cases and error conditions</li>
+              </ul>
             </CardContent>
           </Card>
         </div>

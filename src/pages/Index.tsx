@@ -1,3 +1,4 @@
+
 import { useState } from 'react';
 import { Upload, CheckCircle, FileText, Code, Archive, Zap, Shield, Users, Brain, Eye, Target, Github, MapPin, Mail } from 'lucide-react';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
@@ -80,8 +81,7 @@ const Index = () => {
       category: "Archives & Documents",
       files: [
         { name: "ZIP Archive", extension: ".zip", color: "bg-purple-500" },
-        { name: "TAR Archive", extension: ".tar", color: "bg-indigo-500" },
-        { name: "YAML Config", extension: ".yml", color: "bg-teal-500" }
+        { name: "TAR Archive", extension: ".tar", color: "bg-indigo-500" }
       ]
     }
   ];
@@ -117,8 +117,7 @@ const Index = () => {
       'c': '/file-types/c',
       'go': '/file-types/go',
       'ziparchive': '/file-types/zip',
-      'tararchive': '/file-types/tar',
-      'yamlconfig': '/file-types/output/yml'
+      'tararchive': '/file-types/tar'
     };
 
     const route = routeMap[routeName];

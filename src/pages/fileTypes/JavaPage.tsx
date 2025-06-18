@@ -1,29 +1,28 @@
-
-import { ArrowLeft, FileText, Code, Coffee } from 'lucide-react';
+import { ArrowLeft, Upload, Play, CheckCircle, FileText } from 'lucide-react';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import { Badge } from '@/components/ui/badge';
-import { useNavigate } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 
 const JavaPage = () => {
-  const navigate = useNavigate();
-
   return (
     <div className="min-h-screen bg-background">
       <div className="mx-auto max-w-4xl px-6 py-12">
         <div className="mb-8">
-          <Button variant="ghost" className="mb-4" onClick={() => navigate('/')}>
-            <ArrowLeft className="h-4 w-4 mr-2" />
-            Back to Home
-          </Button>
+          <Link to="/">
+            <Button variant="ghost" className="mb-4">
+              <ArrowLeft className="h-4 w-4 mr-2" />
+              Back to Home
+            </Button>
+          </Link>
           
           <div className="flex items-center gap-4 mb-6">
             <div className="w-16 h-16 rounded-lg bg-orange-500 flex items-center justify-center">
-              <Coffee className="h-8 w-8 text-white" />
+              <span className="text-white font-bold text-sm">.java</span>
             </div>
             <div>
-              <h1 className="text-3xl font-bold text-foreground">Java Source Code</h1>
-              <p className="text-muted-foreground">Enterprise-grade object-oriented programming</p>
+              <h1 className="text-3xl font-bold text-foreground">Java Files</h1>
+              <p className="text-muted-foreground">Learn how to submit Java assignments</p>
             </div>
           </div>
         </div>
@@ -32,38 +31,75 @@ const JavaPage = () => {
           <Card>
             <CardHeader>
               <CardTitle className="flex items-center gap-2">
-                <Code className="h-5 w-5" />
-                About Java
+                <Upload className="h-5 w-5" />
+                How to Submit Java Files
               </CardTitle>
             </CardHeader>
             <CardContent className="space-y-4">
               <p className="text-muted-foreground">
-                Java is a high-level, class-based, object-oriented programming language that is designed to have 
-                as few implementation dependencies as possible. It follows the principle of "write once, run anywhere" 
-                (WORA), making it highly portable across different platforms.
+                Java files (.java) are fully supported in AutoLab with comprehensive compilation and testing capabilities.
               </p>
               
               <div className="space-y-3">
-                <h4 className="font-semibold">Key Features:</h4>
-                <ul className="list-disc list-inside space-y-2 text-muted-foreground">
-                  <li>Platform independence through Java Virtual Machine (JVM)</li>
-                  <li>Strong memory management and garbage collection</li>
-                  <li>Robust security features and sandboxing</li>
-                  <li>Multi-threading support for concurrent programming</li>
-                  <li>Rich API and extensive standard library</li>
-                  <li>Strong typing system and compile-time error checking</li>
-                </ul>
+                <h4 className="font-semibold">Supported File Types:</h4>
+                <div className="flex flex-wrap gap-2">
+                  <Badge variant="secondary">.java</Badge>
+                  <Badge variant="secondary">.jar</Badge>
+                  <Badge variant="secondary">.class</Badge>
+                </div>
               </div>
 
               <div className="space-y-3">
-                <h4 className="font-semibold">Common Use Cases:</h4>
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
-                  <Badge variant="secondary" className="justify-start p-3">Enterprise Applications</Badge>
-                  <Badge variant="secondary" className="justify-start p-3">Android Development</Badge>
-                  <Badge variant="secondary" className="justify-start p-3">Web Services & APIs</Badge>
-                  <Badge variant="secondary" className="justify-start p-3">Desktop Applications</Badge>
-                  <Badge variant="secondary" className="justify-start p-3">Scientific Applications</Badge>
-                  <Badge variant="secondary" className="justify-start p-3">Big Data Processing</Badge>
+                <h4 className="font-semibold">Submission Methods:</h4>
+                <ul className="list-disc list-inside space-y-2 text-muted-foreground">
+                  <li>Single .java source file</li>
+                  <li>Multiple Java files in a package structure</li>
+                  <li>JAR archives with compiled classes</li>
+                  <li>Maven/Gradle projects with build files</li>
+                </ul>
+              </div>
+            </CardContent>
+          </Card>
+
+          <Card>
+            <CardHeader>
+              <CardTitle className="flex items-center gap-2">
+                <Play className="h-5 w-5" />
+                Compilation & Testing Process
+              </CardTitle>
+            </CardHeader>
+            <CardContent className="space-y-4">
+              <div className="space-y-4">
+                <div className="flex items-start gap-3">
+                  <div className="w-6 h-6 rounded-full bg-primary text-primary-foreground flex items-center justify-center text-sm font-bold">1</div>
+                  <div>
+                    <h5 className="font-semibold">Compilation Check</h5>
+                    <p className="text-sm text-muted-foreground">Compile Java source files using javac compiler</p>
+                  </div>
+                </div>
+                
+                <div className="flex items-start gap-3">
+                  <div className="w-6 h-6 rounded-full bg-primary text-primary-foreground flex items-center justify-center text-sm font-bold">2</div>
+                  <div>
+                    <h5 className="font-semibold">Classpath Setup</h5>
+                    <p className="text-sm text-muted-foreground">Configure classpath for external libraries and dependencies</p>
+                  </div>
+                </div>
+                
+                <div className="flex items-start gap-3">
+                  <div className="w-6 h-6 rounded-full bg-primary text-primary-foreground flex items-center justify-center text-sm font-bold">3</div>
+                  <div>
+                    <h5 className="font-semibold">Unit Testing</h5>
+                    <p className="text-sm text-muted-foreground">Execute JUnit tests and custom test cases</p>
+                  </div>
+                </div>
+                
+                <div className="flex items-start gap-3">
+                  <div className="w-6 h-6 rounded-full bg-primary text-primary-foreground flex items-center justify-center text-sm font-bold">4</div>
+                  <div>
+                    <h5 className="font-semibold">Code Quality Analysis</h5>
+                    <p className="text-sm text-muted-foreground">Check coding standards and detect potential issues</p>
+                  </div>
                 </div>
               </div>
             </CardContent>
@@ -73,74 +109,90 @@ const JavaPage = () => {
             <CardHeader>
               <CardTitle className="flex items-center gap-2">
                 <FileText className="h-5 w-5" />
-                File Structure & Syntax
+                Output Files Generated
               </CardTitle>
             </CardHeader>
             <CardContent className="space-y-4">
-              <div className="space-y-4">
-                <div>
-                  <h5 className="font-semibold mb-2">Package Declaration</h5>
-                  <code className="text-sm bg-muted p-2 rounded block">package com.example.myapp;</code>
-                </div>
+              <p className="text-muted-foreground">
+                After compilation and testing, AutoLab generates various output files:
+              </p>
+              
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                <Link to="/file-types/output/pdf">
+                  <div className="space-y-2 p-4 rounded-lg border hover:bg-muted/50 transition-colors cursor-pointer">
+                    <div className="flex items-center gap-2">
+                      <div className="w-8 h-8 rounded bg-red-500 flex items-center justify-center">
+                        <span className="text-white font-bold text-xs">PDF</span>
+                      </div>
+                      <div>
+                        <h5 className="font-semibold">Test Report</h5>
+                        <p className="text-sm text-muted-foreground">Comprehensive compilation and test results</p>
+                      </div>
+                    </div>
+                  </div>
+                </Link>
                 
-                <div>
-                  <h5 className="font-semibold mb-2">Import Statements</h5>
-                  <code className="text-sm bg-muted p-2 rounded block">import java.util.List;<br/>import java.io.*;</code>
-                </div>
+                <Link to="/file-types/output/txt">
+                  <div className="space-y-2 p-4 rounded-lg border hover:bg-muted/50 transition-colors cursor-pointer">
+                    <div className="flex items-center gap-2">
+                      <div className="w-8 h-8 rounded bg-gray-400 flex items-center justify-center">
+                        <span className="text-white font-bold text-xs">TXT</span>
+                      </div>
+                      <div>
+                        <h5 className="font-semibold">Program Output</h5>
+                        <p className="text-sm text-muted-foreground">Console output and execution results</p>
+                      </div>
+                    </div>
+                  </div>
+                </Link>
                 
-                <div>
-                  <h5 className="font-semibold mb-2">Class Declaration</h5>
-                  <code className="text-sm bg-muted p-2 rounded block">public class MyClass &#123;<br/>    // class body<br/>&#125;</code>
-                </div>
+                <Link to="/file-types/output/log">
+                  <div className="space-y-2 p-4 rounded-lg border hover:bg-muted/50 transition-colors cursor-pointer">
+                    <div className="flex items-center gap-2">
+                      <div className="w-8 h-8 rounded bg-amber-500 flex items-center justify-center">
+                        <span className="text-white font-bold text-xs">LOG</span>
+                      </div>
+                      <div>
+                        <h5 className="font-semibold">Compilation Logs</h5>
+                        <p className="text-sm text-muted-foreground">Detailed compilation and error logs</p>
+                      </div>
+                    </div>
+                  </div>
+                </Link>
+                
+                <Link to="/file-types/output/yml">
+                  <div className="space-y-2 p-4 rounded-lg border hover:bg-muted/50 transition-colors cursor-pointer">
+                    <div className="flex items-center gap-2">
+                      <div className="w-8 h-8 rounded bg-teal-500 flex items-center justify-center">
+                        <span className="text-white font-bold text-xs">YML</span>
+                      </div>
+                      <div>
+                        <h5 className="font-semibold">Test Configuration</h5>
+                        <p className="text-sm text-muted-foreground">Build and test configurations</p>
+                      </div>
+                    </div>
+                  </div>
+                </Link>
               </div>
             </CardContent>
           </Card>
 
           <Card>
             <CardHeader>
-              <CardTitle>Common Output Files Generated</CardTitle>
+              <CardTitle className="flex items-center gap-2">
+                <CheckCircle className="h-5 w-5" />
+                Best Practices
+              </CardTitle>
             </CardHeader>
             <CardContent>
-              <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
-                <Card 
-                  className="group hover:shadow-lg transition-all duration-300 hover:scale-105 cursor-pointer"
-                  onClick={() => navigate('/file-types/output/pdf')}
-                >
-                  <CardContent className="p-6 text-center">
-                    <div className="w-12 h-12 rounded-lg bg-red-500 flex items-center justify-center mx-auto mb-3 group-hover:scale-110 transition-transform">
-                      <FileText className="h-6 w-6 text-white" />
-                    </div>
-                    <h4 className="font-semibold text-foreground">PDF Report</h4>
-                    <p className="text-sm text-muted-foreground font-mono">.pdf</p>
-                  </CardContent>
-                </Card>
-                
-                <Card 
-                  className="group hover:shadow-lg transition-all duration-300 hover:scale-105 cursor-pointer"
-                  onClick={() => navigate('/file-types/output/txt')}
-                >
-                  <CardContent className="p-6 text-center">
-                    <div className="w-12 h-12 rounded-lg bg-gray-500 flex items-center justify-center mx-auto mb-3 group-hover:scale-110 transition-transform">
-                      <FileText className="h-6 w-6 text-white" />
-                    </div>
-                    <h4 className="font-semibold text-foreground">Text Output</h4>
-                    <p className="text-sm text-muted-foreground font-mono">.txt</p>
-                  </CardContent>
-                </Card>
-                
-                <Card 
-                  className="group hover:shadow-lg transition-all duration-300 hover:scale-105 cursor-pointer"
-                  onClick={() => navigate('/file-types/output/log')}
-                >
-                  <CardContent className="p-6 text-center">
-                    <div className="w-12 h-12 rounded-lg bg-yellow-600 flex items-center justify-center mx-auto mb-3 group-hover:scale-110 transition-transform">
-                      <FileText className="h-6 w-6 text-white" />
-                    </div>
-                    <h4 className="font-semibold text-foreground">Log Files</h4>
-                    <p className="text-sm text-muted-foreground font-mono">.log</p>
-                  </CardContent>
-                </Card>
-              </div>
+              <ul className="space-y-2 text-muted-foreground">
+                <li>• Follow Java naming conventions (camelCase for methods, PascalCase for classes)</li>
+                <li>• Include proper package declarations</li>
+                <li>• Use meaningful class and method names</li>
+                <li>• Add comprehensive Javadoc comments</li>
+                <li>• Handle exceptions appropriately</li>
+                <li>• Include a main method if required for execution</li>
+              </ul>
             </CardContent>
           </Card>
         </div>
