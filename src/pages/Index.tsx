@@ -1,3 +1,4 @@
+
 import { useState } from 'react';
 import { Upload, CheckCircle, FileText, Code, Archive, Zap, Shield, Users, Brain, Eye, Target, Github, MapPin, Mail } from 'lucide-react';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
@@ -136,6 +137,17 @@ const Index = () => {
 
   return (
     <div className="min-h-screen bg-background">
+      {/* Version Banner */}
+      <div className="bg-primary/10 border-b">
+        <div className="mx-auto max-w-7xl px-6 py-2">
+          <div className="text-center">
+            <Badge variant="outline" className="bg-white/80 text-primary font-medium">
+              Version 0.8.0.1 • Released 6/20/2025
+            </Badge>
+          </div>
+        </div>
+      </div>
+
       {/* Hero Section */}
       <section className="relative overflow-hidden bg-gradient-to-br from-primary/5 via-background to-secondary/5">
         <div className="absolute inset-0 bg-grid-black/[0.02] bg-[size:50px_50px]" />
