@@ -437,7 +437,11 @@ const Index = () => {
                 <a href="#features" className="block text-primary-foreground/80 hover:text-primary-foreground transition-colors">Features</a>
                 <a href="#how-it-works" className="block text-primary-foreground/80 hover:text-primary-foreground transition-colors">How It Works</a>
                 <a href="#about" className="block text-primary-foreground/80 hover:text-primary-foreground transition-colors">About</a>
-                <a href="#documentation" className="block text-primary-foreground/80 hover:text-primary-foreground transition-colors">Documentation</a>
+                <a 
+                  href="https://docs.autolabproject.com/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="block text-primary-foreground/80 hover:text-primary-foreground transition-colors">Documentation</a>
               </div>
             </div>
 
@@ -446,15 +450,29 @@ const Index = () => {
               <h3 className="text-lg font-semibold mb-4">Resources</h3>
               <div className="space-y-2 text-sm">
                 <a 
-                  href="https://github.com" 
+                  href="https://github.com/amirnd51/RAID" 
                   target="_blank" 
                   rel="noopener noreferrer"
                   className="block text-primary-foreground/80 hover:text-primary-foreground transition-colors"
                 >
                   GitHub Repository
                 </a>
-                <a href="#api" className="block text-primary-foreground/80 hover:text-primary-foreground transition-colors">API Documentation</a>
-                <a href="#guide" className="block text-primary-foreground/80 hover:text-primary-foreground transition-colors">User Guide</a>
+                <a 
+                  href="https://cse510.xlabub.com/slides/lecture2.pdf"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="block text-primary-foreground/80 hover:text-primary-foreground transition-colors"
+                >
+                  API Documentation
+                </a>
+                <a
+                  href="https://docs.autolabproject.com/instructors/" 
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="block text-primary-foreground/80 hover:text-primary-foreground transition-colors"
+                >
+                  User Guide
+                </a>
                 <a href="#support" className="block text-primary-foreground/80 hover:text-primary-foreground transition-colors">Support</a>
               </div>
             </div>
