@@ -1,4 +1,3 @@
-
 import { useState } from 'react';
 import { Upload, CheckCircle, FileText, Code, Archive, Zap, Shield, Users, Brain, Eye, Target, Github, MapPin, Mail } from 'lucide-react';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
@@ -128,6 +127,13 @@ const Index = () => {
     }
   };
 
+  const scrollToRAI = () => {
+    const raiSection = document.querySelector('#rai-section');
+    if (raiSection) {
+      raiSection.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
+
   return (
     <div className="min-h-screen bg-background">
       {/* Hero Section */}
@@ -170,7 +176,7 @@ const Index = () => {
       </section>
 
       {/* RAI Section */}
-      <section className="py-24 bg-gradient-to-br from-accent/10 to-primary/5">
+      <section id="rai-section" className="py-24 bg-gradient-to-br from-accent/10 to-primary/5">
         <div className="mx-auto max-w-7xl px-6 lg:px-8">
           <div className="text-center mb-16">
             <div className="flex items-center justify-center mb-6">
@@ -265,7 +271,7 @@ const Index = () => {
       </section>
 
       {/* How It Works Section */}
-      <section className="py-24 bg-secondary/5">
+      <section id="how-it-works" className="py-24 bg-secondary/5">
         <div className="mx-auto max-w-7xl px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-3xl font-bold tracking-tight text-foreground sm:text-4xl">
@@ -434,9 +440,14 @@ const Index = () => {
               <h3 className="text-lg font-semibold mb-4">Quick Links</h3>
               <div className="space-y-2 text-sm">
                 <a href="/" className="block text-primary-foreground/80 hover:text-primary-foreground transition-colors">Home</a>
-                <a href="#features" className="block text-primary-foreground/80 hover:text-primary-foreground transition-colors">Features</a>
-                <a href="#how-it-works" className="block text-primary-foreground/80 hover:text-primary-foreground transition-colors">How It Works</a>
-                <a href="#about" className="block text-primary-foreground/80 hover:text-primary-foreground transition-colors">About</a>
+                <button 
+                  onClick={scrollToRAI}
+                  className="block text-primary-foreground/80 hover:text-primary-foreground transition-colors text-left"
+                >
+                  Features
+                </button>
+                <a href="/how-it-works" className="block text-primary-foreground/80 hover:text-primary-foreground transition-colors">How It Works</a>
+                <a href="/about" className="block text-primary-foreground/80 hover:text-primary-foreground transition-colors">About</a>
                 <a 
                   href="https://docs.autolabproject.com/"
                   target="_blank"
