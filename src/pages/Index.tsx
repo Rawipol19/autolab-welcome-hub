@@ -473,7 +473,7 @@ const Index = () => {
                   href="https://docs.autolabproject.com/"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="block text-primary-foreground/80 hover:text-primary-foreground transition-colors">Get Started</a>
+                  className="block text-primary-foreground/80 hover:text-primary-foreground transition-colors">Documentation</a>
               </div>
             </div>
 

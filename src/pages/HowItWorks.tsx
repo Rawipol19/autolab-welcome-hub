@@ -304,7 +304,11 @@ const HowItWorks = () => {
             from our advanced autograding technology.
           </p>
           <div className="flex items-center justify-center gap-4">
-            <Button size="lg" className="bg-primary hover:bg-primary/90">
+            <Button 
+              size="lg" 
+              className="bg-primary hover:bg-primary/90"
+              onClick={() => window.open('https://docs.autolabproject.com/', '_blank')}
+            >
               Get Started
             </Button>
             <Button variant="outline" size="lg" onClick={() => window.location.href = '/'}>
