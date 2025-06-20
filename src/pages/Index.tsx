@@ -176,10 +176,19 @@ const Index = () => {
               Fast, secure, and comprehensive feedback for students and instructors.
             </p>
             <div className="mt-10 flex items-center justify-center gap-x-6">
-              <Button size="lg" className="bg-primary hover:bg-primary/90 text-primary-foreground">
+              <Button 
+                size="lg" 
+                className="bg-primary hover:bg-primary/90 text-primary-foreground"
+                onClick={() => window.open('https://docs.autolabproject.com/', '_blank')}
+              >
                 Get Started
               </Button>
-              <Button variant="outline" size="lg" className="border-primary text-primary hover:bg-primary hover:text-primary-foreground">
+              <Button 
+                variant="outline" 
+                size="lg" 
+                className="border-primary text-primary hover:bg-primary hover:text-primary-foreground"
+                onClick={() => window.location.href = '/how-it-works'}
+              >
                 Learn More
               </Button>
             </div>
@@ -464,7 +473,7 @@ const Index = () => {
                   href="https://docs.autolabproject.com/"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="block text-primary-foreground/80 hover:text-primary-foreground transition-colors">Documentation</a>
+                  className="block text-primary-foreground/80 hover:text-primary-foreground transition-colors">Get Started</a>
               </div>
             </div>
 
