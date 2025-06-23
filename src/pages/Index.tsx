@@ -1,4 +1,3 @@
-
 import { useState } from 'react';
 import { Upload, CheckCircle, FileText, Code, Archive, Zap, Shield, Users, Brain, Eye, Target, Github, MapPin, Mail } from 'lucide-react';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
@@ -35,10 +34,22 @@ const Index = () => {
       title: "Intelligent Code Analysis",
       description: "AI-powered analysis provides deeper insights into code quality, structure, and potential improvements beyond traditional testing.",
       benefits: [
-        "Detects code patterns and anti-patterns",
-        "Suggests optimization opportunities",
-        "Identifies potential security vulnerabilities",
-        "Analyzes code complexity and maintainability"
+        {
+          text: "Detects code patterns and anti-patterns",
+          image: "https://images.unsplash.com/photo-1461749280684-dccba630e2f6?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80"
+        },
+        {
+          text: "Suggests optimization opportunities",
+          image: "https://images.unsplash.com/photo-1487058792275-0ad4aaf24ca7?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80"
+        },
+        {
+          text: "Identifies potential security vulnerabilities",
+          image: "https://images.unsplash.com/photo-1518770660439-4636190af475?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80"
+        },
+        {
+          text: "Analyzes code complexity and maintainability",
+          image: "https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80"
+        }
       ]
     },
     {
@@ -46,10 +57,22 @@ const Index = () => {
       title: "Fair & Unbiased Assessment",
       description: "RAI ensures equitable evaluation by removing human bias and providing consistent, transparent grading criteria.",
       benefits: [
-        "Standardized evaluation across all submissions",
-        "Eliminates subjective grading variations",
-        "Provides detailed justification for scores",
-        "Ensures equal opportunity for all students"
+        {
+          text: "Standardized evaluation across all submissions",
+          image: "https://images.unsplash.com/photo-1531297484001-80022131f5a1?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80"
+        },
+        {
+          text: "Eliminates subjective grading variations",
+          image: "https://images.unsplash.com/photo-1498050108023-c5249f4df085?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80"
+        },
+        {
+          text: "Provides detailed justification for scores",
+          image: "https://images.unsplash.com/photo-1461749280684-dccba630e2f6?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80"
+        },
+        {
+          text: "Ensures equal opportunity for all students",
+          image: "https://images.unsplash.com/photo-1487058792275-0ad4aaf24ca7?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80"
+        }
       ]
     },
     {
@@ -57,10 +80,22 @@ const Index = () => {
       title: "Personalized Learning Insights",
       description: "Advanced analytics identify individual learning patterns and provide targeted recommendations for improvement.",
       benefits: [
-        "Tracks learning progress over time",
-        "Identifies knowledge gaps and strengths",
-        "Suggests personalized study materials",
-        "Adapts difficulty based on student performance"
+        {
+          text: "Tracks learning progress over time",
+          image: "https://images.unsplash.com/photo-1518770660439-4636190af475?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80"
+        },
+        {
+          text: "Identifies knowledge gaps and strengths",
+          image: "https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80"
+        },
+        {
+          text: "Suggests personalized study materials",
+          image: "https://images.unsplash.com/photo-1531297484001-80022131f5a1?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80"
+        },
+        {
+          text: "Adapts difficulty based on student performance",
+          image: "https://images.unsplash.com/photo-1498050108023-c5249f4df085?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80"
+        }
       ]
     }
   ];
@@ -229,14 +264,23 @@ const Index = () => {
                     </CardDescription>
                   </CardHeader>
                   <CardContent>
-                    <ul className="space-y-2">
+                    <div className="space-y-4">
                       {feature.benefits.map((benefit, benefitIndex) => (
-                        <li key={benefitIndex} className="flex items-start gap-2 text-sm text-muted-foreground">
-                          <CheckCircle className="h-4 w-4 text-primary mt-0.5 flex-shrink-0" />
-                          <span>{benefit}</span>
-                        </li>
+                        <div key={benefitIndex} className="flex items-start gap-3 p-3 bg-white/50 rounded-lg border border-primary/10 hover:shadow-md transition-all duration-200">
+                          <div className="flex-shrink-0">
+                            <img 
+                              src={benefit.image} 
+                              alt={benefit.text}
+                              className="w-12 h-12 object-cover rounded-lg shadow-sm"
+                            />
+                          </div>
+                          <div className="flex items-start gap-2 flex-1">
+                            <CheckCircle className="h-4 w-4 text-primary mt-0.5 flex-shrink-0" />
+                            <span className="text-sm text-muted-foreground leading-relaxed">{benefit.text}</span>
+                          </div>
+                        </div>
                       ))}
-                    </ul>
+                    </div>
                   </CardContent>
                 </Card>
               );
