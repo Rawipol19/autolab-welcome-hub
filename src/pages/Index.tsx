@@ -1,4 +1,3 @@
-
 import { useState } from 'react';
 import { Upload, CheckCircle, FileText, Code, Archive, Zap, Shield, Users, Brain, Eye, Target, Github, MapPin, Mail } from 'lucide-react';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
@@ -250,7 +249,7 @@ const Index = () => {
             </p>
           </div>
 
-          <div className="grid lg:grid-cols-3 gap-8 mb-16">
+          <div className="grid lg:grid-cols-1 xl:grid-cols-3 gap-12 mb-16">
             {raiFeatures.map((feature, index) => {
               const FeatureIcon = feature.icon;
               return (
@@ -265,19 +264,19 @@ const Index = () => {
                     </CardDescription>
                   </CardHeader>
                   <CardContent>
-                    <div className="space-y-6">
+                    <div className="space-y-8">
                       {feature.benefits.map((benefit, benefitIndex) => (
-                        <div key={benefitIndex} className="flex flex-col sm:flex-row gap-4 p-4 bg-white/50 rounded-lg border border-primary/10 hover:shadow-md transition-all duration-200">
-                          <div className="flex-shrink-0">
+                        <div key={benefitIndex} className="p-6 bg-white/50 rounded-lg border border-primary/10 hover:shadow-md transition-all duration-200">
+                          <div className="mb-4">
                             <img 
                               src={benefit.image} 
                               alt={benefit.text}
-                              className="w-full sm:w-20 h-16 sm:h-16 object-cover rounded-lg shadow-sm"
+                              className="w-full h-48 object-cover rounded-lg shadow-lg"
                             />
                           </div>
-                          <div className="flex items-start gap-3 flex-1">
+                          <div className="flex items-start gap-3">
                             <CheckCircle className="h-5 w-5 text-primary mt-0.5 flex-shrink-0" />
-                            <span className="text-sm text-muted-foreground leading-relaxed font-medium">{benefit.text}</span>
+                            <span className="text-base text-muted-foreground leading-relaxed font-medium">{benefit.text}</span>
                           </div>
                         </div>
                       ))}
