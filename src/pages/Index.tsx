@@ -104,20 +104,20 @@ const Index = () => {
     {
       category: "Programming Languages",
       files: [
-        { name: "Python", extension: ".py", color: "bg-blue-500" },
-        { name: "Java", extension: ".java", color: "bg-orange-500" },
-        { name: "C++", extension: ".cpp", color: "bg-green-500" },
-        { name: "JavaScript", extension: ".js", color: "bg-yellow-500" },
-        { name: "C", extension: ".c", color: "bg-gray-500" },
-        { name: "Go", extension: ".go", color: "bg-cyan-500" }
+        { name: "Python", extension: ".py", color: "bg-blue-500", logo: "/logos/python.svg" },
+        { name: "Java", extension: ".java", color: "bg-orange-500", logo: "/logos/java.svg" },
+        { name: "C++", extension: ".cpp", color: "bg-green-500", logo: "/logos/cpp.svg" },
+        { name: "JavaScript", extension: ".js", color: "bg-yellow-500", logo: "/logos/javascript.svg" },
+        { name: "C", extension: ".c", color: "bg-gray-500", logo: "/logos/c.svg" },
+        { name: "Go", extension: ".go", color: "bg-cyan-500", logo: "/logos/go.svg" }
       ]
     },
     {
       category: "Archives & Documents",
       files: [
-        { name: "ZIP Archive", extension: ".zip", color: "bg-purple-500" },
-        { name: "TAR Archive", extension: ".tar", color: "bg-indigo-500" },
-        { name: "YAML Configuration", extension: ".yml", color: "bg-teal-500" }
+        { name: "ZIP Archive", extension: ".zip", color: "bg-purple-500", logo: "/logos/zip.svg" },
+        { name: "TAR Archive", extension: ".tar", color: "bg-indigo-500", logo: "/logos/tar.svg" },
+        { name: "YAML Configuration", extension: ".yml", color: "bg-teal-500", logo: "/logos/yaml.svg" }
       ]
     }
   ];
@@ -436,8 +436,21 @@ const Index = () => {
                       onClick={() => handleFileTypeClick(file.name, category.category)}
                     >
                       <CardContent className="p-6 text-center">
-                        <div className={`w-12 h-12 rounded-lg ${file.color} flex items-center justify-center mx-auto mb-3 group-hover:scale-110 transition-transform`}>
-                          <FileText className="h-6 w-6 text-white" />
+                        <div className="w-12 h-12 flex items-center justify-center mx-auto mb-3 group-hover:scale-110 transition-transform">
+                          <img 
+                            src={file.logo} 
+                            alt={`${file.name} logo`}
+                            className="w-12 h-12 object-contain"
+                            onError={(e) => {
+                              // Fallback to colored icon if logo fails to load
+                              const target = e.target as HTMLImageElement;
+                              target.style.display = 'none';
+                              const fallback = document.createElement('div');
+                              fallback.className = `w-12 h-12 rounded-lg ${file.color} flex items-center justify-center`;
+                              fallback.innerHTML = `<svg class="h-6 w-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path></svg>`;
+                              target.parentNode?.appendChild(fallback);
+                            }}
+                          />
                         </div>
                         <h4 className="font-semibold text-foreground">{file.name}</h4>
                         <p className="text-sm text-muted-foreground font-mono">{file.extension}</p>
