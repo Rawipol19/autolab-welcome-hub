@@ -34,22 +34,10 @@ const Index = () => {
       title: "Job Processing & Management",
       description: "RAI handles the core job processing workflow, managing submission queues and coordinating with the execution environment.",
       benefits: [
-        {
-          text: "Processes and assigns unique job IDs to submissions",
-          image: "https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80"
-        },
-        {
-          text: "Manages job submission queue through RabbitMQ messaging",
-          image: "https://images.unsplash.com/photo-1558494949-ef010cbdcc31?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80"
-        },
-        {
-          text: "Coordinates with Redis for job status tracking",
-          image: "https://images.unsplash.com/photo-1518770660439-4636190af475?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80"
-        },
-        {
-          text: "Monitors job completion status and results",
-          image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80"
-        }
+        "Processes and assigns unique job IDs to submissions",
+        "Manages job submission queue through RabbitMQ messaging",
+        "Coordinates with Redis for job status tracking",
+        "Monitors job completion status and results"
       ]
     },
     {
@@ -57,22 +45,10 @@ const Index = () => {
       title: "Docker Integration",
       description: "RAI seamlessly integrates with Docker containers to provide isolated and secure code execution environments.",
       benefits: [
-        {
-          text: "Transports job IDs to Docker for containerized execution",
-          image: "https://images.unsplash.com/photo-1605810230434-7631ac76ec81?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80"
-        },
-        {
-          text: "Ensures secure isolation for each code submission",
-          image: "https://images.unsplash.com/photo-1614064641938-3bbee52942c7?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80"
-        },
-        {
-          text: "Manages container lifecycle and resource allocation",
-          image: "https://images.unsplash.com/photo-1667372393119-3d4c48d07fc9?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80"
-        },
-        {
-          text: "Retrieves execution results and output files",
-          image: "https://images.unsplash.com/photo-1555949963-aa79dcee981c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80"
-        }
+        "Transports job IDs to Docker for containerized execution",
+        "Ensures secure isolation for each code submission",
+        "Manages container lifecycle and resource allocation",
+        "Retrieves execution results and output files"
       ]
     },
     {
@@ -80,22 +56,10 @@ const Index = () => {
       title: "Data Management & Storage",
       description: "RAI coordinates with MongoDB and Minio for comprehensive data storage and file management throughout the grading process.",
       benefits: [
-        {
-          text: "Stores job metadata and results in MongoDB",
-          image: "https://images.unsplash.com/photo-1544383835-bda2bc66a55d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80"
-        },
-        {
-          text: "Manages file uploads and project directories through Minio",
-          image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80"
-        },
-        {
-          text: "Handles output file storage and retrieval",
-          image: "https://images.unsplash.com/photo-1586953208448-b95a79798f07?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80"
-        },
-        {
-          text: "Maintains data consistency across the entire system",
-          image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80"
-        }
+        "Stores job metadata and results in MongoDB",
+        "Manages file uploads and project directories through Minio",
+        "Handles output file storage and retrieval",
+        "Maintains data consistency across the entire system"
       ]
     }
   ];
@@ -264,20 +228,11 @@ const Index = () => {
                     </CardDescription>
                   </CardHeader>
                   <CardContent>
-                    <div className="space-y-8">
+                    <div className="space-y-4">
                       {feature.benefits.map((benefit, benefitIndex) => (
-                        <div key={benefitIndex} className="p-8 bg-white/50 rounded-lg border border-primary/10 hover:shadow-md transition-all duration-200">
-                          <div className="mb-6">
-                            <img 
-                              src={benefit.image} 
-                              alt={benefit.text}
-                              className="w-full h-64 object-cover rounded-lg shadow-lg"
-                            />
-                          </div>
-                          <div className="flex items-start gap-3">
-                            <CheckCircle className="h-5 w-5 text-primary mt-0.5 flex-shrink-0" />
-                            <span className="text-base text-muted-foreground leading-relaxed font-medium">{benefit.text}</span>
-                          </div>
+                        <div key={benefitIndex} className="flex items-start gap-3 p-4 bg-white/50 rounded-lg border border-primary/10">
+                          <CheckCircle className="h-5 w-5 text-primary mt-0.5 flex-shrink-0" />
+                          <span className="text-base text-muted-foreground leading-relaxed font-medium">{benefit}</span>
                         </div>
                       ))}
                     </div>
