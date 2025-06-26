@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { Upload, CheckCircle, FileText, Code, Archive, Zap, Shield, Users, Brain, Eye, Target, Github, MapPin, Mail } from 'lucide-react';
+import { Upload, CheckCircle, FileText, Code, Archive, Zap, Shield, Users, Brain, Eye, Target, Github, MapPin, Mail, Database, Docker } from 'lucide-react';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
 import { Button } from '@/components/ui/button';
@@ -31,69 +31,69 @@ const Index = () => {
   const raiFeatures = [
     {
       icon: Brain,
-      title: "Intelligent Code Analysis",
-      description: "AI-powered analysis provides deeper insights into code quality, structure, and potential improvements beyond traditional testing.",
+      title: "Job Processing & Management",
+      description: "RAI handles the core job processing workflow, managing submission queues and coordinating with the execution environment.",
       benefits: [
         {
-          text: "Detects code patterns and anti-patterns",
+          text: "Processes and assigns unique job IDs to submissions",
           image: "https://images.unsplash.com/photo-1461749280684-dccba630e2f6?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80"
         },
         {
-          text: "Suggests optimization opportunities",
+          text: "Manages job submission queue through RabbitMQ messaging",
           image: "https://images.unsplash.com/photo-1487058792275-0ad4aaf24ca7?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80"
         },
         {
-          text: "Identifies potential security vulnerabilities",
+          text: "Coordinates with Redis for job status tracking",
           image: "https://images.unsplash.com/photo-1518770660439-4636190af475?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80"
         },
         {
-          text: "Analyzes code complexity and maintainability",
+          text: "Monitors job completion status and results",
           image: "https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80"
         }
       ]
     },
     {
-      icon: Eye,
-      title: "Fair & Unbiased Assessment",
-      description: "RAI ensures equitable evaluation by removing human bias and providing consistent, transparent grading criteria.",
+      icon: Docker,
+      title: "Docker Integration",
+      description: "RAI seamlessly integrates with Docker containers to provide isolated and secure code execution environments.",
       benefits: [
         {
-          text: "Standardized evaluation across all submissions",
+          text: "Transports job IDs to Docker for containerized execution",
           image: "https://images.unsplash.com/photo-1531297484001-80022131f5a1?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80"
         },
         {
-          text: "Eliminates subjective grading variations",
+          text: "Ensures secure isolation for each code submission",
           image: "https://images.unsplash.com/photo-1498050108023-c5249f4df085?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80"
         },
         {
-          text: "Provides detailed justification for scores",
+          text: "Manages container lifecycle and resource allocation",
           image: "https://images.unsplash.com/photo-1461749280684-dccba630e2f6?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80"
         },
         {
-          text: "Ensures equal opportunity for all students",
+          text: "Retrieves execution results and output files",
           image: "https://images.unsplash.com/photo-1487058792275-0ad4aaf24ca7?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80"
         }
       ]
     },
     {
-      icon: Target,
-      title: "Personalized Learning Insights",
-      description: "Advanced analytics identify individual learning patterns and provide targeted recommendations for improvement.",
+      icon: Database,
+      title: "Data Management & Storage",
+      description: "RAI coordinates with MongoDB and Minio for comprehensive data storage and file management throughout the grading process.",
       benefits: [
         {
-          text: "Tracks learning progress over time",
+          text: "Stores job metadata and results in MongoDB",
           image: "https://images.unsplash.com/photo-1518770660439-4636190af475?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80"
         },
         {
-          text: "Identifies knowledge gaps and strengths",
+          text: "Manages file uploads and project directories through Minio",
           image: "https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80"
         },
         {
-          text: "Suggests personalized study materials",
+          text: "Handles output file storage and retrieval",
           image: "https://images.unsplash.com/photo-1531297484001-80022131f5a1?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80"
         },
         {
-          text: "Adapts difficulty based on student performance",
+          text: "Maintains data consistency across the entire system",
           image: "https://images.unsplash.com/photo-1498050108023-c5249f4df085?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80"
         }
       ]
@@ -244,8 +244,8 @@ const Index = () => {
               Responsible AI (RAI) Integration
             </h2>
             <p className="mt-4 text-lg text-muted-foreground max-w-3xl mx-auto">
-              AutoLab leverages cutting-edge Responsible AI technology to provide fair, intelligent, and comprehensive 
-              code assessment that goes beyond traditional automated testing.
+              AutoLab's RAI system orchestrates the entire job processing workflow, from submission handling to 
+              Docker execution and result management, ensuring efficient and reliable code evaluation.
             </p>
           </div>
 
@@ -266,12 +266,12 @@ const Index = () => {
                   <CardContent>
                     <div className="space-y-8">
                       {feature.benefits.map((benefit, benefitIndex) => (
-                        <div key={benefitIndex} className="p-6 bg-white/50 rounded-lg border border-primary/10 hover:shadow-md transition-all duration-200">
-                          <div className="mb-4">
+                        <div key={benefitIndex} className="p-8 bg-white/50 rounded-lg border border-primary/10 hover:shadow-md transition-all duration-200">
+                          <div className="mb-6">
                             <img 
                               src={benefit.image} 
                               alt={benefit.text}
-                              className="w-full h-48 object-cover rounded-lg shadow-lg"
+                              className="w-full h-64 object-cover rounded-lg shadow-lg"
                             />
                           </div>
                           <div className="flex items-start gap-3">
@@ -289,44 +289,44 @@ const Index = () => {
 
           <div className="bg-card rounded-2xl p-8 border border-primary/20 shadow-lg">
             <h3 className="text-2xl font-bold text-primary mb-6 text-center">
-              How RAI Enhances AutoLab
+              RAI Architecture Integration
             </h3>
             <div className="grid md:grid-cols-2 gap-8">
               <div>
-                <h4 className="text-lg font-semibold text-foreground mb-4">Traditional Autograding vs RAI-Enhanced</h4>
+                <h4 className="text-lg font-semibold text-foreground mb-4">Core RAI Workflow</h4>
                 <div className="space-y-4">
-                  <div className="p-4 bg-secondary/10 rounded-lg border border-secondary/20">
-                    <p className="text-sm font-medium text-secondary mb-2">Traditional Approach:</p>
+                  <div className="p-4 bg-primary/10 rounded-lg border border-primary/20">
+                    <p className="text-sm font-medium text-primary mb-2">Job Processing:</p>
                     <p className="text-sm text-muted-foreground">
-                      Basic pass/fail testing with limited feedback on code structure and quality.
+                      RAI receives submissions, assigns job IDs, and manages the queue through RabbitMQ messaging system.
                     </p>
                   </div>
-                  <div className="p-4 bg-primary/10 rounded-lg border border-primary/20">
-                    <p className="text-sm font-medium text-primary mb-2">RAI-Enhanced AutoLab:</p>
+                  <div className="p-4 bg-secondary/10 rounded-lg border border-secondary/20">
+                    <p className="text-sm font-medium text-secondary mb-2">Docker Integration:</p>
                     <p className="text-sm text-muted-foreground">
-                      Comprehensive analysis including code quality, style, efficiency, and personalized improvement suggestions.
+                      Transports job IDs to Docker containers for secure, isolated code execution and result collection.
                     </p>
                   </div>
                 </div>
               </div>
               <div>
-                <h4 className="text-lg font-semibold text-foreground mb-4">Key RAI Benefits</h4>
+                <h4 className="text-lg font-semibold text-foreground mb-4">System Components</h4>
                 <div className="space-y-3">
                   <div className="flex items-center gap-3">
                     <div className="w-2 h-2 bg-primary rounded-full"></div>
-                    <span className="text-sm text-muted-foreground">Reduces grading time by 80% while improving feedback quality</span>
+                    <span className="text-sm text-muted-foreground">MongoDB for persistent job data storage</span>
                   </div>
                   <div className="flex items-center gap-3">
                     <div className="w-2 h-2 bg-primary rounded-full"></div>
-                    <span className="text-sm text-muted-foreground">Ensures consistent evaluation standards across all submissions</span>
+                    <span className="text-sm text-muted-foreground">Redis for real-time job status tracking</span>
                   </div>
                   <div className="flex items-center gap-3">
                     <div className="w-2 h-2 bg-primary rounded-full"></div>
-                    <span className="text-sm text-muted-foreground">Provides actionable insights for student improvement</span>
+                    <span className="text-sm text-muted-foreground">RabbitMQ for reliable message queuing</span>
                   </div>
                   <div className="flex items-center gap-3">
                     <div className="w-2 h-2 bg-primary rounded-full"></div>
-                    <span className="text-sm text-muted-foreground">Adapts to different programming styles and approaches</span>
+                    <span className="text-sm text-muted-foreground">Minio for scalable file storage management</span>
                   </div>
                 </div>
               </div>
