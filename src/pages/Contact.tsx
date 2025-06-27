@@ -1,5 +1,5 @@
 
-import { Mail, Phone, MapPin, User } from 'lucide-react';
+import { Mail, Phone, MapPin, User, ArrowLeft } from 'lucide-react';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
 import { Button } from '@/components/ui/button';
@@ -50,6 +50,18 @@ const Contact = () => {
 
   return (
     <div className="min-h-screen bg-background">
+      {/* Back to Home Button */}
+      <div className="p-6">
+        <Button 
+          variant="outline" 
+          onClick={() => window.location.href = '/'}
+          className="flex items-center gap-2"
+        >
+          <ArrowLeft className="h-4 w-4" />
+          Back to Home
+        </Button>
+      </div>
+
       {/* Header */}
       <section className="bg-gradient-to-br from-primary/10 to-secondary/10 py-16">
         <div className="mx-auto max-w-7xl px-6 lg:px-8">
