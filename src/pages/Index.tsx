@@ -517,7 +517,7 @@ const Index = () => {
                 >
                   User Guide
                 </a>
-                <a href="#support" className="block text-primary-foreground/80 hover:text-primary-foreground transition-colors">Support</a>
+                <a href="/publications" className="block text-primary-foreground/80 hover:text-primary-foreground transition-colors">Publications</a>
               </div>
             </div>
 
@@ -526,14 +526,14 @@ const Index = () => {
               <h3 className="text-lg font-semibold mb-4">Connect</h3>
               <div className="space-y-2 text-sm">
                 <a 
-                  href="mailto:support@buffalo.edu" 
+                  href="/contact" 
                   className="block text-primary-foreground/80 hover:text-primary-foreground transition-colors"
                 >
                   Contact Us
                 </a>
-                <a href="#team" className="block text-primary-foreground/80 hover:text-primary-foreground transition-colors">Research Team</a>
-                <a href="#publications" className="block text-primary-foreground/80 hover:text-primary-foreground transition-colors">Publications</a>
-                <a href="#news" className="block text-primary-foreground/80 hover:text-primary-foreground transition-colors">News &amp; Updates</a>
+                <a href="/research-team" className="block text-primary-foreground/80 hover:text-primary-foreground transition-colors">Research Team</a>
+                <a href="/publications" className="block text-primary-foreground/80 hover:text-primary-foreground transition-colors">Publications</a>
+                <a href="/news-updates" className="block text-primary-foreground/80 hover:text-primary-foreground transition-colors">News &amp; Updates</a>
               </div>
             </div>
           </div>
