@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { Upload, CheckCircle, FileText, Code, Archive, Zap, Shield, Users, Brain, Eye, Target, Github, MapPin, Mail, Database, Container } from 'lucide-react';
+import { Upload, CheckCircle, FileText, Code, Archive, Zap, Shield, Users, Brain, Eye, Target, Github, MapPin, Mail, Database, Container, ArrowRight, Workflow, Server, Network } from 'lucide-react';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
 import { Button } from '@/components/ui/button';
@@ -61,6 +61,78 @@ const Index = () => {
         "Handles output file storage and retrieval",
         "Maintains data consistency across the entire system"
       ]
+    }
+  ];
+
+  const comparisonData = [
+    {
+      category: "Architecture",
+      oldAutolab: {
+        title: "Tango-Based System",
+        description: "Traditional producer-consumer model with Redis job queue",
+        features: [
+          "Multiple producers handling job submissions",
+          "Single consumer managing container allocation",
+          "Redis-based job queuing system",
+          "Direct VM container management"
+        ]
+      },
+      newAutolab: {
+        title: "RAI-Orchestrated System",
+        description: "AI-driven intelligent job processing and resource management",
+        features: [
+          "RAI-coordinated job processing workflow",
+          "Intelligent resource allocation and optimization",
+          "Multi-database integration (MongoDB + Redis)",
+          "Advanced container orchestration with Docker"
+        ]
+      }
+    },
+    {
+      category: "Job Processing",
+      oldAutolab: {
+        title: "Linear Processing",
+        description: "Sequential job handling through predefined producer-consumer chains",
+        features: [
+          "Fixed producer-consumer relationships",
+          "Limited scalability with job volume",
+          "Basic job status tracking",
+          "Manual resource management"
+        ]
+      },
+      newAutolab: {
+        title: "Intelligent Processing",
+        description: "AI-enhanced job management with dynamic resource allocation",
+        features: [
+          "RAI-optimized job scheduling and prioritization",
+          "Dynamic scaling based on workload patterns",
+          "Real-time job status monitoring with Redis",
+          "Automated resource optimization"
+        ]
+      }
+    },
+    {
+      category: "Data Management",
+      oldAutolab: {
+        title: "Basic Storage",
+        description: "Simple file storage with limited metadata tracking",
+        features: [
+          "Basic file upload and storage",
+          "Limited job result tracking",
+          "Minimal data analytics capabilities",
+          "Simple database integration"
+        ]
+      },
+      newAutolab: {
+        title: "Advanced Storage",
+        description: "Comprehensive data management with multiple storage solutions",
+        features: [
+          "Minio for scalable file storage management",
+          "MongoDB for rich metadata and analytics",
+          "Redis for high-performance caching",
+          "Integrated data consistency across systems"
+        ]
+      }
     }
   ];
 
@@ -195,6 +267,240 @@ const Index = () => {
         </div>
       </section>
 
+      {/* How It Works Section */}
+      <section id="how-it-works" className="py-24 bg-secondary/5">
+        <div className="mx-auto max-w-7xl px-6 lg:px-8">
+          <div className="text-center mb-16">
+            <h2 className="text-3xl font-bold tracking-tight text-foreground sm:text-4xl">
+              How AutoLab Works
+            </h2>
+            <p className="mt-4 text-lg text-muted-foreground">
+              Three simple steps to automated grading excellence
+            </p>
+          </div>
+
+          <div className="grid lg:grid-cols-2 gap-12 items-center">
+            {/* Steps Navigation */}
+            <div className="space-y-4">
+              {steps.map((step, index) => {
+                const StepIcon = step.icon;
+                return (
+                  <Card 
+                    key={index}
+                    className={`cursor-pointer transition-all duration-300 ${
+                      selectedStep === index 
+                        ? 'border-primary shadow-lg scale-105' 
+                        : 'hover:border-primary/50 hover:shadow-md'
+                    }`}
+                    onClick={() => setSelectedStep(index)}
+                  >
+                    <CardHeader className="pb-3">
+                      <div className="flex items-center gap-4">
+                        <div className={`p-2 rounded-lg ${
+                          selectedStep === index ? 'bg-primary text-primary-foreground' : 'bg-secondary'
+                        }`}>
+                          <StepIcon className="h-6 w-6" />
+                        </div>
+                        <div>
+                          <CardTitle className="text-lg">{step.title}</CardTitle>
+                          <CardDescription>{step.description}</CardDescription>
+                        </div>
+                      </div>
+                    </CardHeader>
+                  </Card>
+                );
+              })}
+            </div>
+
+            {/* Step Detail */}
+            <div className="lg:pl-8">
+              <Card className="border-primary/20 bg-gradient-to-br from-primary/5 to-secondary/5">
+                <CardHeader>
+                  <div className="flex items-center gap-4 mb-4">
+                    <div className="p-3 bg-primary rounded-xl">
+                      {steps[selectedStep] && (() => {
+                        const SelectedStepIcon = steps[selectedStep].icon;
+                        return <SelectedStepIcon className="h-8 w-8 text-primary-foreground" />;
+                      })()}
+                    </div>
+                    <div>
+                      <CardTitle className="text-xl">{steps[selectedStep]?.title}</CardTitle>
+                      <Badge variant="secondary" className="mt-1">
+                        Step {selectedStep + 1}
+                      </Badge>
+                    </div>
+                  </div>
+                </CardHeader>
+                <CardContent>
+                  <p className="text-muted-foreground leading-relaxed">
+                    {steps[selectedStep]?.detail}
+                  </p>
+                </CardContent>
+              </Card>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Comparison Section */}
+      <section className="py-24 bg-gradient-to-br from-secondary/5 to-accent/5">
+        <div className="mx-auto max-w-7xl px-6 lg:px-8">
+          <div className="text-center mb-16">
+            <h2 className="text-3xl font-bold tracking-tight text-foreground sm:text-4xl">
+              Evolution from Carnegie Mellon to RAI-Based AutoLab
+            </h2>
+            <p className="mt-4 text-lg text-muted-foreground max-w-3xl mx-auto">
+              See how we've transformed the traditional Autolab architecture into an intelligent, 
+              AI-driven system that delivers superior performance and scalability.
+            </p>
+          </div>
+
+          {/* Architecture Diagram Reference */}
+          <div className="mb-16">
+            <Card className="bg-card/50 backdrop-blur-sm border-primary/20">
+              <CardHeader className="text-center">
+                <CardTitle className="text-xl text-primary flex items-center justify-center gap-2">
+                  <Workflow className="h-6 w-6" />
+                  Traditional Autolab + Tango Architecture
+                </CardTitle>
+                <CardDescription>
+                  The original Carnegie Mellon system architecture with producer-consumer model
+                </CardDescription>
+              </CardHeader>
+              <CardContent className="flex justify-center">
+                <img 
+                  src="/lovable-uploads/4883bd08-223e-45e3-a0b8-aec4e7b44ee1.png" 
+                  alt="Autolab + Tango Architecture Diagram"
+                  className="max-w-full h-auto rounded-lg border border-primary/20 shadow-md"
+                />
+              </CardContent>
+            </Card>
+          </div>
+
+          {/* Comparison Grid */}
+          <div className="space-y-12">
+            {comparisonData.map((comparison, index) => (
+              <div key={index} className="relative">
+                <div className="text-center mb-8">
+                  <Badge variant="outline" className="text-lg px-4 py-2 bg-white/80 text-primary font-semibold">
+                    {comparison.category}
+                  </Badge>
+                </div>
+                
+                <div className="grid lg:grid-cols-2 gap-8 items-start">
+                  {/* Old Autolab */}
+                  <Card className="h-full hover:shadow-lg transition-all duration-300 bg-gray-50/50 border-gray-300/50">
+                    <CardHeader>
+                      <div className="flex items-center gap-3 mb-3">
+                        <div className="p-2 bg-gray-500 rounded-lg">
+                          <Server className="h-6 w-6 text-white" />
+                        </div>
+                        <div>
+                          <CardTitle className="text-lg text-gray-700">
+                            {comparison.oldAutolab.title}
+                          </CardTitle>
+                          <Badge variant="secondary" className="mt-1">
+                            Carnegie Mellon
+                          </Badge>
+                        </div>
+                      </div>
+                      <CardDescription className="text-base">
+                        {comparison.oldAutolab.description}
+                      </CardDescription>
+                    </CardHeader>
+                    <CardContent>
+                      <div className="space-y-3">
+                        {comparison.oldAutolab.features.map((feature, featureIndex) => (
+                          <div key={featureIndex} className="flex items-start gap-3 p-3 bg-white/50 rounded-lg border border-gray-200">
+                            <div className="w-2 h-2 bg-gray-400 rounded-full mt-2 flex-shrink-0"></div>
+                            <span className="text-sm text-muted-foreground leading-relaxed">{feature}</span>
+                          </div>
+                        ))}
+                      </div>
+                    </CardContent>
+                  </Card>
+
+                  {/* Arrow */}
+                  <div className="hidden lg:flex absolute left-1/2 top-1/2 transform -translate-x-1/2 -translate-y-1/2 z-10">
+                    <div className="p-3 bg-primary rounded-full shadow-lg">
+                      <ArrowRight className="h-6 w-6 text-primary-foreground" />
+                    </div>
+                  </div>
+
+                  {/* New RAI-based Autolab */}
+                  <Card className="h-full hover:shadow-lg transition-all duration-300 bg-primary/5 border-primary/30">
+                    <CardHeader>
+                      <div className="flex items-center gap-3 mb-3">
+                        <div className="p-2 bg-primary rounded-lg">
+                          <Brain className="h-6 w-6 text-primary-foreground" />
+                        </div>
+                        <div>
+                          <CardTitle className="text-lg text-primary">
+                            {comparison.newAutolab.title}
+                          </CardTitle>
+                          <Badge variant="outline" className="mt-1 border-primary text-primary">
+                            University at Buffalo
+                          </Badge>
+                        </div>
+                      </div>
+                      <CardDescription className="text-base">
+                        {comparison.newAutolab.description}
+                      </CardDescription>
+                    </CardHeader>
+                    <CardContent>
+                      <div className="space-y-3">
+                        {comparison.newAutolab.features.map((feature, featureIndex) => (
+                          <div key={featureIndex} className="flex items-start gap-3 p-3 bg-white/50 rounded-lg border border-primary/20">
+                            <CheckCircle className="h-4 w-4 text-primary mt-1 flex-shrink-0" />
+                            <span className="text-sm text-muted-foreground leading-relaxed font-medium">{feature}</span>
+                          </div>
+                        ))}
+                      </div>
+                    </CardContent>
+                  </Card>
+                </div>
+              </div>
+            ))}
+          </div>
+
+          {/* Key Advantages Summary */}
+          <div className="mt-16 bg-gradient-to-r from-primary/10 to-secondary/10 rounded-2xl p-8 border border-primary/20">
+            <h3 className="text-2xl font-bold text-center mb-8 text-primary">
+              Key Advantages of RAI-Based AutoLab
+            </h3>
+            <div className="grid md:grid-cols-3 gap-6">
+              <div className="text-center">
+                <div className="w-16 h-16 bg-primary rounded-2xl flex items-center justify-center mx-auto mb-4">
+                  <Brain className="h-8 w-8 text-primary-foreground" />
+                </div>
+                <h4 className="font-semibold text-lg mb-2">AI-Driven Intelligence</h4>
+                <p className="text-sm text-muted-foreground">
+                  RAI orchestrates the entire workflow, making intelligent decisions about resource allocation and job processing.
+                </p>
+              </div>
+              <div className="text-center">
+                <div className="w-16 h-16 bg-primary rounded-2xl flex items-center justify-center mx-auto mb-4">
+                  <Network className="h-8 w-8 text-primary-foreground" />
+                </div>
+                <h4 className="font-semibold text-lg mb-2">Enhanced Scalability</h4>
+                <p className="text-sm text-muted-foreground">
+                  Modern architecture with multiple database integration and dynamic scaling capabilities.
+                </p>
+              </div>
+              <div className="text-center">
+                <div className="w-16 h-16 bg-primary rounded-2xl flex items-center justify-center mx-auto mb-4">
+                  <Shield className="h-8 w-8 text-primary-foreground" />
+                </div>
+                <h4 className="font-semibold text-lg mb-2">Improved Security</h4>
+                <p className="text-sm text-muted-foreground">
+                  Advanced container orchestration with Docker and comprehensive data management across multiple systems.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* RAI Section */}
       <section id="rai-section" className="py-24 bg-gradient-to-br from-accent/10 to-primary/5">
         <div className="mx-auto max-w-7xl px-6 lg:px-8">
@@ -285,81 +591,6 @@ const Index = () => {
                   </div>
                 </div>
               </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* How It Works Section */}
-      <section id="how-it-works" className="py-24 bg-secondary/5">
-        <div className="mx-auto max-w-7xl px-6 lg:px-8">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl font-bold tracking-tight text-foreground sm:text-4xl">
-              How AutoLab Works
-            </h2>
-            <p className="mt-4 text-lg text-muted-foreground">
-              Three simple steps to automated grading excellence
-            </p>
-          </div>
-
-          <div className="grid lg:grid-cols-2 gap-12 items-center">
-            {/* Steps Navigation */}
-            <div className="space-y-4">
-              {steps.map((step, index) => {
-                const StepIcon = step.icon;
-                return (
-                  <Card 
-                    key={index}
-                    className={`cursor-pointer transition-all duration-300 ${
-                      selectedStep === index 
-                        ? 'border-primary shadow-lg scale-105' 
-                        : 'hover:border-primary/50 hover:shadow-md'
-                    }`}
-                    onClick={() => setSelectedStep(index)}
-                  >
-                    <CardHeader className="pb-3">
-                      <div className="flex items-center gap-4">
-                        <div className={`p-2 rounded-lg ${
-                          selectedStep === index ? 'bg-primary text-primary-foreground' : 'bg-secondary'
-                        }`}>
-                          <StepIcon className="h-6 w-6" />
-                        </div>
-                        <div>
-                          <CardTitle className="text-lg">{step.title}</CardTitle>
-                          <CardDescription>{step.description}</CardDescription>
-                        </div>
-                      </div>
-                    </CardHeader>
-                  </Card>
-                );
-              })}
-            </div>
-
-            {/* Step Detail */}
-            <div className="lg:pl-8">
-              <Card className="border-primary/20 bg-gradient-to-br from-primary/5 to-secondary/5">
-                <CardHeader>
-                  <div className="flex items-center gap-4 mb-4">
-                    <div className="p-3 bg-primary rounded-xl">
-                      {steps[selectedStep] && (() => {
-                        const SelectedStepIcon = steps[selectedStep].icon;
-                        return <SelectedStepIcon className="h-8 w-8 text-primary-foreground" />;
-                      })()}
-                    </div>
-                    <div>
-                      <CardTitle className="text-xl">{steps[selectedStep]?.title}</CardTitle>
-                      <Badge variant="secondary" className="mt-1">
-                        Step {selectedStep + 1}
-                      </Badge>
-                    </div>
-                  </div>
-                </CardHeader>
-                <CardContent>
-                  <p className="text-muted-foreground leading-relaxed">
-                    {steps[selectedStep]?.detail}
-                  </p>
-                </CardContent>
-              </Card>
             </div>
           </div>
         </div>
