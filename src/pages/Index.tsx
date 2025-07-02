@@ -213,7 +213,7 @@ const Index = () => {
         <div className="mx-auto max-w-7xl px-6 py-2">
           <div className="text-center">
             <Badge variant="outline" className="bg-white/80 text-primary font-medium">
-              Version 0.8.5.1 • Updated 6/26/2025
+              Version 0.8.9.0 • Updated 6/26/2025
             </Badge>
           </div>
         </div>
@@ -461,42 +461,6 @@ const Index = () => {
                 </div>
               </div>
             ))}
-          </div>
-
-          {/* Key Advantages Summary */}
-          <div className="mt-16 bg-gradient-to-r from-primary/10 to-secondary/10 rounded-2xl p-8 border border-primary/20">
-            <h3 className="text-2xl font-bold text-center mb-8 text-primary">
-              Key Advantages of RAI-Based AutoLab
-            </h3>
-            <div className="grid md:grid-cols-3 gap-6">
-              <div className="text-center">
-                <div className="w-16 h-16 bg-primary rounded-2xl flex items-center justify-center mx-auto mb-4">
-                  <Brain className="h-8 w-8 text-primary-foreground" />
-                </div>
-                <h4 className="font-semibold text-lg mb-2">AI-Driven Intelligence</h4>
-                <p className="text-sm text-muted-foreground">
-                  RAI orchestrates the entire workflow, making intelligent decisions about resource allocation and job processing.
-                </p>
-              </div>
-              <div className="text-center">
-                <div className="w-16 h-16 bg-primary rounded-2xl flex items-center justify-center mx-auto mb-4">
-                  <Network className="h-8 w-8 text-primary-foreground" />
-                </div>
-                <h4 className="font-semibold text-lg mb-2">Enhanced Scalability</h4>
-                <p className="text-sm text-muted-foreground">
-                  Modern architecture with multiple database integration and dynamic scaling capabilities.
-                </p>
-              </div>
-              <div className="text-center">
-                <div className="w-16 h-16 bg-primary rounded-2xl flex items-center justify-center mx-auto mb-4">
-                  <Shield className="h-8 w-8 text-primary-foreground" />
-                </div>
-                <h4 className="font-semibold text-lg mb-2">Improved Security</h4>
-                <p className="text-sm text-muted-foreground">
-                  Advanced container orchestration with Docker and comprehensive data management across multiple systems.
-                </p>
-              </div>
-            </div>
           </div>
         </div>
       </section>
