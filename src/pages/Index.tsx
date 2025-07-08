@@ -7,22 +7,35 @@ import Footer from '@/components/Footer';
 
 const Index = () => {
   const [selectedStep, setSelectedStep] = useState(0);
-  const [isScrollRestored, setIsScrollRestored] = useState(false);
+  const [isContentReady, setIsContentReady] = useState(false);
 
-  // Restore scroll position when component mounts
+  // Handle scroll position restoration
   useEffect(() => {
-    const savedScrollPosition = sessionStorage.getItem('homepage-scroll-position');
-    if (savedScrollPosition) {
-      // Restore scroll position immediately without timeout
-      window.scrollTo(0, parseInt(savedScrollPosition, 10));
-      sessionStorage.removeItem('homepage-scroll-position');
-    }
-    setIsScrollRestored(true);
+    const restoreScrollPosition = () => {
+      const savedScrollPosition = sessionStorage.getItem('homepage-scroll-position');
+      if (savedScrollPosition && savedScrollPosition !== '0') {
+        // Use setTimeout to ensure DOM is fully rendered
+        setTimeout(() => {
+          window.scrollTo({
+            top: parseInt(savedScrollPosition, 10),
+            behavior: 'instant'
+          });
+          // Clean up the saved position after restoring
+          sessionStorage.removeItem('homepage-scroll-position');
+        }, 0);
+      }
+      setIsContentReady(true);
+    };
+
+    restoreScrollPosition();
   }, []);
 
   // Save scroll position before navigating away
   const saveScrollPosition = () => {
-    sessionStorage.setItem('homepage-scroll-position', window.scrollY.toString());
+    const currentScrollY = window.scrollY;
+    if (currentScrollY > 0) {
+      sessionStorage.setItem('homepage-scroll-position', currentScrollY.toString());
+    }
   };
 
   const steps = [
@@ -227,14 +240,13 @@ const Index = () => {
     }
   };
 
-  // Don't render content until scroll position is restored to prevent flash
-  if (!isScrollRestored) {
+  // Show loading state while content is being prepared
+  if (!isContentReady) {
     return <div className="min-h-screen bg-background" />;
   }
 
   return (
     <div className="min-h-screen bg-background">
-      {/* Version Banner */}
       <div className="bg-primary/10 border-b">
         <div className="mx-auto max-w-7xl px-6 py-2">
           <div className="text-center">
@@ -245,7 +257,6 @@ const Index = () => {
         </div>
       </div>
 
-      {/* Hero Section */}
       <section className="relative overflow-hidden bg-gradient-to-br from-primary/5 via-background to-secondary/5">
         <div className="absolute inset-0 bg-grid-black/[0.02] bg-[size:50px_50px]" />
         <div className="relative mx-auto max-w-7xl px-6 py-24 sm:py-32 lg:px-8">
@@ -293,7 +304,6 @@ const Index = () => {
         </div>
       </section>
 
-      {/* How It Works Section */}
       <section id="how-it-works" className="py-24 bg-secondary/5">
         <div className="mx-auto max-w-7xl px-6 lg:px-8">
           <div className="text-center mb-16">
@@ -306,7 +316,6 @@ const Index = () => {
           </div>
 
           <div className="grid lg:grid-cols-2 gap-12 items-center">
-            {/* Steps Navigation */}
             <div className="space-y-4">
               {steps.map((step, index) => {
                 const StepIcon = step.icon;
@@ -338,7 +347,6 @@ const Index = () => {
               })}
             </div>
 
-            {/* Step Detail */}
             <div className="lg:pl-8">
               <Card className="border-primary/20 bg-gradient-to-br from-primary/5 to-secondary/5">
                 <CardHeader>
@@ -368,7 +376,6 @@ const Index = () => {
         </div>
       </section>
 
-      {/* Comparison Section */}
       <section className="py-24 bg-gradient-to-br from-secondary/5 to-accent/5">
         <div className="mx-auto max-w-7xl px-6 lg:px-8">
           <div className="text-center mb-16">
@@ -381,7 +388,6 @@ const Index = () => {
             </p>
           </div>
 
-          {/* Architecture Diagram Reference */}
           <div className="mb-16">
             <Card className="bg-card/50 backdrop-blur-sm border-primary/20">
               <CardHeader className="text-center">
@@ -403,7 +409,6 @@ const Index = () => {
             </Card>
           </div>
 
-          {/* Comparison Grid */}
           <div className="space-y-12">
             {comparisonData.map((comparison, index) => (
               <div key={index} className="relative">
@@ -414,7 +419,6 @@ const Index = () => {
                 </div>
                 
                 <div className="grid lg:grid-cols-2 gap-8 items-start">
-                  {/* Old Autolab */}
                   <Card className="h-full hover:shadow-lg transition-all duration-300 bg-gray-50/50 border-gray-300/50">
                     <CardHeader>
                       <div className="flex items-center gap-3 mb-3">
@@ -446,14 +450,12 @@ const Index = () => {
                     </CardContent>
                   </Card>
 
-                  {/* Arrow */}
                   <div className="hidden lg:flex absolute left-1/2 top-1/2 transform -translate-x-1/2 -translate-y-1/2 z-10">
                     <div className="p-3 bg-primary rounded-full shadow-lg">
                       <ArrowRight className="h-6 w-6 text-primary-foreground" />
                     </div>
                   </div>
 
-                  {/* New RAI-based Autolab */}
                   <Card className="h-full hover:shadow-lg transition-all duration-300 bg-primary/5 border-primary/30">
                     <CardHeader>
                       <div className="flex items-center gap-3 mb-3">
@@ -491,7 +493,6 @@ const Index = () => {
         </div>
       </section>
 
-      {/* RAI Section */}
       <section id="rai-section" className="py-24 bg-gradient-to-br from-accent/10 to-primary/5">
         <div className="mx-auto max-w-7xl px-6 lg:px-8">
           <div className="text-center mb-16">
@@ -586,7 +587,6 @@ const Index = () => {
         </div>
       </section>
 
-      {/* Supported File Types Section */}
       <section className="py-24">
         <div className="mx-auto max-w-7xl px-6 lg:px-8">
           <div className="text-center mb-16">
@@ -618,7 +618,6 @@ const Index = () => {
                             alt={`${file.name} logo`}
                             className="w-12 h-12 object-contain"
                             onError={(e) => {
-                              // Fallback to colored icon if logo fails to load
                               const target = e.target as HTMLImageElement;
                               target.style.display = 'none';
                               const fallback = document.createElement('div');
@@ -640,7 +639,6 @@ const Index = () => {
         </div>
       </section>
 
-      {/* Features Section */}
       <section className="py-24 bg-secondary/5">
         <div className="mx-auto max-w-7xl px-6 lg:px-8">
           <div className="text-center mb-16">
@@ -675,7 +673,6 @@ const Index = () => {
         </div>
       </section>
 
-      {/* Footer Section */}
       <Footer />
     </div>
   );
