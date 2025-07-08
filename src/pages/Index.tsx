@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { Upload, CheckCircle, FileText, Code, Archive, Zap, Shield, Users, Brain, Eye, Target, Github, MapPin, Mail, Database, Container, ArrowRight, Workflow, Server, Network } from 'lucide-react';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
@@ -6,6 +6,22 @@ import { Button } from '@/components/ui/button';
 
 const Index = () => {
   const [selectedStep, setSelectedStep] = useState(0);
+
+  // Restore scroll position when component mounts
+  useEffect(() => {
+    const savedScrollPosition = sessionStorage.getItem('homepage-scroll-position');
+    if (savedScrollPosition) {
+      setTimeout(() => {
+        window.scrollTo(0, parseInt(savedScrollPosition, 10));
+        sessionStorage.removeItem('homepage-scroll-position');
+      }, 100);
+    }
+  }, []);
+
+  // Save scroll position before navigating away
+  const saveScrollPosition = () => {
+    sessionStorage.setItem('homepage-scroll-position', window.scrollY.toString());
+  };
 
   const steps = [
     {
@@ -177,6 +193,9 @@ const Index = () => {
   ];
 
   const handleFileTypeClick = (fileName: string, category: string) => {
+    // Save scroll position before navigating
+    saveScrollPosition();
+    
     // Convert file name to route-friendly format
     const routeName = fileName.toLowerCase().replace(/[^a-z0-9]/g, '');
     
