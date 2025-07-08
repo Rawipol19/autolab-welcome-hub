@@ -189,24 +189,6 @@ const Index = () => {
     }
   ];
 
-  const features = [
-    {
-      icon: Zap,
-      title: "Lightning Fast",
-      description: "Get results in seconds with our optimized testing infrastructure"
-    },
-    {
-      icon: Shield,
-      title: "Secure & Isolated",
-      description: "All code runs in sandboxed environments for maximum security"
-    },
-    {
-      icon: Users,
-      title: "Multi-User Support",
-      description: "Built for classrooms with comprehensive user management"
-    }
-  ];
-
   const handleFileTypeClick = (fileName: string, category: string) => {
     // Save scroll position before navigating
     saveScrollPosition();
@@ -251,7 +233,7 @@ const Index = () => {
         <div className="mx-auto max-w-7xl px-6 py-2">
           <div className="text-center">
             <Badge variant="outline" className="bg-white/80 text-primary font-medium">
-              Version 0.8.9.0 • Updated 7/3/2025
+              Version 0.8.9.5 • Updated 7/8/2025
             </Badge>
           </div>
         </div>
@@ -635,40 +617,6 @@ const Index = () => {
                 </div>
               </div>
             ))}
-          </div>
-        </div>
-      </section>
-
-      <section className="py-24 bg-secondary/5">
-        <div className="mx-auto max-w-7xl px-6 lg:px-8">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl font-bold tracking-tight text-foreground sm:text-4xl">
-              Why Choose AutoLab?
-            </h2>
-            <p className="mt-4 text-lg text-muted-foreground">
-              Built for modern education with cutting-edge technology
-            </p>
-          </div>
-
-          <div className="grid md:grid-cols-3 gap-8">
-            {features.map((feature, index) => {
-              const FeatureIcon = feature.icon;
-              return (
-                <Card key={index} className="text-center hover:shadow-lg transition-all duration-300 hover:scale-105">
-                  <CardHeader>
-                    <div className="w-16 h-16 bg-primary rounded-2xl flex items-center justify-center mx-auto mb-4">
-                      <FeatureIcon className="h-8 w-8 text-primary-foreground" />
-                    </div>
-                    <CardTitle className="text-xl">{feature.title}</CardTitle>
-                  </CardHeader>
-                  <CardContent>
-                    <CardDescription className="text-base">
-                      {feature.description}
-                    </CardDescription>
-                  </CardContent>
-                </Card>
-              );
-            })}
           </div>
         </div>
       </section>
