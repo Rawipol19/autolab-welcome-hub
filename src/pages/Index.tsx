@@ -1,3 +1,4 @@
+
 import { useState, useEffect } from 'react';
 import { Upload, CheckCircle, FileText, Code, Archive, Zap, Shield, Users, Brain, Eye, Target, Github, MapPin, Mail, Database, Container, ArrowRight, Workflow, Server, Network } from 'lucide-react';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
@@ -97,71 +98,71 @@ const Index = () => {
 
   const comparisonData = [
     {
-      category: "Architecture",
+      category: "Job Management Architecture",
       oldAutolab: {
-        title: "Tango-Based System",
-        description: "Traditional producer-consumer model with Redis job queue",
+        title: "Python-Based Tango Job Manager",
+        description: "Traditional single-threaded Python job manager with limited scalability",
         features: [
-          "Multiple producers handling job submissions",
-          "Single consumer managing container allocation",
-          "Redis-based job queuing system",
-          "Direct VM container management"
+          "Single Python process handling all job operations",
+          "Sequential job processing with basic queue management",
+          "Limited concurrent job execution capabilities",
+          "Manual resource allocation and monitoring"
         ]
       },
       newAutolab: {
-        title: "RAI-Orchestrated System",
-        description: "AI-driven intelligent job processing and resource management",
+        title: "RAI-Orchestrated Intelligent System",
+        description: "AI-driven job processing with advanced resource management and optimization",
         features: [
-          "RAI-coordinated job processing workflow",
-          "Intelligent resource allocation and optimization",
-          "Multi-database integration (MongoDB + Redis)",
-          "Advanced container orchestration with Docker"
+          "Multi-threaded RAI system with intelligent job scheduling",
+          "Parallel job processing with dynamic load balancing",
+          "Automated resource optimization based on job requirements",
+          "Real-time monitoring and adaptive scaling"
         ]
       }
     },
     {
-      category: "Job Processing",
+      category: "System Integration & Communication",
       oldAutolab: {
-        title: "Linear Processing",
-        description: "Sequential job handling through predefined producer-consumer chains",
+        title: "Basic Tango Integration",
+        description: "Simple producer-consumer model with limited inter-service communication",
         features: [
-          "Fixed producer-consumer relationships",
-          "Limited scalability with job volume",
-          "Basic job status tracking",
-          "Manual resource management"
+          "Basic Redis-only communication between components",
+          "Limited message passing capabilities",
+          "Tight coupling between job manager and execution environment",
+          "Manual error handling and recovery processes"
         ]
       },
       newAutolab: {
-        title: "Intelligent Processing",
-        description: "AI-enhanced job management with dynamic resource allocation",
+        title: "Advanced RAI Communication Hub",
+        description: "Sophisticated multi-protocol communication with intelligent message routing",
         features: [
-          "RAI-optimized job scheduling and prioritization",
-          "Dynamic scaling based on workload patterns",
-          "Real-time job status monitoring with Redis",
-          "Automated resource optimization"
+          "RabbitMQ for reliable message queuing and delivery",
+          "Redis for high-performance caching and real-time updates",
+          "Microservices architecture with loose coupling",
+          "Automated error detection and recovery mechanisms"
         ]
       }
     },
     {
-      category: "Data Management",
+      category: "Data Storage & File Management",
       oldAutolab: {
-        title: "Basic Storage",
-        description: "Simple file storage with limited metadata tracking",
+        title: "Limited Storage Capabilities",
+        description: "Basic file storage with minimal metadata and limited scalability",
         features: [
-          "Basic file upload and storage",
-          "Limited job result tracking",
-          "Minimal data analytics capabilities",
-          "Simple database integration"
+          "Simple file system storage with limited organization",
+          "Basic metadata tracking for jobs and submissions",
+          "Manual file cleanup and maintenance processes",
+          "Limited backup and recovery capabilities"
         ]
       },
       newAutolab: {
-        title: "Advanced Storage",
-        description: "Comprehensive data management with multiple storage solutions",
+        title: "Enterprise-Grade Storage Solution",
+        description: "Comprehensive multi-tier storage with advanced file management",
         features: [
-          "Minio for scalable file storage management",
-          "MongoDB for rich metadata and analytics",
-          "Redis for high-performance caching",
-          "Integrated data consistency across systems"
+          "Minio object storage for scalable file management",
+          "MongoDB for rich metadata and analytics capabilities",
+          "Automated file lifecycle management and cleanup",
+          "Built-in backup, versioning, and disaster recovery"
         ]
       }
     }
@@ -364,9 +365,10 @@ const Index = () => {
             <h2 className="text-3xl font-bold tracking-tight text-foreground sm:text-4xl">
               Evolution from Carnegie Mellon to RAI-Based AutoLab
             </h2>
-            <p className="mt-4 text-lg text-muted-foreground max-w-3xl mx-auto">
-              See how we've transformed the traditional Autolab architecture into an intelligent, 
-              AI-driven system that delivers superior performance and scalability.
+            <p className="mt-4 text-lg text-muted-foreground max-w-4xl mx-auto">
+              Our RAI-based AutoLab represents a revolutionary advancement over the traditional Carnegie Mellon Tango system. 
+              While Tango relies on a basic Python job manager, our intelligent RAI architecture delivers superior performance, 
+              scalability, and reliability through advanced AI-driven orchestration.
             </p>
           </div>
 
@@ -375,20 +377,34 @@ const Index = () => {
               <CardHeader className="text-center">
                 <CardTitle className="text-xl text-primary flex items-center justify-center gap-2">
                   <Workflow className="h-6 w-6" />
-                  Traditional Autolab + Tango Architecture
+                  Traditional Carnegie Mellon Autolab + Tango Architecture
                 </CardTitle>
-                <CardDescription>
-                  The original Carnegie Mellon system architecture with producer-consumer model
+                <CardDescription className="text-base">
+                  The original system architecture with Python-based Tango job manager and producer-consumer model
                 </CardDescription>
               </CardHeader>
               <CardContent className="flex justify-center">
                 <img 
                   src="/lovable-uploads/4883bd08-223e-45e3-a0b8-aec4e7b44ee1.png" 
-                  alt="Autolab + Tango Architecture Diagram"
+                  alt="Traditional Autolab + Tango Architecture showing Python job manager limitations"
                   className="max-w-full h-auto rounded-lg border border-primary/20 shadow-md"
                 />
               </CardContent>
             </Card>
+          </div>
+
+          <div className="text-center mb-12">
+            <div className="inline-flex items-center gap-4 px-6 py-3 bg-primary/10 rounded-full border border-primary/20">
+              <div className="flex items-center gap-2 text-gray-600">
+                <Server className="h-5 w-5" />
+                <span className="font-medium">Python Tango Job Manager</span>
+              </div>
+              <ArrowRight className="h-5 w-5 text-primary" />
+              <div className="flex items-center gap-2 text-primary">
+                <Brain className="h-5 w-5" />
+                <span className="font-medium">RAI Intelligent Orchestration</span>
+              </div>
+            </div>
           </div>
 
           <div className="space-y-12">
