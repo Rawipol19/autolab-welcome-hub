@@ -7,64 +7,64 @@ import { Button } from '@/components/ui/button';
 const ResearchTeam = () => {
   const teamMembers = [
     {
-      name: "Dr. Sarah Johnson",
+      name: "Prof. [Name]",
       role: "Project Director & Principal Investigator",
-      degree: "Ph.D. in Computer Science",
-      institution: "Stanford University, 2015",
+      degree: "Ph.D. in [Blank]",
+      institution: "[University], 2015",
       specialization: "Artificial Intelligence, Educational Technology",
-      bio: "Dr. Johnson leads the AutoLab project with over 8 years of experience in AI-driven educational tools. Her research focuses on automated assessment systems and machine learning applications in education.",
-      email: "sarah.johnson@buffalo.edu",
-      image: "/lovable-uploads/e9f9078c-92fc-4420-bd5c-b119d7d953e5.png"
+      bio: "[Bio info]",
+      email: "email@buffalo.edu",
+      image: "/e9f9078c-92fc-4420-bd5c-b119d7d953e5.png"
     },
     {
-      name: "Prof. Michael Chen",
+      name: "Prof. [Name]",
       role: "Technical Lead & Co-Investigator",
-      degree: "Ph.D. in Software Engineering",
-      institution: "MIT, 2012",
+      degree: "Ph.D. in [Blank]",
+      institution: "[University], 2012",
       specialization: "Distributed Systems, Container Orchestration",
-      bio: "Prof. Chen oversees the technical architecture of AutoLab's RAI system. He has extensive experience in building scalable software systems and has published over 30 papers in top-tier conferences.",
-      email: "mchen@buffalo.edu",
-      image: "/lovable-uploads/3905c3d0-5069-469f-a267-29c26630e4c4.png"
+      bio: "[Bio info]",
+      email: "email@buffalo.edu",
+      image: "/3905c3d0-5069-469f-a267-29c26630e4c4.png"
     },
     {
-      name: "Dr. Emily Rodriguez",
+      name: "Prof. [Name]",
       role: "RAI Systems Architect",
-      degree: "Ph.D. in Computer Systems",
-      institution: "Carnegie Mellon University, 2017",
+      degree: "Ph.D. in [Blank]",
+      institution: "[University], 2017",
       specialization: "Responsible AI, System Architecture",
-      bio: "Dr. Rodriguez designs and implements the core RAI infrastructure that powers AutoLab. Her expertise in responsible AI ensures our systems are ethical, fair, and transparent.",
-      email: "erodriguez@buffalo.edu",
-      image: "/lovable-uploads/d73a6f39-361f-4c1f-8cf4-a7419e7ce0a8.png"
+      bio: "[Bio info]",
+      email: "email@buffalo.edu",
+      image: "/d73a6f39-361f-4c1f-8cf4-a7419e7ce0a8.png"
     },
     {
-      name: "James Wilson",
+      name: "[Name]",
       role: "Graduate Research Assistant",
-      degree: "M.S. in Computer Science (In Progress)",
-      institution: "University at Buffalo, Expected 2025",
+      degree: "M.S. in [Blank]",
+      institution: "[University], Expected 2025",
       specialization: "Machine Learning, Code Analysis",
-      bio: "James is pursuing his Master's degree while contributing to AutoLab's machine learning components. His thesis focuses on automated code quality assessment using deep learning techniques.",
-      email: "jwilson@buffalo.edu",
-      image: "/lovable-uploads/e9f9078c-92fc-4420-bd5c-b119d7d953e5.png"
+      bio: "[Bio info]",
+      email: "email@buffalo.edu",
+      image: "/e9f9078c-92fc-4420-bd5c-b119d7d953e5.png"
     },
     {
-      name: "Lisa Zhang",
+      name: "[Name]",
       role: "Software Developer & UI/UX Designer",
-      degree: "B.S. in Computer Science",
-      institution: "University at Buffalo, 2020",
+      degree: "B.S. in [Blank]",
+      institution: "[University], 2020",
       specialization: "Full-Stack Development, User Experience",
-      bio: "Lisa develops the front-end interface and ensures AutoLab provides an intuitive user experience for both students and instructors. She brings 4 years of industry experience in web development.",
-      email: "lzhang@buffalo.edu",
-      image: "/lovable-uploads/3905c3d0-5069-469f-a267-29c26630e4c4.png"
+      bio: "[Bio info]",
+      email: "email@buffalo.edu",
+      image: "/3905c3d0-5069-469f-a267-29c26630e4c4.png"
     },
     {
-      name: "Dr. Robert Kim",
+      name: "[Name]",
       role: "Research Scientist",
-      degree: "Ph.D. in Educational Psychology",
-      institution: "University of Michigan, 2014",
+      degree: "Ph.D. in [Blank]",
+      institution: "[University], 2014",
       specialization: "Learning Analytics, Assessment Theory",
-      bio: "Dr. Kim brings pedagogical expertise to the AutoLab team, ensuring our automated grading systems align with educational best practices and learning outcomes.",
-      email: "rkim@buffalo.edu",
-      image: "/lovable-uploads/d73a6f39-361f-4c1f-8cf4-a7419e7ce0a8.png"
+      bio: "[Bio info]",
+      email: "email@buffalo.edu",
+      image: "/d73a6f39-361f-4c1f-8cf4-a7419e7ce0a8.png"
     }
   ];
 
