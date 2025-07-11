@@ -1,3 +1,4 @@
+
 import { ArrowLeft, Upload, Play, CheckCircle, FileText } from 'lucide-react';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
@@ -18,7 +19,7 @@ const GoPage = () => {
           
           <div className="flex items-center gap-4 mb-6">
             <div className="w-16 h-16 rounded-lg bg-cyan-500 flex items-center justify-center">
-              <span className="text-white font-bold text-xl">.go</span>
+              <img src="/logos/go.svg" alt="Go" className="w-10 h-10" />
             </div>
             <div>
               <h1 className="text-3xl font-bold text-foreground">Go Files</h1>
