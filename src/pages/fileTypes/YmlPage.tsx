@@ -19,7 +19,7 @@ const YmlPage = () => {
           
           <div className="flex items-center gap-4 mb-6">
             <div className="w-16 h-16 rounded-lg bg-teal-500 flex items-center justify-center">
-              <span className="text-white font-bold text-sm">.yml</span>
+              <img src="/logos/yaml.svg" alt="YAML" className="w-10 h-10" />
             </div>
             <div>
               <h1 className="text-3xl font-bold text-foreground">Configuration Files</h1>
