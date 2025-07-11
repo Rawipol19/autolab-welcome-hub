@@ -7,7 +7,7 @@ import { Button } from '@/components/ui/button';
 const Contact = () => {
   const contactMembers = [
     {
-      name: "Dr. Sarah Johnson",
+      name: "Dr. [Faculty Name]",
       role: "Project Director",
       department: "Computer Science & Engineering",
       email: "sarah.johnson@buffalo.edu",
@@ -15,7 +15,7 @@ const Contact = () => {
       office: "Davis Hall 338"
     },
     {
-      name: "Prof. Michael Chen",
+      name: "Prof. [Faculty Name]",
       role: "Technical Lead",
       department: "Computer Science & Engineering", 
       email: "mchen@buffalo.edu",
@@ -23,7 +23,7 @@ const Contact = () => {
       office: "Davis Hall 340"
     },
     {
-      name: "Dr. Emily Rodriguez",
+      name: "Dr. [Faculty Name]",
       role: "RAI Systems Architect",
       department: "Computer Science & Engineering",
       email: "erodriguez@buffalo.edu", 
@@ -31,7 +31,7 @@ const Contact = () => {
       office: "Davis Hall 342"
     },
     {
-      name: "James Wilson",
+      name: "[Faculty Name]",
       role: "Graduate Research Assistant",
       department: "Computer Science & Engineering",
       email: "jwilson@buffalo.edu",
@@ -39,7 +39,7 @@ const Contact = () => {
       office: "Davis Hall 235"
     },
     {
-      name: "Lisa Zhang",
+      name: "[Developer Name]",
       role: "Software Developer",
       department: "Computer Science & Engineering",
       email: "lzhang@buffalo.edu",
