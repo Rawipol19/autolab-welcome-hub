@@ -1,13 +1,23 @@
 
 import { Brain, Github, MapPin, Mail } from 'lucide-react';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 
 const Footer = () => {
+  const navigate = useNavigate();
+
   const scrollToRAI = () => {
     const raiSection = document.querySelector('#rai-section');
     if (raiSection) {
       raiSection.scrollIntoView({ behavior: 'smooth' });
     }
+  };
+
+  const saveScrollAndNavigate = (path: string) => {
+    const currentScrollY = window.scrollY;
+    if (currentScrollY > 0) {
+      sessionStorage.setItem('homepage-scroll-position', currentScrollY.toString());
+    }
+    navigate(path);
   };
 
   return (
@@ -28,7 +38,12 @@ const Footer = () => {
           <div>
             <h3 className="text-lg font-semibold mb-4">Quick Links</h3>
             <div className="space-y-2 text-sm">
-              <Link to="/" className="block text-primary-foreground/80 hover:text-primary-foreground transition-colors">Home</Link>
+              <button 
+                onClick={() => saveScrollAndNavigate('/')}
+                className="block text-primary-foreground/80 hover:text-primary-foreground transition-colors text-left"
+              >
+                Home
+              </button>
               <button 
                 onClick={scrollToRAI}
                 className="block text-primary-foreground/80 hover:text-primary-foreground transition-colors text-left"

@@ -1,10 +1,20 @@
-
 import { User, GraduationCap, Award, Mail, ExternalLink, ArrowLeft } from 'lucide-react';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
 import { Button } from '@/components/ui/button';
+import { useNavigate } from 'react-router-dom';
 
 const ResearchTeam = () => {
+  const navigate = useNavigate();
+
+  const saveScrollAndGoHome = () => {
+    const currentScrollY = window.scrollY;
+    if (currentScrollY > 0) {
+      sessionStorage.setItem('homepage-scroll-position', currentScrollY.toString());
+    }
+    navigate('/');
+  };
+
   const teamMembers = [
     {
       name: "Prof. [Name]",
@@ -74,7 +84,7 @@ const ResearchTeam = () => {
       <div className="p-6">
         <Button 
           variant="outline" 
-          onClick={() => window.location.href = '/'}
+          onClick={saveScrollAndGoHome}
           className="flex items-center gap-2"
         >
           <ArrowLeft className="h-4 w-4" />
