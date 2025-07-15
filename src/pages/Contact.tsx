@@ -9,11 +9,12 @@ const Contact = () => {
   const navigate = useNavigate();
 
   const saveScrollAndGoHome = () => {
-    const currentScrollY = window.scrollY;
-    if (currentScrollY > 0) {
-      sessionStorage.setItem('homepage-scroll-position', currentScrollY.toString());
-    }
+    // Clear any saved scroll position to go to top
+    sessionStorage.removeItem('homepage-scroll-position');
     navigate('/');
+    setTimeout(() => {
+      window.scrollTo(0, 0);
+    }, 100);
   };
 
   const contactMembers = [

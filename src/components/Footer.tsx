@@ -18,6 +18,19 @@ const Footer = () => {
       sessionStorage.setItem('homepage-scroll-position', currentScrollY.toString());
     }
     navigate(path);
+    // Scroll to top after navigation
+    setTimeout(() => {
+      window.scrollTo(0, 0);
+    }, 100);
+  };
+
+  const goToHomepageTop = () => {
+    // Clear any saved scroll position and go to top
+    sessionStorage.removeItem('homepage-scroll-position');
+    navigate('/');
+    setTimeout(() => {
+      window.scrollTo(0, 0);
+    }, 100);
   };
 
   return (
@@ -39,7 +52,7 @@ const Footer = () => {
             <h3 className="text-lg font-semibold mb-4">Quick Links</h3>
             <div className="space-y-2 text-sm">
               <button 
-                onClick={() => saveScrollAndNavigate('/')}
+                onClick={goToHomepageTop}
                 className="block text-primary-foreground/80 hover:text-primary-foreground transition-colors text-left"
               >
                 Home
