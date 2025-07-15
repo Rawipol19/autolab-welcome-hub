@@ -1,21 +1,10 @@
+
 import { Zap, Calendar, CheckCircle, Star, Rocket, Shield, Users, Code, ArrowLeft } from 'lucide-react';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
 import { Button } from '@/components/ui/button';
-import { useNavigate } from 'react-router-dom';
 
 const NewsUpdates = () => {
-  const navigate = useNavigate();
-
-  const saveScrollAndGoHome = () => {
-    // Clear any saved scroll position to go to top
-    sessionStorage.removeItem('homepage-scroll-position');
-    navigate('/');
-    setTimeout(() => {
-      window.scrollTo(0, 0);
-    }, 100);
-  };
-
   const updates = [
     {
       version: "0.8.5.1",
@@ -148,7 +137,7 @@ const NewsUpdates = () => {
       <div className="p-6">
         <Button 
           variant="outline" 
-          onClick={saveScrollAndGoHome}
+          onClick={() => window.location.href = '/'}
           className="flex items-center gap-2"
         >
           <ArrowLeft className="h-4 w-4" />

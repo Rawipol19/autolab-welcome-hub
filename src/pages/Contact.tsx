@@ -1,27 +1,10 @@
+
 import { Mail, Phone, MapPin, User, ArrowLeft } from 'lucide-react';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
 import { Button } from '@/components/ui/button';
-import { useNavigate } from 'react-router-dom';
-import { useEffect } from 'react';
 
 const Contact = () => {
-  const navigate = useNavigate();
-
-  // Scroll to top immediately when page loads
-  useEffect(() => {
-    window.scrollTo(0, 0);
-  }, []);
-
-  const saveScrollAndGoHome = () => {
-    // Clear any saved scroll position to go to top
-    sessionStorage.removeItem('homepage-scroll-position');
-    navigate('/');
-    setTimeout(() => {
-      window.scrollTo(0, 0);
-    }, 100);
-  };
-
   const contactMembers = [
     {
       name: "Dr. [Faculty Name]",
@@ -71,7 +54,7 @@ const Contact = () => {
       <div className="p-6">
         <Button 
           variant="outline" 
-          onClick={saveScrollAndGoHome}
+          onClick={() => window.location.href = '/'}
           className="flex items-center gap-2"
         >
           <ArrowLeft className="h-4 w-4" />

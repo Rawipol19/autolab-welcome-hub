@@ -1,36 +1,12 @@
 
 import { Brain, Github, MapPin, Mail } from 'lucide-react';
-import { Link, useNavigate } from 'react-router-dom';
 
 const Footer = () => {
-  const navigate = useNavigate();
-
   const scrollToRAI = () => {
     const raiSection = document.querySelector('#rai-section');
     if (raiSection) {
       raiSection.scrollIntoView({ behavior: 'smooth' });
     }
-  };
-
-  const saveScrollAndNavigate = (path: string) => {
-    const currentScrollY = window.scrollY;
-    if (currentScrollY > 0) {
-      sessionStorage.setItem('homepage-scroll-position', currentScrollY.toString());
-    }
-    navigate(path);
-    // Scroll to top after navigation
-    setTimeout(() => {
-      window.scrollTo(0, 0);
-    }, 100);
-  };
-
-  const goToHomepageTop = () => {
-    // Clear any saved scroll position and go to top
-    sessionStorage.removeItem('homepage-scroll-position');
-    navigate('/');
-    setTimeout(() => {
-      window.scrollTo(0, 0);
-    }, 100);
   };
 
   return (
@@ -51,30 +27,15 @@ const Footer = () => {
           <div>
             <h3 className="text-lg font-semibold mb-4">Quick Links</h3>
             <div className="space-y-2 text-sm">
-              <button 
-                onClick={goToHomepageTop}
-                className="block text-primary-foreground/80 hover:text-primary-foreground transition-colors text-left"
-              >
-                Home
-              </button>
+              <a href="/" className="block text-primary-foreground/80 hover:text-primary-foreground transition-colors">Home</a>
               <button 
                 onClick={scrollToRAI}
                 className="block text-primary-foreground/80 hover:text-primary-foreground transition-colors text-left"
               >
                 Features
               </button>
-              <button 
-                onClick={() => saveScrollAndNavigate('/how-it-works')}
-                className="block text-primary-foreground/80 hover:text-primary-foreground transition-colors text-left"
-              >
-                How It Works
-              </button>
-              <button 
-                onClick={() => saveScrollAndNavigate('/about')}
-                className="block text-primary-foreground/80 hover:text-primary-foreground transition-colors text-left"
-              >
-                About
-              </button>
+              <a href="/how-it-works" className="block text-primary-foreground/80 hover:text-primary-foreground transition-colors">How It Works</a>
+              <a href="/about" className="block text-primary-foreground/80 hover:text-primary-foreground transition-colors">About</a>
               <a 
                 href="https://docs.autolabproject.com/"
                 target="_blank"
@@ -111,12 +72,7 @@ const Footer = () => {
               >
                 User Guide
               </a>
-              <button 
-                onClick={() => saveScrollAndNavigate('/publications')}
-                className="block text-primary-foreground/80 hover:text-primary-foreground transition-colors text-left"
-              >
-                Publications
-              </button>
+              <a href="/publications" className="block text-primary-foreground/80 hover:text-primary-foreground transition-colors">Publications</a>
             </div>
           </div>
 
@@ -124,24 +80,14 @@ const Footer = () => {
           <div>
             <h3 className="text-lg font-semibold mb-4">Connect</h3>
             <div className="space-y-2 text-sm">
-              <button 
-                onClick={() => saveScrollAndNavigate('/contact')}
-                className="block text-primary-foreground/80 hover:text-primary-foreground transition-colors text-left"
+              <a 
+                href="/contact" 
+                className="block text-primary-foreground/80 hover:text-primary-foreground transition-colors"
               >
                 Contact Us
-              </button>
-              <button 
-                onClick={() => saveScrollAndNavigate('/research-team')}
-                className="block text-primary-foreground/80 hover:text-primary-foreground transition-colors text-left"
-              >
-                Research Team
-              </button>
-              <button 
-                onClick={() => saveScrollAndNavigate('/news-updates')}
-                className="block text-primary-foreground/80 hover:text-primary-foreground transition-colors text-left"
-              >
-                News &amp; Updates
-              </button>
+              </a>
+              <a href="/research-team" className="block text-primary-foreground/80 hover:text-primary-foreground transition-colors">Research Team</a>
+              <a href="/news-updates" className="block text-primary-foreground/80 hover:text-primary-foreground transition-colors">News &amp; Updates</a>
             </div>
           </div>
         </div>
