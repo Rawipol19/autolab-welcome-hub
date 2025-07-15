@@ -50,8 +50,18 @@ const Footer = () => {
               >
                 Features
               </button>
-              <Link to="/how-it-works" className="block text-primary-foreground/80 hover:text-primary-foreground transition-colors">How It Works</Link>
-              <Link to="/about" className="block text-primary-foreground/80 hover:text-primary-foreground transition-colors">About</Link>
+              <button 
+                onClick={() => saveScrollAndNavigate('/how-it-works')}
+                className="block text-primary-foreground/80 hover:text-primary-foreground transition-colors text-left"
+              >
+                How It Works
+              </button>
+              <button 
+                onClick={() => saveScrollAndNavigate('/about')}
+                className="block text-primary-foreground/80 hover:text-primary-foreground transition-colors text-left"
+              >
+                About
+              </button>
               <a 
                 href="https://docs.autolabproject.com/"
                 target="_blank"
@@ -88,7 +98,12 @@ const Footer = () => {
               >
                 User Guide
               </a>
-              <Link to="/publications" className="block text-primary-foreground/80 hover:text-primary-foreground transition-colors">Publications</Link>
+              <button 
+                onClick={() => saveScrollAndNavigate('/publications')}
+                className="block text-primary-foreground/80 hover:text-primary-foreground transition-colors text-left"
+              >
+                Publications
+              </button>
             </div>
           </div>
 
@@ -96,14 +111,24 @@ const Footer = () => {
           <div>
             <h3 className="text-lg font-semibold mb-4">Connect</h3>
             <div className="space-y-2 text-sm">
-              <Link 
-                to="/contact" 
-                className="block text-primary-foreground/80 hover:text-primary-foreground transition-colors"
+              <button 
+                onClick={() => saveScrollAndNavigate('/contact')}
+                className="block text-primary-foreground/80 hover:text-primary-foreground transition-colors text-left"
               >
                 Contact Us
-              </Link>
-              <Link to="/research-team" className="block text-primary-foreground/80 hover:text-primary-foreground transition-colors">Research Team</Link>
-              <Link to="/news-updates" className="block text-primary-foreground/80 hover:text-primary-foreground transition-colors">News &amp; Updates</Link>
+              </button>
+              <button 
+                onClick={() => saveScrollAndNavigate('/research-team')}
+                className="block text-primary-foreground/80 hover:text-primary-foreground transition-colors text-left"
+              >
+                Research Team
+              </button>
+              <button 
+                onClick={() => saveScrollAndNavigate('/news-updates')}
+                className="block text-primary-foreground/80 hover:text-primary-foreground transition-colors text-left"
+              >
+                News &amp; Updates
+              </button>
             </div>
           </div>
         </div>
