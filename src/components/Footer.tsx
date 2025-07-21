@@ -2,6 +2,23 @@
 import { Brain, Github, MapPin, Mail } from 'lucide-react';
 
 const Footer = () => {
+  const saveScrollPosition = () => {
+    const currentScrollY = window.scrollY;
+    if (currentScrollY > 0) {
+      sessionStorage.setItem('homepage-scroll-position', currentScrollY.toString());
+    }
+  };
+
+  const handleHomeClick = () => {
+    sessionStorage.removeItem('homepage-scroll-position');
+    window.location.href = '/';
+  };
+
+  const handleFooterNavigation = (path: string) => {
+    saveScrollPosition();
+    window.location.href = path;
+  };
+
   const scrollToRAI = () => {
     const raiSection = document.querySelector('#rai-section');
     if (raiSection) {
@@ -27,15 +44,30 @@ const Footer = () => {
           <div>
             <h3 className="text-lg font-semibold mb-4">Quick Links</h3>
             <div className="space-y-2 text-sm">
-              <a href="/" className="block text-primary-foreground/80 hover:text-primary-foreground transition-colors">Home</a>
+              <button 
+                onClick={handleHomeClick}
+                className="block text-primary-foreground/80 hover:text-primary-foreground transition-colors text-left"
+              >
+                Home
+              </button>
               <button 
                 onClick={scrollToRAI}
                 className="block text-primary-foreground/80 hover:text-primary-foreground transition-colors text-left"
               >
                 Features
               </button>
-              <a href="/how-it-works" className="block text-primary-foreground/80 hover:text-primary-foreground transition-colors">How It Works</a>
-              <a href="/about" className="block text-primary-foreground/80 hover:text-primary-foreground transition-colors">About</a>
+              <button 
+                onClick={() => handleFooterNavigation('/how-it-works')}
+                className="block text-primary-foreground/80 hover:text-primary-foreground transition-colors text-left"
+              >
+                How It Works
+              </button>
+              <button 
+                onClick={() => handleFooterNavigation('/about')}
+                className="block text-primary-foreground/80 hover:text-primary-foreground transition-colors text-left"
+              >
+                About
+              </button>
               <a 
                 href="https://docs.autolabproject.com/"
                 target="_blank"
@@ -72,7 +104,12 @@ const Footer = () => {
               >
                 User Guide
               </a>
-              <a href="/publications" className="block text-primary-foreground/80 hover:text-primary-foreground transition-colors">Publications</a>
+              <button 
+                onClick={() => handleFooterNavigation('/publications')}
+                className="block text-primary-foreground/80 hover:text-primary-foreground transition-colors text-left"
+              >
+                Publications
+              </button>
             </div>
           </div>
 
@@ -80,14 +117,24 @@ const Footer = () => {
           <div>
             <h3 className="text-lg font-semibold mb-4">Connect</h3>
             <div className="space-y-2 text-sm">
-              <a 
-                href="/contact" 
-                className="block text-primary-foreground/80 hover:text-primary-foreground transition-colors"
+              <button 
+                onClick={() => handleFooterNavigation('/contact')}
+                className="block text-primary-foreground/80 hover:text-primary-foreground transition-colors text-left"
               >
                 Contact Us
-              </a>
-              <a href="/research-team" className="block text-primary-foreground/80 hover:text-primary-foreground transition-colors">Research Team</a>
-              <a href="/news-updates" className="block text-primary-foreground/80 hover:text-primary-foreground transition-colors">News &amp; Updates</a>
+              </button>
+              <button 
+                onClick={() => handleFooterNavigation('/research-team')}
+                className="block text-primary-foreground/80 hover:text-primary-foreground transition-colors text-left"
+              >
+                Research Team
+              </button>
+              <button 
+                onClick={() => handleFooterNavigation('/news-updates')}
+                className="block text-primary-foreground/80 hover:text-primary-foreground transition-colors text-left"
+              >
+                News &amp; Updates
+              </button>
             </div>
           </div>
         </div>

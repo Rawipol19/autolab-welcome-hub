@@ -13,15 +13,28 @@ const Index = () => {
   // Handle scroll position restoration
   useEffect(() => {
     const restoreScrollPosition = () => {
+      // Check for restore-scroll first (from footer navigation)
+      const restorePosition = sessionStorage.getItem('restore-scroll');
+      if (restorePosition && restorePosition !== '0') {
+        setTimeout(() => {
+          window.scrollTo({
+            top: parseInt(restorePosition, 10),
+            behavior: 'instant'
+          });
+          sessionStorage.removeItem('restore-scroll');
+        }, 0);
+        setIsContentReady(true);
+        return;
+      }
+
+      // Then check for homepage-scroll-position (from file types)
       const savedScrollPosition = sessionStorage.getItem('homepage-scroll-position');
       if (savedScrollPosition && savedScrollPosition !== '0') {
-        // Use setTimeout to ensure DOM is fully rendered
         setTimeout(() => {
           window.scrollTo({
             top: parseInt(savedScrollPosition, 10),
             behavior: 'instant'
           });
-          // Clean up the saved position after restoring
           sessionStorage.removeItem('homepage-scroll-position');
         }, 0);
       }
