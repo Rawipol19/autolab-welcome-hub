@@ -74,7 +74,14 @@ const ResearchTeam = () => {
       <div className="p-6">
         <Button 
           variant="outline" 
-          onClick={() => window.location.href = '/'}
+          onClick={() => {
+            const savedPosition = sessionStorage.getItem('homepage-scroll-position');
+            if (savedPosition) {
+              sessionStorage.setItem('restore-scroll', savedPosition);
+              sessionStorage.removeItem('homepage-scroll-position');
+            }
+            window.location.href = '/';
+          }}
           className="flex items-center gap-2"
         >
           <ArrowLeft className="h-4 w-4" />
