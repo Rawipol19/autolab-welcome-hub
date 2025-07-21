@@ -7,8 +7,26 @@ import { Button } from '@/components/ui/button';
 const NewsUpdates = () => {
   const updates = [
     {
-      version: "0.9.0.0",
+      version: "0.9.5.6",
       date: "July 21, 2025",
+      type: "Website Features Release",
+      features: [
+        "Complete UI/UX redesign with modern design system",
+        "New responsive navigation with fixing scroll position",
+        "Enhanced footer with quick links and better organization",
+        "Advanced scroll position management across all pages",
+        "Improved mobile experience with touch-friendly controls"
+      ],
+      improvements: [
+        "Achieved 60% faster page load times through optimized assets and reduced payloads",
+        "Implemented comprehensive SEO enhancements across all pages",
+        "Introduced smooth page transitions for a more fluid user experience",
+        "Refactored codebase for improved organization, readability, and long-term maintainability"
+      ]
+    },
+    {
+      version: "0.9.0.0",
+      date: "July 10, 2025",
       type: "Major Release",
       features: [
         "Complete UI/UX redesign with modern design system",
