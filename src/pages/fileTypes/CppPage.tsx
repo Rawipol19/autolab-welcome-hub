@@ -18,7 +18,7 @@ const CppPage = () => {
           </Link>
           
           <div className="flex items-center gap-4 mb-6">
-            <div className="w-16 h-16 rounded-lg bg-blue-600 flex items-center justify-center">
+            <div className="w-16 h-16 rounded-lg bg-white-600 flex items-center justify-center">
               <img src="/logos/cpp.svg" alt="C++" className="w-10 h-10" />
             </div>
             <div>

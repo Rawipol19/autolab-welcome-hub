@@ -18,7 +18,7 @@ const GoPage = () => {
           </Link>
           
           <div className="flex items-center gap-4 mb-6">
-            <div className="w-16 h-16 rounded-lg bg-cyan-500 flex items-center justify-center">
+            <div className="w-16 h-16 rounded-lg bg-white-500 flex items-center justify-center">
               <img src="/logos/go.svg" alt="Go" className="w-10 h-10" />
             </div>
             <div>
