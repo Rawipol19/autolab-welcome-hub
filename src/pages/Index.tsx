@@ -328,7 +328,7 @@ const Index = () => {
                     <CardHeader className="pb-3">
                       <div className="flex items-center gap-4">
                         <div className={`p-2 rounded-lg ${
-                          selectedStep === index ? 'bg-primary text-primary-foreground' : 'bg-secondary'
+                          selectedStep === index ? 'bg-primary text-primary-foreground' : 'bg-muted/30'
                         }`}>
                           <StepIcon className="h-6 w-6" />
                         </div>
