@@ -220,6 +220,8 @@ const Index = () => {
       'javascript': '/file-types/javascript',
       'c': '/file-types/c',
       'go': '/file-types/go',
+      'rust': '/file-types/rust',
+      'sml': '/file-types/sml',
       'ziparchive': '/file-types/zip',
       'tararchive': '/file-types/tar',
       'yamlconfiguration': '/file-types/yml'
