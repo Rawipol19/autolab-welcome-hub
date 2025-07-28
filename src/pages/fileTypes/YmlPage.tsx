@@ -1,5 +1,5 @@
 
-import { ArrowLeft, Upload, Play, CheckCircle } from 'lucide-react';
+import { ArrowLeft, Upload, Play, CheckCircle, FileText } from 'lucide-react';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import { Badge } from '@/components/ui/badge';
@@ -51,6 +51,54 @@ const YmlPage = () => {
                   <li>Timeout limits and resource constraints</li>
                   <li>Grading rubric and scoring criteria</li>
                 </ul>
+              </div>
+            </CardContent>
+          </Card>
+
+          <Card>
+            <CardHeader>
+              <CardTitle className="flex items-center gap-2">
+                <FileText className="h-5 w-5" />
+                Example Code
+              </CardTitle>
+            </CardHeader>
+            <CardContent>
+              <div className="bg-muted/50 rounded-lg p-4 overflow-x-auto">
+                <pre className="text-sm">
+                  <code>{`rai:
+  version: 0.2 
+  image: autograderpython
+resources:
+  cpu:
+    architecture: arm64 
+  gpu:
+    architecture: Ampere 
+    count: 1
+  network: false
+clean: 
+  rm -rf *~ src
+commands:
+  
+  build:
+    # Extract files and set up directory structure
+    - mkdir -p /build/work
+    - tar -xvf /src/autograde.tar -C /build/work
+    - cp /src/sorter.cpp /build/work/
+    
+    # Compile the necessary files
+    - g++ -std=c++11 -o ./work/oracle ./work/oracle.cpp
+    - g++ -std=c++11 -o ./work/sorter ./work/sorter.cpp
+    
+    # Make the checker executable
+    - chmod +x /build/work/interactive_checker.py
+    
+    # Run the checker and ensure output.log is created
+    - python3 /build/work/interactive_checker.py
+    
+    # Create a direct JSON output for autograder
+    - |
+      echo "{\"score\": 100, \"feedback\": \"Autograder ran successfully\"}" > /build/autoresult.json`}</code>
+                </pre>
               </div>
             </CardContent>
           </Card>
