@@ -190,7 +190,9 @@ const Index = () => {
         { name: "C++", extension: ".cpp", color: "bg-green-500", logo: "/logos/cpp.svg" },
         { name: "JavaScript", extension: ".js", color: "bg-yellow-500", logo: "/logos/javascript.svg" },
         { name: "C", extension: ".c", color: "bg-gray-500", logo: "/logos/c.svg" },
-        { name: "Go", extension: ".go", color: "bg-cyan-500", logo: "/logos/go.svg" }
+        { name: "Go", extension: ".go", color: "bg-cyan-500", logo: "/logos/go.svg" },
+        { name: "Rust", extension: ".rs", color: "bg-red-500", logo: "/logos/rust.svg" },
+        { name: "SML", extension: ".sml", color: "bg-pink-500", logo: "/logos/sml.svg" }
       ]
     },
     {
