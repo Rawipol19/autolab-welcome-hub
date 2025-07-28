@@ -167,6 +167,22 @@ const CPage = () => {
           <Card>
             <CardHeader>
               <CardTitle className="flex items-center gap-2">
+                <FileText className="h-5 w-5" />
+                Example Code
+              </CardTitle>
+            </CardHeader>
+            <CardContent>
+              <div className="bg-muted/50 rounded-lg p-6 min-h-[200px] border-2 border-dashed border-muted-foreground/30">
+                <p className="text-muted-foreground text-center">
+                  Example code will be added here
+                </p>
+              </div>
+            </CardContent>
+          </Card>
+
+          <Card>
+            <CardHeader>
+              <CardTitle className="flex items-center gap-2">
                 <CheckCircle className="h-5 w-5" />
                 Best Practices
               </CardTitle>
