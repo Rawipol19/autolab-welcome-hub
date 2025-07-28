@@ -172,10 +172,19 @@ const GoPage = () => {
               </CardTitle>
             </CardHeader>
             <CardContent>
-              <div className="bg-muted/50 rounded-lg p-6 min-h-[200px] border-2 border-dashed border-muted-foreground/30">
-                <p className="text-muted-foreground text-center">
-                  Example code will be added here
-                </p>
+               <div className="bg-muted/50 rounded-lg p-4 overflow-x-auto">
+                <pre className="text-sm">
+                  <code>{`package main
+
+func fib(n int) int {
+	if n <= 2 {
+		return 1
+	}
+
+	return fib(n-1) + fib(n-2)
+}
+}`}</code>
+                </pre>
               </div>
             </CardContent>
           </Card>

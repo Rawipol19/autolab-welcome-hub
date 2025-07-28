@@ -177,10 +177,102 @@ const PythonPage = () => {
               </CardTitle>
             </CardHeader>
             <CardContent>
-              <div className="bg-muted/50 rounded-lg p-6 min-h-[200px] border-2 border-dashed border-muted-foreground/30">
-                <p className="text-muted-foreground text-center">
-                  Example code will be added here
-                </p>
+              <div className="bg-muted/50 rounded-lg p-4 overflow-x-auto">
+                <pre className="text-sm">
+                  <code>{`#!/usr/bin/python3
+import subprocess
+import os
+import fcntl
+from subprocess import PIPE
+from datetime import datetime, timedelta
+
+#Buffalo time
+us_eastern_time = datetime.utcnow() - timedelta(hours=4)
+
+ORACLE_BINARY = "./work/oracle"
+STUDENT_BINARY = "./work/sorter"
+
+VERBOSE = True # change to False to disable interaction logs
+
+# Create output.log file at the beginning with valid initial JSON
+os.makedirs("/build", exist_ok=True)
+with open("/build/output.log", "w") as f:
+    f.write('{"status": "running", "scores": {"correctness": 0, "query_score": 0}}')
+
+class bcolors:
+    HEADER = '033[95m'
+    OKBLUE = '033[94m'
+    OKCYAN = '033[96m'
+    OKGREEN = '033[92m'
+    WARNING = '033[93m'
+    FAIL = '033[91m'
+    ENDC = '033[0m'
+    BOLD = '033[1m'
+    UNDERLINE = '033[4m'
+
+# Reads a line from student program
+def read(proc):
+    return proc.stdout.readline().decode("utf-8").strip()
+
+# Outputs a line to student program
+def write(proc, message):
+    proc.stdin.write(f"{message.strip()}\n".encode("utf-8"))
+    proc.stdin.flush()
+
+def interactive_checker():
+    try:
+        oracle_proc = subprocess.Popen(ORACLE_BINARY, stdin=PIPE,
+                                stdout=PIPE, stderr=PIPE)
+        student_proc = subprocess.Popen(STUDENT_BINARY, stdin=PIPE,
+                                stdout=PIPE, stderr=PIPE)
+    except Exception as e:
+        # Update output.log with error information
+        with open("/build/output.log", "w") as f:
+            f.write(f'{{"status": "error", "message": "Failed to start processes: {str(e)}"}}')
+        return
+
+    while True:
+        data = read(oracle_proc)
+
+        if "AUTOGRADER_COMPLETE" in data:
+            print(f"Oracle has judged student answer")
+            # Get the actual result JSON from oracle
+            autograder_result = read(oracle_proc)
+            print(autograder_result)
+            
+            # Write the final result to output.log
+            with open("/build/output.log", "w") as f:
+                # Append grading metadata
+                f.write("\n\nOracle has judged student answer\n")
+                f.write(f"Graded at: {us_eastern_time.strftime('%Y-%m-%d %H:%M:%S')} US/Eastern (approx)\n")
+                f.write("Grading Method:\n")
+                f.write("1. The oracle program sent a series of prompts to the student program.\n")
+                f.write("2. The student program responded to each prompt.\n")
+                f.write("3. Each response was compared to the oracle's expected output.\n")
+                f.write("4. Correctness score was calculated based on matching outputs.\n")
+                f.write("5. Query score (if applicable) was calculated based on the quality or structure of responses.\n")
+                f.write("6. Once all checks were complete, the oracle printed 'AUTOGRADER_COMPLETE' followed by the final result JSON.\n")
+                f.write("\n")
+                f.write(autograder_result)
+            break
+
+        write(student_proc, data)
+        if VERBOSE:
+            print(f"Relayed from {bcolors.OKGREEN}oracle{bcolors.ENDC} to {bcolors.OKBLUE}student{bcolors.ENDC}:\t\t{data}")
+        query = read(student_proc)
+        write(oracle_proc, query)
+        if VERBOSE:
+            print(f"Relayed from {bcolors.OKBLUE}student{bcolors.ENDC} to {bcolors.OKGREEN}oracle{bcolors.ENDC}:\t\t{query}")
+
+if __name__ == "__main__":
+    try:
+        interactive_checker()
+    except Exception as e:
+        # Update output.log with any uncaught exceptions
+        with open("/build/output.log", "w") as f:
+            f.write(f'{{"status": "error", "message": "Unhandled exception: {str(e)}"}}')
+}`}</code>
+                </pre>
               </div>
             </CardContent>
           </Card>
