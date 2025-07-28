@@ -176,7 +176,7 @@ const CppPage = () => {
             <CardContent>
               <div className="bg-muted/50 rounded-lg p-6 min-h-[200px] border-2 border-dashed border-muted-foreground/30">
                 <p className="text-muted-foreground text-center">
-                  Example code will be added here 
+                  Example code will be added here
                 </p>
               </div>
             </CardContent>
