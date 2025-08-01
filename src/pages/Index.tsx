@@ -574,45 +574,45 @@ const Index = () => {
           </div>
 
           <div className="bg-card rounded-2xl p-8 border border-primary/20 shadow-lg">
-            <h3 className="text-3xl font-bold text-primary mb-6 text-center">
+            <h3 className="text-2xl font-bold text-primary mb-6 text-center">
               RAI Architecture Integration
             </h3>
             <div className="grid md:grid-cols-2 gap-8">
               <div>
-                <h4 className="text-xl font-semibold text-foreground mb-4">Core RAI Workflow</h4>
+                <h4 className="text-lg font-semibold text-foreground mb-4">Core RAI Workflow</h4>
                 <div className="space-y-4">
                   <div className="p-4 bg-primary/10 rounded-lg border border-primary/20">
-                    <p className="text-base font-medium text-primary mb-2">Job Processing:</p>
-                    <p className="text-base text-muted-foreground">
+                    <p className="text-sm font-medium text-primary mb-2">Job Processing:</p>
+                    <p className="text-sm text-muted-foreground">
                       RAI receives submissions, assigns job IDs, and manages the queue through RabbitMQ messaging system.
                     </p>
                   </div>
                   <div className="p-4 bg-secondary/10 rounded-lg border border-secondary/20">
-                    <p className="text-base font-medium text-secondary mb-2">Docker Integration:</p>
-                    <p className="text-base text-muted-foreground">
+                    <p className="text-sm font-medium text-secondary mb-2">Docker Integration:</p>
+                    <p className="text-sm text-muted-foreground">
                       Transports job IDs to Docker containers for secure, isolated code execution and result collection.
                     </p>
                   </div>
                 </div>
               </div>
               <div>
-                <h4 className="text-xl font-semibold text-foreground mb-4">System Components</h4>
+                <h4 className="text-lg font-semibold text-foreground mb-4">System Components</h4>
                 <div className="space-y-3">
                   <div className="flex items-center gap-3">
                     <div className="w-2 h-2 bg-primary rounded-full"></div>
-                    <span className="text-base text-muted-foreground">MongoDB for persistent job data storage</span>
+                    <span className="text-sm text-muted-foreground">MongoDB for persistent job data storage</span>
                   </div>
                   <div className="flex items-center gap-3">
                     <div className="w-2 h-2 bg-primary rounded-full"></div>
-                    <span className="text-base text-muted-foreground">Redis for real-time job status tracking</span>
+                    <span className="text-sm text-muted-foreground">Redis for real-time job status tracking</span>
                   </div>
                   <div className="flex items-center gap-3">
                     <div className="w-2 h-2 bg-primary rounded-full"></div>
-                    <span className="text-base text-muted-foreground">RabbitMQ for reliable message queuing</span>
+                    <span className="text-sm text-muted-foreground">RabbitMQ for reliable message queuing</span>
                   </div>
                   <div className="flex items-center gap-3">
                     <div className="w-2 h-2 bg-primary rounded-full"></div>
-                    <span className="text-base text-muted-foreground">Minio for scalable file storage management</span>
+                    <span className="text-sm text-muted-foreground">Minio for scalable file storage management</span>
                   </div>
                 </div>
               </div>
