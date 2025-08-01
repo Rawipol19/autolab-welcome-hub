@@ -170,16 +170,16 @@ const PythonPage = () => {
           </Card>
 
           <Card>
-            <CardHeader>
-              <CardTitle className="flex items-center gap-2">
-                <FileText className="h-5 w-5" />
-                Example Code
-              </CardTitle>
-            </CardHeader>
-            <CardContent>
-              <div className="bg-muted/50 rounded-lg p-4 overflow-x-auto">
-                <pre className="text-sm">
-                  <code>{`#!/usr/bin/python3
+  <CardHeader>
+    <CardTitle className="flex items-center gap-2">
+      <FileText className="h-5 w-5" />
+      Example Code (Part of the Tar File for Teachers)
+    </CardTitle>
+  </CardHeader>
+  <CardContent>
+    <div className="bg-muted/50 rounded-lg p-4 overflow-x-auto overflow-y-auto max-h-[500px]">
+      <pre className="text-sm">
+        <code>{`#!/usr/bin/python3
 import subprocess
 import os
 import fcntl
@@ -243,16 +243,16 @@ def interactive_checker():
             # Write the final result to output.log
             with open("/build/output.log", "w") as f:
                 # Append grading metadata
-                f.write("\n\nOracle has judged student answer\n")
-                f.write(f"Graded at: {us_eastern_time.strftime('%Y-%m-%d %H:%M:%S')} US/Eastern (approx)\n")
-                f.write("Grading Method:\n")
-                f.write("1. The oracle program sent a series of prompts to the student program.\n")
-                f.write("2. The student program responded to each prompt.\n")
-                f.write("3. Each response was compared to the oracle's expected output.\n")
-                f.write("4. Correctness score was calculated based on matching outputs.\n")
-                f.write("5. Query score (if applicable) was calculated based on the quality or structure of responses.\n")
-                f.write("6. Once all checks were complete, the oracle printed 'AUTOGRADER_COMPLETE' followed by the final result JSON.\n")
-                f.write("\n")
+                f.write("\\n\\nOracle has judged student answer\\n")
+                f.write(f"Graded at: {us_eastern_time.strftime('%Y-%m-%d %H:%M:%S')} US/Eastern (approx)\\n")
+                f.write("Grading Method:\\n")
+                f.write("1. The oracle program sent a series of prompts to the student program.\\n")
+                f.write("2. The student program responded to each prompt.\\n")
+                f.write("3. Each response was compared to the oracle's expected output.\\n")
+                f.write("4. Correctness score was calculated based on matching outputs.\\n")
+                f.write("5. Query score (if applicable) was calculated based on the quality or structure of responses.\\n")
+                f.write("6. Once all checks were complete, the oracle printed 'AUTOGRADER_COMPLETE' followed by the final result JSON.\\n")
+                f.write("\\n")
                 f.write(autograder_result)
             break
 
@@ -271,10 +271,43 @@ if __name__ == "__main__":
         # Update output.log with any uncaught exceptions
         with open("/build/output.log", "w") as f:
             f.write(f'{{"status": "error", "message": "Unhandled exception: {str(e)}"}}')
-}`}</code>
-                </pre>
-              </div>
-            </CardContent>
+`}</code>
+      </pre>
+    </div>
+  </CardContent>
+</Card>
+
+<Card>
+  <CardHeader>
+    <CardTitle className="flex items-center gap-2">
+      <FileText className="h-5 w-5" />
+      Example Code (Students Assignment Code)
+    </CardTitle>
+  </CardHeader>
+  <CardContent>
+    <div className="bg-muted/50 rounded-lg p-4 overflow-x-auto overflow-y-auto max-h-[300px]">
+      <pre className="text-sm">
+        <code>{`def wordToInt(word, solution):
+    result = 0
+    for c in word:
+        digit = solution.find(c)
+        if (digit < 0):
+            return None
+        result = 10*result + digit
+    return result
+
+def solvesCryptarithm(puzzle, solution):
+    plusIndex = puzzle.find(' + ')
+    equalsIndex = puzzle.find(' = ')
+    x1 = wordToInt(puzzle[0:plusIndex], solution)
+    x2 = wordToInt(puzzle[3+plusIndex:equalsIndex], solution)
+    x3 = wordToInt(puzzle[3+equalsIndex:], solution)
+    return (x1 != None) and (x2 != None) and (x3 != None) and (x1 + x2 == x3)`
+    
+    }</code>
+              </pre>
+            </div>
+          </CardContent>
           </Card>
 
           <Card>

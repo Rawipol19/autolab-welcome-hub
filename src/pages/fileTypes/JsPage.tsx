@@ -173,7 +173,7 @@ const JsPage = () => {
               </CardTitle>
             </CardHeader>
             <CardContent>
-              <div className="bg-muted/50 rounded-lg p-4 overflow-x-auto">
+              <div className="bg-muted/50 rounded-lg p-4 overflow-x-auto overflow-y-auto max-h-[500px]">
                 <pre className="text-sm">
                   <code>{`function sum(a, b) {
     return a + b;

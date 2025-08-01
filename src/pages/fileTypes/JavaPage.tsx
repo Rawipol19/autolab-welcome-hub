@@ -168,11 +168,11 @@ const JavaPage = () => {
             <CardHeader>
               <CardTitle className="flex items-center gap-2">
                 <FileText className="h-5 w-5" />
-                Example Code
+                Example Code (Student Assignment Test Cases Code)
               </CardTitle>
             </CardHeader>
             <CardContent>
-              <div className="bg-muted/50 rounded-lg p-4 overflow-x-auto">
+              <div className="bg-muted/50 rounded-lg p-4 overflow-x-auto overflow-y-auto max-h-[500px]">
                 <pre className="text-sm">
                   <code>{`public class TestMissing {
   // Test cases

@@ -102,6 +102,36 @@ const TxtPage = () => {
           <Card>
             <CardHeader>
               <CardTitle className="flex items-center gap-2">
+                <FileText className="h-5 w-5" />
+                Example Code (Information and Grade Output)
+              </CardTitle>
+            </CardHeader>
+            <CardContent>
+              <div className="bg-muted/50 rounded-lg p-4 overflow-x-auto">
+                <pre className="text-sm">
+                  <code>{`Build-dir:https://minio.xlabub.com/rai-ub/userdata/build-6830e1adcf814be242adff3f.tar.gz
+src-dir:https://minio.xlabub.com/rai-ub/userdata/src-6830e1adcf814be242adff3f.tar.gz
+output.log0000644000000000000000000000127515014160664011317 0ustar0000000000000000
+
+Oracle has judged student answer
+Graded at: 2025-05-23 16:59:32 US/Eastern (approx)
+Grading Method:
+1. The oracle program sent a series of prompts to the student program.
+2. The student program responded to each prompt.
+3. Each response was compared to the oracle's expected output.
+4. Correctness score was calculated based on matching outputs.
+5. Query score (if applicable) was calculated based on the quality or structure of responses.
+6. Once all checks were complete, the oracle printed 'AUTOGRADER_COMPLETE' followed by the final result JSON.
+
+{"scores": {"correctness": 100, "query_score": 79.399483}, "queries": 87, "correct_answer": "5 2 0 9 6 8 3 1 4 7 ", "array": "2 7 1 6 8 0 4 9 5 3 "}`}</code>
+                </pre>
+              </div>
+            </CardContent>
+          </Card>
+
+          <Card>
+            <CardHeader>
+              <CardTitle className="flex items-center gap-2">
                 <Copy className="h-5 w-5" />
                 Usage Tips
               </CardTitle>
