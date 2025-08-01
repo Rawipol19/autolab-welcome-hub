@@ -389,12 +389,12 @@ const Index = () => {
             </p>
           </div>
 
-          <div className="mb-16">
+          <div className="grid lg:grid-cols-2 gap-8 mb-16">
             <Card className="bg-card/50 backdrop-blur-sm border-primary/20">
               <CardHeader className="text-center">
                 <CardTitle className="text-xl text-primary flex items-center justify-center gap-2">
                   <Workflow className="h-6 w-6" />
-                  Traditional Carnegie Mellon Autolab + Tango Architecture
+                  Traditional Carnegie Mellon Architecture
                 </CardTitle>
                 <CardDescription className="text-base">
                   The original system architecture with Python-based Tango job manager and producer-consumer model
@@ -404,6 +404,25 @@ const Index = () => {
                 <img 
                   src="/lovable-uploads/4883bd08-223e-45e3-a0b8-aec4e7b44ee1.png" 
                   alt="Traditional Autolab + Tango Architecture showing Python job manager limitations"
+                  className="max-w-full h-auto rounded-lg border border-primary/20 shadow-md"
+                />
+              </CardContent>
+            </Card>
+
+            <Card className="bg-card/50 backdrop-blur-sm border-primary/20">
+              <CardHeader className="text-center">
+                <CardTitle className="text-xl text-primary flex items-center justify-center gap-2">
+                  <Brain className="h-6 w-6" />
+                  Current RAI-Based Architecture
+                </CardTitle>
+                <CardDescription className="text-base">
+                  The enhanced architecture with RAI CLI, worker nodes, and intelligent job orchestration
+                </CardDescription>
+              </CardHeader>
+              <CardContent className="flex justify-center">
+                <img 
+                  src="/lovable-uploads/81eaf779-685e-42c4-8c0b-d3633eece5a9.png" 
+                  alt="Current Autolab + Tango + RAI Architecture with enhanced job management"
                   className="max-w-full h-auto rounded-lg border border-primary/20 shadow-md"
                 />
               </CardContent>
