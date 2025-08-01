@@ -548,7 +548,7 @@ const Index = () => {
             {raiFeatures.map((feature, index) => {
               const FeatureIcon = feature.icon;
               return (
-                <Card key={index} className="h-full hover:shadow-lg transition-all duration-300 hover:scale-105 bg-card/50 backdrop-blur-sm border-primary/20">
+                <Card key={index} className="h-full hover:shadow-lg transition-all duration-300 bg-card/50 backdrop-blur-sm border-primary/20">
                   <CardHeader>
                     <div className="w-16 h-16 bg-primary rounded-2xl flex items-center justify-center mb-4">
                       <FeatureIcon className="h-8 w-8 text-primary-foreground" />
