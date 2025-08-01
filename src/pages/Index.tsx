@@ -402,8 +402,8 @@ const Index = () => {
               </CardHeader>
               <CardContent className="flex justify-center">
                 <img 
-                  src="/lovable-uploads/4883bd08-223e-45e3-a0b8-aec4e7b44ee1.png" 
-                  alt="Traditional Autolab + Tango Architecture showing Python job manager limitations"
+                  src="/lovable-uploads/50334043-1316-4add-918a-b8111f9fb3ed.png" 
+                  alt="Traditional Autolab + Tango Architecture showing producer-consumer model"
                   className="max-w-full h-auto rounded-lg border border-primary/20 shadow-md"
                 />
               </CardContent>
