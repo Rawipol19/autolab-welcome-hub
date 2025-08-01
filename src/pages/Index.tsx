@@ -421,7 +421,7 @@ const Index = () => {
               </CardHeader>
               <CardContent className="flex justify-center">
                 <img 
-                  src="/lovable-uploads/81eaf779-685e-42c4-8c0b-d3633eece5a9.png" 
+                  src="/lovable-uploads/59bb43d2-ad0b-4f8e-bd18-2612bd877e03.png" 
                   alt="Current Autolab + Tango + RAI Architecture with enhanced job management"
                   className="max-w-full h-auto rounded-lg border border-primary/20 shadow-md"
                 />
