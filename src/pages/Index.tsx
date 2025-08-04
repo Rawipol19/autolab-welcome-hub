@@ -592,229 +592,210 @@ const Index = () => {
             </p>
           </div>
 
-          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-8 items-center justify-items-center">
+          <div className="grid grid-cols-4 gap-2 items-center justify-items-center">
             {/* Row 1 */}
-            <div className="flex flex-col items-center space-y-3 p-4 rounded-lg hover:bg-white/50 transition-all duration-300">
-              <div className="h-16 w-32 flex items-center justify-center">
+            <div className="p-2 rounded-lg hover:bg-white/50 transition-all duration-300">
+              <div className="h-24 w-48 flex items-center justify-center">
                 <img 
-                  src="https://autolabproject.com/images/universities/cmu.png"
+                  src="https://images.unsplash.com/photo-1461749280684-dccba630e2f6?w=200&h=80&fit=crop"
                   alt="Carnegie Mellon University" 
                   className="max-h-full max-w-full object-contain"
                 />
               </div>
-              <span className="text-sm font-medium text-center text-muted-foreground">Carnegie Mellon University</span>
             </div>
 
-            <div className="flex flex-col items-center space-y-3 p-4 rounded-lg hover:bg-white/50 transition-all duration-300">
-              <div className="h-16 w-32 flex items-center justify-center">
+            <div className="p-2 rounded-lg hover:bg-white/50 transition-all duration-300">
+              <div className="h-24 w-48 flex items-center justify-center">
                 <img 
-                  src="https://images.unsplash.com/photo-1485827404703-89b55fcc595e?w=200&h=80&fit=crop"
+                  src="https://images.unsplash.com/photo-1485827404703-89b55fcc595e?w=300&h=120&fit=crop"
                   alt="Georgetown University" 
                   className="max-h-full max-w-full object-contain"
                 />
               </div>
-              <span className="text-sm font-medium text-center text-muted-foreground">Georgetown University</span>
             </div>
 
-            <div className="flex flex-col items-center space-y-3 p-4 rounded-lg hover:bg-white/50 transition-all duration-300">
-              <div className="h-16 w-32 flex items-center justify-center">
+            <div className="p-2 rounded-lg hover:bg-white/50 transition-all duration-300">
+              <div className="h-24 w-48 flex items-center justify-center">
                 <img 
-                  src="https://images.unsplash.com/photo-1519389950473-47ba0277781c?w=200&h=80&fit=crop"
+                  src="https://images.unsplash.com/photo-1519389950473-47ba0277781c?w=300&h=120&fit=crop"
                   alt="University of Toronto" 
                   className="max-h-full max-w-full object-contain"
                 />
               </div>
-              <span className="text-sm font-medium text-center text-muted-foreground">University of Toronto</span>
             </div>
 
-            <div className="flex flex-col items-center space-y-3 p-4 rounded-lg hover:bg-white/50 transition-all duration-300">
-              <div className="h-16 w-32 flex items-center justify-center">
+            <div className="p-2 rounded-lg hover:bg-white/50 transition-all duration-300">
+              <div className="h-24 w-48 flex items-center justify-center">
                 <img 
-                  src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?w=200&h=80&fit=crop"
+                  src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?w=300&h=120&fit=crop"
                   alt="University of Georgia" 
                   className="max-h-full max-w-full object-contain"
                 />
               </div>
-              <span className="text-sm font-medium text-center text-muted-foreground">University of Georgia</span>
             </div>
 
-            <div className="flex flex-col items-center space-y-3 p-4 rounded-lg hover:bg-white/50 transition-all duration-300">
-              <div className="h-16 w-32 flex items-center justify-center">
+            {/* Row 2 */}
+            <div className="p-2 rounded-lg hover:bg-white/50 transition-all duration-300">
+              <div className="h-24 w-48 flex items-center justify-center">
                 <img 
-                  src="https://images.unsplash.com/photo-1473091534298-04dcbce3278c?w=200&h=80&fit=crop"
+                  src="https://images.unsplash.com/photo-1473091534298-04dcbce3278c?w=300&h=120&fit=crop"
                   alt="Tsinghua University" 
                   className="max-h-full max-w-full object-contain"
                 />
               </div>
-              <span className="text-sm font-medium text-center text-muted-foreground">Tsinghua University</span>
             </div>
 
-            {/* Row 2 */}
-            <div className="flex flex-col items-center space-y-3 p-4 rounded-lg hover:bg-white/50 transition-all duration-300">
-              <div className="h-16 w-32 flex items-center justify-center">
+            <div className="p-2 rounded-lg hover:bg-white/50 transition-all duration-300">
+              <div className="h-24 w-48 flex items-center justify-center">
                 <img 
-                  src="https://images.unsplash.com/photo-1581090464777-f3220bbe118b?w=200&h=80&fit=crop"
+                  src="https://images.unsplash.com/photo-1581090464777-f3220bbe118b?w=300&h=120&fit=crop"
                   alt="Peking University" 
                   className="max-h-full max-w-full object-contain"
                 />
               </div>
-              <span className="text-sm font-medium text-center text-muted-foreground">Peking University</span>
             </div>
 
-            <div className="flex flex-col items-center space-y-3 p-4 rounded-lg hover:bg-white/50 transition-all duration-300">
-              <div className="h-16 w-32 flex items-center justify-center">
+            <div className="p-2 rounded-lg hover:bg-white/50 transition-all duration-300">
+              <div className="h-24 w-48 flex items-center justify-center">
                 <img 
-                  src="https://images.unsplash.com/photo-1487058792275-0ad4aaf24ca7?w=200&h=80&fit=crop"
+                  src="https://images.unsplash.com/photo-1487058792275-0ad4aaf24ca7?w=300&h=120&fit=crop"
                   alt="Rutgers University" 
                   className="max-h-full max-w-full object-contain"
                 />
               </div>
-              <span className="text-sm font-medium text-center text-muted-foreground">Rutgers University</span>
             </div>
 
-            <div className="flex flex-col items-center space-y-3 p-4 rounded-lg hover:bg-white/50 transition-all duration-300">
-              <div className="h-16 w-32 flex items-center justify-center">
+            <div className="p-2 rounded-lg hover:bg-white/50 transition-all duration-300">
+              <div className="h-24 w-48 flex items-center justify-center">
                 <img 
-                  src="https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?w=200&h=80&fit=crop"
+                  src="https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?w=300&h=120&fit=crop"
                   alt="University at Buffalo" 
                   className="max-h-full max-w-full object-contain"
                 />
               </div>
-              <span className="text-sm font-medium text-center text-muted-foreground">University at Buffalo</span>
             </div>
 
-            <div className="flex flex-col items-center space-y-3 p-4 rounded-lg hover:bg-white/50 transition-all duration-300">
-              <div className="h-16 w-32 flex items-center justify-center">
+            {/* Row 3 */}
+            <div className="p-2 rounded-lg hover:bg-white/50 transition-all duration-300">
+              <div className="h-24 w-48 flex items-center justify-center">
                 <img 
-                  src="https://images.unsplash.com/photo-1483058712412-4245e9b90334?w=200&h=80&fit=crop"
+                  src="https://images.unsplash.com/photo-1483058712412-4245e9b90334?w=300&h=120&fit=crop"
                   alt="Washington State University" 
                   className="max-h-full max-w-full object-contain"
                 />
               </div>
-              <span className="text-sm font-medium text-center text-muted-foreground">Washington State University</span>
             </div>
 
-            <div className="flex flex-col items-center space-y-3 p-4 rounded-lg hover:bg-white/50 transition-all duration-300">
-              <div className="h-16 w-32 flex items-center justify-center">
+            <div className="p-2 rounded-lg hover:bg-white/50 transition-all duration-300">
+              <div className="h-24 w-48 flex items-center justify-center">
                 <img 
-                  src="https://images.unsplash.com/photo-1461749280684-dccba630e2f6?w=200&h=80&fit=crop"
+                  src="https://images.unsplash.com/photo-1461749280684-dccba630e2f6?w=300&h=120&fit=crop"
                   alt="DTU Technical University of Denmark" 
                   className="max-h-full max-w-full object-contain"
                 />
               </div>
-              <span className="text-sm font-medium text-center text-muted-foreground">DTU Technical University of Denmark</span>
             </div>
 
-            {/* Row 3 */}
-            <div className="flex flex-col items-center space-y-3 p-4 rounded-lg hover:bg-white/50 transition-all duration-300">
-              <div className="h-16 w-32 flex items-center justify-center">
+            <div className="p-2 rounded-lg hover:bg-white/50 transition-all duration-300">
+              <div className="h-24 w-48 flex items-center justify-center">
                 <img 
-                  src="https://images.unsplash.com/photo-1485827404703-89b55fcc595e?w=200&h=80&fit=crop"
+                  src="https://images.unsplash.com/photo-1485827404703-89b55fcc595e?w=300&h=120&fit=crop"
                   alt="Technische Universität Berlin" 
                   className="max-h-full max-w-full object-contain"
                 />
               </div>
-              <span className="text-sm font-medium text-center text-muted-foreground">Technische Universität Berlin</span>
             </div>
 
-            <div className="flex flex-col items-center space-y-3 p-4 rounded-lg hover:bg-white/50 transition-all duration-300">
-              <div className="h-16 w-32 flex items-center justify-center">
+            <div className="p-2 rounded-lg hover:bg-white/50 transition-all duration-300">
+              <div className="h-24 w-48 flex items-center justify-center">
                 <img 
-                  src="https://images.unsplash.com/photo-1519389950473-47ba0277781c?w=200&h=80&fit=crop"
+                  src="https://images.unsplash.com/photo-1519389950473-47ba0277781c?w=300&h=120&fit=crop"
                   alt="ShanghaiTech University" 
                   className="max-h-full max-w-full object-contain"
                 />
               </div>
-              <span className="text-sm font-medium text-center text-muted-foreground">ShanghaiTech University</span>
             </div>
 
-            <div className="flex flex-col items-center space-y-3 p-4 rounded-lg hover:bg-white/50 transition-all duration-300">
-              <div className="h-16 w-32 flex items-center justify-center">
+            {/* Row 4 */}
+            <div className="p-2 rounded-lg hover:bg-white/50 transition-all duration-300">
+              <div className="h-24 w-48 flex items-center justify-center">
                 <img 
-                  src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?w=200&h=80&fit=crop"
+                  src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?w=300&h=120&fit=crop"
                   alt="The University of New Orleans" 
                   className="max-h-full max-w-full object-contain"
                 />
               </div>
-              <span className="text-sm font-medium text-center text-muted-foreground">The University of New Orleans</span>
             </div>
 
-            <div className="flex flex-col items-center space-y-3 p-4 rounded-lg hover:bg-white/50 transition-all duration-300">
-              <div className="h-16 w-32 flex items-center justify-center">
+            <div className="p-2 rounded-lg hover:bg-white/50 transition-all duration-300">
+              <div className="h-24 w-48 flex items-center justify-center">
                 <img 
-                  src="https://images.unsplash.com/photo-1473091534298-04dcbce3278c?w=200&h=80&fit=crop"
+                  src="https://images.unsplash.com/photo-1473091534298-04dcbce3278c?w=300&h=120&fit=crop"
                   alt="University of Pennsylvania" 
                   className="max-h-full max-w-full object-contain"
                 />
               </div>
-              <span className="text-sm font-medium text-center text-muted-foreground">University of Pennsylvania</span>
             </div>
 
-            <div className="flex flex-col items-center space-y-3 p-4 rounded-lg hover:bg-white/50 transition-all duration-300">
-              <div className="h-16 w-32 flex items-center justify-center">
+            <div className="p-2 rounded-lg hover:bg-white/50 transition-all duration-300">
+              <div className="h-24 w-48 flex items-center justify-center">
                 <img 
-                  src="https://images.unsplash.com/photo-1581090464777-f3220bbe118b?w=200&h=80&fit=crop"
+                  src="https://images.unsplash.com/photo-1581090464777-f3220bbe118b?w=300&h=120&fit=crop"
                   alt="University of Wisconsin La Crosse" 
                   className="max-h-full max-w-full object-contain"
                 />
               </div>
-              <span className="text-sm font-medium text-center text-muted-foreground">University of Wisconsin La Crosse</span>
             </div>
 
-            {/* Row 4 */}
-            <div className="flex flex-col items-center space-y-3 p-4 rounded-lg hover:bg-white/50 transition-all duration-300">
-              <div className="h-16 w-32 flex items-center justify-center">
+            <div className="p-2 rounded-lg hover:bg-white/50 transition-all duration-300">
+              <div className="h-24 w-48 flex items-center justify-center">
                 <img 
-                  src="https://images.unsplash.com/photo-1487058792275-0ad4aaf24ca7?w=200&h=80&fit=crop"
+                  src="https://images.unsplash.com/photo-1487058792275-0ad4aaf24ca7?w=300&h=120&fit=crop"
                   alt="National Institute of Technology Karnataka" 
                   className="max-h-full max-w-full object-contain"
                 />
               </div>
-              <span className="text-sm font-medium text-center text-muted-foreground">National Institute of Technology Karnataka</span>
             </div>
 
-            <div className="flex flex-col items-center space-y-3 p-4 rounded-lg hover:bg-white/50 transition-all duration-300">
-              <div className="h-16 w-32 flex items-center justify-center">
+            {/* Row 5 */}
+            <div className="p-2 rounded-lg hover:bg-white/50 transition-all duration-300">
+              <div className="h-24 w-48 flex items-center justify-center">
                 <img 
-                  src="https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?w=200&h=80&fit=crop"
+                  src="https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?w=300&h=120&fit=crop"
                   alt="Al Hussein Technical University" 
                   className="max-h-full max-w-full object-contain"
                 />
               </div>
-              <span className="text-sm font-medium text-center text-muted-foreground">Al Hussein Technical University</span>
             </div>
 
-            <div className="flex flex-col items-center space-y-3 p-4 rounded-lg hover:bg-white/50 transition-all duration-300">
-              <div className="h-16 w-32 flex items-center justify-center">
+            <div className="p-2 rounded-lg hover:bg-white/50 transition-all duration-300">
+              <div className="h-24 w-48 flex items-center justify-center">
                 <img 
-                  src="https://images.unsplash.com/photo-1483058712412-4245e9b90334?w=200&h=80&fit=crop"
+                  src="https://images.unsplash.com/photo-1483058712412-4245e9b90334?w=300&h=120&fit=crop"
                   alt="Amrita Vishwa Vidyapeetham" 
                   className="max-h-full max-w-full object-contain"
                 />
               </div>
-              <span className="text-sm font-medium text-center text-muted-foreground">Amrita Vishwa Vidyapeetham</span>
             </div>
 
-            <div className="flex flex-col items-center space-y-3 p-4 rounded-lg hover:bg-white/50 transition-all duration-300">
-              <div className="h-16 w-32 flex items-center justify-center">
+            <div className="p-2 rounded-lg hover:bg-white/50 transition-all duration-300">
+              <div className="h-24 w-48 flex items-center justify-center">
                 <img 
-                  src="https://images.unsplash.com/photo-1461749280684-dccba630e2f6?w=200&h=80&fit=crop"
+                  src="https://images.unsplash.com/photo-1461749280684-dccba630e2f6?w=300&h=120&fit=crop"
                   alt="Universidade Vila Velha" 
                   className="max-h-full max-w-full object-contain"
                 />
               </div>
-              <span className="text-sm font-medium text-center text-muted-foreground">Universidade Vila Velha</span>
             </div>
 
-            <div className="flex flex-col items-center space-y-3 p-4 rounded-lg hover:bg-white/50 transition-all duration-300">
-              <div className="h-16 w-32 flex items-center justify-center">
+            <div className="p-2 rounded-lg hover:bg-white/50 transition-all duration-300">
+              <div className="h-24 w-48 flex items-center justify-center">
                 <img 
-                  src="https://images.unsplash.com/photo-1485827404703-89b55fcc595e?w=200&h=80&fit=crop"
+                  src="https://images.unsplash.com/photo-1485827404703-89b55fcc595e?w=300&h=120&fit=crop"
                   alt="University of Thessaly" 
                   className="max-h-full max-w-full object-contain"
                 />
               </div>
-              <span className="text-sm font-medium text-center text-muted-foreground">University of Thessaly</span>
             </div>
           </div>
         </div>
