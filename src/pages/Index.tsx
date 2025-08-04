@@ -592,216 +592,111 @@ const Index = () => {
             </p>
           </div>
 
-          <div className="grid grid-cols-4 gap-2 items-center justify-items-center">
-            {/* Row 1 */}
-            <div className="p-2 rounded-lg hover:bg-white/50 transition-all duration-300">
-              <div className="h-36 w-72 flex items-center justify-center">
-                <img 
-                  src="https://autolabproject.com/images/universities/cmu.png"
-                  alt="Carnegie Mellon University" 
-                  className="max-h-full max-w-full object-contain"
-                />
+          <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-4 items-center justify-items-center">
+            {[
+              {
+                src: "https://autolabproject.com/images/universities/cmu.png",
+                alt: "Carnegie Mellon University",
+              },
+              {
+                src: "https://autolabproject.com/images/universities/ubuffalo.png",
+                alt: "University at Buffalo",
+              },
+              {
+                src: "https://autolabproject.com/images/universities/utoronto.png",
+                alt: "University of Toronto",
+              },
+              {
+                src: "https://autolabproject.com/images/universities/uga.png",
+                alt: "University of Georgia",
+              },
+              {
+                src: "https://autolabproject.com/images/universities/tsinghua.png",
+                alt: "Tsinghua University",
+              },
+              {
+                src: "https://autolabproject.com/images/universities/peking.png",
+                alt: "Peking University",
+              },
+              {
+                src: "https://autolabproject.com/images/universities/rutgers.png",
+                alt: "Rutgers University",
+              },
+              {
+                src: "https://autolabproject.com/images/universities/georgetown.png",
+                alt: "Georgetown University",
+              },
+              {
+                src: "https://autolabproject.com/images/universities/wsu-vancouver.png",
+                alt: "Washington State University",
+              },
+              {
+                src: "https://autolabproject.com/images/universities/dtu.png",
+                alt: "DTU Technical University of Denmark",
+              },
+              {
+                src: "https://autolabproject.com/images/universities/tu-berlin.png",
+                alt: "Technische Universität Berlin",
+              },
+              {
+                src: "https://autolabproject.com/images/universities/shanghai-tech.png",
+                alt: "ShanghaiTech University",
+              },
+              {
+                src: "https://autolabproject.com/images/universities/uno.png",
+                alt: "The University of New Orleans",
+              },
+              {
+                src: "https://autolabproject.com/images/universities/millersville.png",
+                alt: "University of Pennsylvania",
+              },
+              {
+                src: "https://autolabproject.com/images/universities/uw-la-crosse.png",
+                alt: "University of Wisconsin La Crosse",
+              },
+              {
+                src: "https://autolabproject.com/images/universities/nitk.png",
+                alt: "National Institute of Technology Karnataka",
+              },
+              {
+                src: "https://autolabproject.com/images/universities/amrita.png",
+                alt: "Amrita Vishwa Vidyapeetham",
+              },
+              {
+                src: "https://autolabproject.com/images/universities/kku.png",
+                alt: "Al Hussein Technical University",
+              },
+              {
+                src: "https://autolabproject.com/images/universities/htu.png",
+                alt: "Universidade Vila Velha",
+              },
+              {
+                src: "https://autolabproject.com/images/universities/vilavelha.png",
+                alt: "University of Thessaly",
+              },
+              {
+                src: "https://autolabproject.com/images/universities/thessaly.png",
+                alt: "University of Thessaly",
+              },
+            ].map((uni, idx) => (
+              <div
+                key={idx}
+                className="p-2 rounded-lg hover:bg-white/50 transition-all duration-300 w-full max-w-[18rem]"
+              >
+                <div className="h-36 w-full flex items-center justify-center">
+                  <img
+                    src={uni.src}
+                    alt={uni.alt}
+                    className="h-full w-full object-contain"
+                  />
+                </div>
               </div>
-            </div>
-
-            <div className="p-2 rounded-lg hover:bg-white/50 transition-all duration-300">
-              <div className="h-36 w-72 flex items-center justify-center">
-                <img 
-                  src="https://autolabproject.com/images/universities/ubuffalo.png"
-                  alt="University at Buffalo" 
-                  className="max-h-full max-w-full object-contain"
-                />
-              </div>
-            </div>
-
-            <div className="p-2 rounded-lg hover:bg-white/50 transition-all duration-300">
-              <div className="h-36 w-72 flex items-center justify-center">
-                <img 
-                  src="https://autolabproject.com/images/universities/utoronto.png"
-                  alt="University of Toronto" 
-                  className="max-h-full max-w-full object-contain"
-                />
-              </div>
-            </div>
-
-            <div className="p-2 rounded-lg hover:bg-white/50 transition-all duration-300">
-              <div className="h-36 w-72 flex items-center justify-center">
-                <img 
-                  src="https://autolabproject.com/images/universities/uga.png"
-                  alt="University of Georgia" 
-                  className="max-h-full max-w-full object-contain"
-                />
-              </div>
-            </div>
-
-            {/* Row 2 */}
-            <div className="p-2 rounded-lg hover:bg-white/50 transition-all duration-300">
-              <div className="h-36 w-72 flex items-center justify-center">
-                <img 
-                  src="https://autolabproject.com/images/universities/tsinghua.png"
-                  alt="Tsinghua University" 
-                  className="max-h-full max-w-full object-contain"
-                />
-              </div>
-            </div>
-
-            <div className="p-2 rounded-lg hover:bg-white/50 transition-all duration-300">
-              <div className="h-36 w-72 flex items-center justify-center">
-                <img 
-                  src="https://autolabproject.com/images/universities/peking.png"
-                  alt="Peking University" 
-                  className="max-h-full max-w-full object-contain"
-                />
-              </div>
-            </div>
-
-            <div className="p-2 rounded-lg hover:bg-white/50 transition-all duration-300">
-              <div className="h-36 w-72 flex items-center justify-center">
-                <img 
-                  src="https://autolabproject.com/images/universities/rutgers.png"
-                  alt="Rutgers University" 
-                  className="max-h-full max-w-full object-contain"
-                />
-              </div>
-            </div>
-
-            <div className="p-2 rounded-lg hover:bg-white/50 transition-all duration-300">
-              <div className="h-36 w-72 flex items-center justify-center">
-                <img 
-                  src="https://autolabproject.com/images/universities/georgetown.png"
-                  alt="Gorgetown University" 
-                  className="max-h-full max-w-full object-contain"
-                />
-              </div>
-            </div>
-
-            {/* Row 3 */}
-            <div className="p-2 rounded-lg hover:bg-white/50 transition-all duration-300">
-              <div className="h-36 w-72 flex items-center justify-center">
-                <img 
-                  src="https://autolabproject.com/images/universities/wsu-vancouver.png"
-                  alt="Washington State University" 
-                  className="max-h-full max-w-full object-contain"
-                />
-              </div>
-            </div>
-
-            <div className="p-2 rounded-lg hover:bg-white/50 transition-all duration-300">
-              <div className="h-36 w-72 flex items-center justify-center">
-                <img 
-                  src="https://autolabproject.com/images/universities/dtu.png"
-                  alt="DTU Technical University of Denmark" 
-                  className="max-h-full max-w-full object-contain"
-                />
-              </div>
-            </div>
-
-            <div className="p-2 rounded-lg hover:bg-white/50 transition-all duration-300">
-              <div className="h-36 w-72 flex items-center justify-center">
-                <img 
-                  src="https://autolabproject.com/images/universities/tu-berlin.png"
-                  alt="Technische Universität Berlin" 
-                  className="max-h-full max-w-full object-contain"
-                />
-              </div>
-            </div>
-
-            <div className="p-2 rounded-lg hover:bg-white/50 transition-all duration-300">
-              <div className="h-36 w-72 flex items-center justify-center">
-                <img 
-                  src="https://autolabproject.com/images/universities/shanghai-tech.png"
-                  alt="ShanghaiTech University" 
-                  className="max-h-full max-w-full object-contain"
-                />
-              </div>
-            </div>
-
-            {/* Row 4 */}
-            <div className="p-2 rounded-lg hover:bg-white/50 transition-all duration-300">
-              <div className="h-36 w-72 flex items-center justify-center">
-                <img 
-                  src="https://autolabproject.com/images/universities/uno.png"
-                  alt="The University of New Orleans" 
-                  className="max-h-full max-w-full object-contain"
-                />
-              </div>
-            </div>
-
-            <div className="p-2 rounded-lg hover:bg-white/50 transition-all duration-300">
-              <div className="h-36 w-72 flex items-center justify-center">
-                <img 
-                  src="https://autolabproject.com/images/universities/millersville.png"
-                  alt="University of Pennsylvania" 
-                  className="max-h-full max-w-full object-contain"
-                />
-              </div>
-            </div>
-
-            <div className="p-2 rounded-lg hover:bg-white/50 transition-all duration-300">
-              <div className="h-36 w-72 flex items-center justify-center">
-                <img 
-                  src="https://autolabproject.com/images/universities/uw-la-crosse.png"
-                  alt="University of Wisconsin La Crosse" 
-                  className="max-h-full max-w-full object-contain"
-                />
-              </div>
-            </div>
-
-            <div className="p-2 rounded-lg hover:bg-white/50 transition-all duration-300">
-              <div className="h-36 w-72 flex items-center justify-center">
-                <img 
-                  src="https://autolabproject.com/images/universities/nitk.png"
-                  alt="National Institute of Technology Karnataka" 
-                  className="max-h-full max-w-full object-contain"
-                />
-              </div>
-            </div>
-
-            {/* Row 5 */}
-            <div className="p-2 rounded-lg hover:bg-white/50 transition-all duration-300">
-              <div className="h-36 w-72 flex items-center justify-center">
-                <img 
-                  src="https://autolabproject.com/images/universities/amrita.png"
-                  alt="Al Hussein Technical University" 
-                  className="max-h-full max-w-full object-contain"
-                />
-              </div>
-            </div>
-
-            <div className="p-2 rounded-lg hover:bg-white/50 transition-all duration-300">
-              <div className="h-36 w-72 flex items-center justify-center">
-                <img 
-                  src="https://autolabproject.com/images/universities/kku.png"
-                  alt="Amrita Vishwa Vidyapeetham" 
-                  className="max-h-full max-w-full object-contain"
-                />
-              </div>
-            </div>
-
-            <div className="p-2 rounded-lg hover:bg-white/50 transition-all duration-300">
-              <div className="h-36 w-72 flex items-center justify-center">
-                <img 
-                  src="https://autolabproject.com/images/universities/htu.png"
-                  alt="Universidade Vila Velha" 
-                  className="max-h-full max-w-full object-contain"
-                />
-              </div>
-            </div>
-
-            <div className="p-2 rounded-lg hover:bg-white/50 transition-all duration-300">
-              <div className="h-36 w-72 flex items-center justify-center">
-                <img 
-                  src="https://autolabproject.com/images/universities/vilavelha.png"
-                  alt="University of Thessaly" 
-                  className="max-h-full max-w-full object-contain"
-                />
-              </div>
-            </div>
+            ))}
           </div>
         </div>
       </section>
-
       <Footer />
+
     </div>
   );
 };
