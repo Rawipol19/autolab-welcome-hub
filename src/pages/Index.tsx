@@ -585,7 +585,7 @@ const Index = () => {
         <div className="mx-auto max-w-7xl px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-3xl font-bold tracking-tight text-foreground sm:text-4xl">
-              Who Uses Autolab
+              University Who Uses Autolab
             </h2>
             <p className="mt-4 text-lg text-muted-foreground">
               Trusted by leading universities worldwide for computer science education
@@ -595,9 +595,9 @@ const Index = () => {
           <div className="grid grid-cols-4 gap-2 items-center justify-items-center">
             {/* Row 1 */}
             <div className="p-2 rounded-lg hover:bg-white/50 transition-all duration-300">
-              <div className="h-24 w-48 flex items-center justify-center">
+              <div className="h-36 w-72 flex items-center justify-center">
                 <img 
-                  src="https://images.unsplash.com/photo-1461749280684-dccba630e2f6?w=200&h=80&fit=crop"
+                  src="https://autolabproject.com/images/universities/cmu.png"
                   alt="Carnegie Mellon University" 
                   className="max-h-full max-w-full object-contain"
                 />
@@ -605,19 +605,19 @@ const Index = () => {
             </div>
 
             <div className="p-2 rounded-lg hover:bg-white/50 transition-all duration-300">
-              <div className="h-24 w-48 flex items-center justify-center">
+              <div className="h-36 w-72 flex items-center justify-center">
                 <img 
-                  src="https://images.unsplash.com/photo-1485827404703-89b55fcc595e?w=300&h=120&fit=crop"
-                  alt="Georgetown University" 
+                  src="https://autolabproject.com/images/universities/ubuffalo.png"
+                  alt="University at Buffalo" 
                   className="max-h-full max-w-full object-contain"
                 />
               </div>
             </div>
 
             <div className="p-2 rounded-lg hover:bg-white/50 transition-all duration-300">
-              <div className="h-24 w-48 flex items-center justify-center">
+              <div className="h-36 w-72 flex items-center justify-center">
                 <img 
-                  src="https://images.unsplash.com/photo-1519389950473-47ba0277781c?w=300&h=120&fit=crop"
+                  src="https://autolabproject.com/images/universities/utoronto.png"
                   alt="University of Toronto" 
                   className="max-h-full max-w-full object-contain"
                 />
@@ -625,9 +625,9 @@ const Index = () => {
             </div>
 
             <div className="p-2 rounded-lg hover:bg-white/50 transition-all duration-300">
-              <div className="h-24 w-48 flex items-center justify-center">
+              <div className="h-36 w-72 flex items-center justify-center">
                 <img 
-                  src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?w=300&h=120&fit=crop"
+                  src="https://autolabproject.com/images/universities/uga.png"
                   alt="University of Georgia" 
                   className="max-h-full max-w-full object-contain"
                 />
@@ -636,9 +636,9 @@ const Index = () => {
 
             {/* Row 2 */}
             <div className="p-2 rounded-lg hover:bg-white/50 transition-all duration-300">
-              <div className="h-24 w-48 flex items-center justify-center">
+              <div className="h-36 w-72 flex items-center justify-center">
                 <img 
-                  src="https://images.unsplash.com/photo-1473091534298-04dcbce3278c?w=300&h=120&fit=crop"
+                  src="https://autolabproject.com/images/universities/tsinghua.png"
                   alt="Tsinghua University" 
                   className="max-h-full max-w-full object-contain"
                 />
@@ -646,9 +646,9 @@ const Index = () => {
             </div>
 
             <div className="p-2 rounded-lg hover:bg-white/50 transition-all duration-300">
-              <div className="h-24 w-48 flex items-center justify-center">
+              <div className="h-36 w-72 flex items-center justify-center">
                 <img 
-                  src="https://images.unsplash.com/photo-1581090464777-f3220bbe118b?w=300&h=120&fit=crop"
+                  src="https://autolabproject.com/images/universities/peking.png"
                   alt="Peking University" 
                   className="max-h-full max-w-full object-contain"
                 />
@@ -656,9 +656,9 @@ const Index = () => {
             </div>
 
             <div className="p-2 rounded-lg hover:bg-white/50 transition-all duration-300">
-              <div className="h-24 w-48 flex items-center justify-center">
+              <div className="h-36 w-72 flex items-center justify-center">
                 <img 
-                  src="https://images.unsplash.com/photo-1487058792275-0ad4aaf24ca7?w=300&h=120&fit=crop"
+                  src="https://autolabproject.com/images/universities/rutgers.png"
                   alt="Rutgers University" 
                   className="max-h-full max-w-full object-contain"
                 />
@@ -666,10 +666,10 @@ const Index = () => {
             </div>
 
             <div className="p-2 rounded-lg hover:bg-white/50 transition-all duration-300">
-              <div className="h-24 w-48 flex items-center justify-center">
+              <div className="h-36 w-72 flex items-center justify-center">
                 <img 
-                  src="https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?w=300&h=120&fit=crop"
-                  alt="University at Buffalo" 
+                  src="https://autolabproject.com/images/universities/georgetown.png"
+                  alt="Gorgetown University" 
                   className="max-h-full max-w-full object-contain"
                 />
               </div>
@@ -677,9 +677,9 @@ const Index = () => {
 
             {/* Row 3 */}
             <div className="p-2 rounded-lg hover:bg-white/50 transition-all duration-300">
-              <div className="h-24 w-48 flex items-center justify-center">
+              <div className="h-36 w-72 flex items-center justify-center">
                 <img 
-                  src="https://images.unsplash.com/photo-1483058712412-4245e9b90334?w=300&h=120&fit=crop"
+                  src="https://autolabproject.com/images/universities/wsu-vancouver.png"
                   alt="Washington State University" 
                   className="max-h-full max-w-full object-contain"
                 />
@@ -687,9 +687,9 @@ const Index = () => {
             </div>
 
             <div className="p-2 rounded-lg hover:bg-white/50 transition-all duration-300">
-              <div className="h-24 w-48 flex items-center justify-center">
+              <div className="h-36 w-72 flex items-center justify-center">
                 <img 
-                  src="https://images.unsplash.com/photo-1461749280684-dccba630e2f6?w=300&h=120&fit=crop"
+                  src="https://autolabproject.com/images/universities/dtu.png"
                   alt="DTU Technical University of Denmark" 
                   className="max-h-full max-w-full object-contain"
                 />
@@ -697,9 +697,9 @@ const Index = () => {
             </div>
 
             <div className="p-2 rounded-lg hover:bg-white/50 transition-all duration-300">
-              <div className="h-24 w-48 flex items-center justify-center">
+              <div className="h-36 w-72 flex items-center justify-center">
                 <img 
-                  src="https://images.unsplash.com/photo-1485827404703-89b55fcc595e?w=300&h=120&fit=crop"
+                  src="https://autolabproject.com/images/universities/tu-berlin.png"
                   alt="Technische Universität Berlin" 
                   className="max-h-full max-w-full object-contain"
                 />
@@ -707,9 +707,9 @@ const Index = () => {
             </div>
 
             <div className="p-2 rounded-lg hover:bg-white/50 transition-all duration-300">
-              <div className="h-24 w-48 flex items-center justify-center">
+              <div className="h-36 w-72 flex items-center justify-center">
                 <img 
-                  src="https://images.unsplash.com/photo-1519389950473-47ba0277781c?w=300&h=120&fit=crop"
+                  src="https://autolabproject.com/images/universities/shanghai-tech.png"
                   alt="ShanghaiTech University" 
                   className="max-h-full max-w-full object-contain"
                 />
@@ -718,9 +718,9 @@ const Index = () => {
 
             {/* Row 4 */}
             <div className="p-2 rounded-lg hover:bg-white/50 transition-all duration-300">
-              <div className="h-24 w-48 flex items-center justify-center">
+              <div className="h-36 w-72 flex items-center justify-center">
                 <img 
-                  src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?w=300&h=120&fit=crop"
+                  src="https://autolabproject.com/images/universities/uno.png"
                   alt="The University of New Orleans" 
                   className="max-h-full max-w-full object-contain"
                 />
@@ -728,9 +728,9 @@ const Index = () => {
             </div>
 
             <div className="p-2 rounded-lg hover:bg-white/50 transition-all duration-300">
-              <div className="h-24 w-48 flex items-center justify-center">
+              <div className="h-36 w-72 flex items-center justify-center">
                 <img 
-                  src="https://images.unsplash.com/photo-1473091534298-04dcbce3278c?w=300&h=120&fit=crop"
+                  src="https://autolabproject.com/images/universities/millersville.png"
                   alt="University of Pennsylvania" 
                   className="max-h-full max-w-full object-contain"
                 />
@@ -738,9 +738,9 @@ const Index = () => {
             </div>
 
             <div className="p-2 rounded-lg hover:bg-white/50 transition-all duration-300">
-              <div className="h-24 w-48 flex items-center justify-center">
+              <div className="h-36 w-72 flex items-center justify-center">
                 <img 
-                  src="https://images.unsplash.com/photo-1581090464777-f3220bbe118b?w=300&h=120&fit=crop"
+                  src="https://autolabproject.com/images/universities/uw-la-crosse.png"
                   alt="University of Wisconsin La Crosse" 
                   className="max-h-full max-w-full object-contain"
                 />
@@ -748,9 +748,9 @@ const Index = () => {
             </div>
 
             <div className="p-2 rounded-lg hover:bg-white/50 transition-all duration-300">
-              <div className="h-24 w-48 flex items-center justify-center">
+              <div className="h-36 w-72 flex items-center justify-center">
                 <img 
-                  src="https://images.unsplash.com/photo-1487058792275-0ad4aaf24ca7?w=300&h=120&fit=crop"
+                  src="https://autolabproject.com/images/universities/nitk.png"
                   alt="National Institute of Technology Karnataka" 
                   className="max-h-full max-w-full object-contain"
                 />
@@ -759,9 +759,9 @@ const Index = () => {
 
             {/* Row 5 */}
             <div className="p-2 rounded-lg hover:bg-white/50 transition-all duration-300">
-              <div className="h-24 w-48 flex items-center justify-center">
+              <div className="h-36 w-72 flex items-center justify-center">
                 <img 
-                  src="https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?w=300&h=120&fit=crop"
+                  src="https://autolabproject.com/images/universities/amrita.png"
                   alt="Al Hussein Technical University" 
                   className="max-h-full max-w-full object-contain"
                 />
@@ -769,9 +769,9 @@ const Index = () => {
             </div>
 
             <div className="p-2 rounded-lg hover:bg-white/50 transition-all duration-300">
-              <div className="h-24 w-48 flex items-center justify-center">
+              <div className="h-36 w-72 flex items-center justify-center">
                 <img 
-                  src="https://images.unsplash.com/photo-1483058712412-4245e9b90334?w=300&h=120&fit=crop"
+                  src="https://autolabproject.com/images/universities/kku.png"
                   alt="Amrita Vishwa Vidyapeetham" 
                   className="max-h-full max-w-full object-contain"
                 />
@@ -779,9 +779,9 @@ const Index = () => {
             </div>
 
             <div className="p-2 rounded-lg hover:bg-white/50 transition-all duration-300">
-              <div className="h-24 w-48 flex items-center justify-center">
+              <div className="h-36 w-72 flex items-center justify-center">
                 <img 
-                  src="https://images.unsplash.com/photo-1461749280684-dccba630e2f6?w=300&h=120&fit=crop"
+                  src="https://autolabproject.com/images/universities/htu.png"
                   alt="Universidade Vila Velha" 
                   className="max-h-full max-w-full object-contain"
                 />
@@ -789,9 +789,9 @@ const Index = () => {
             </div>
 
             <div className="p-2 rounded-lg hover:bg-white/50 transition-all duration-300">
-              <div className="h-24 w-48 flex items-center justify-center">
+              <div className="h-36 w-72 flex items-center justify-center">
                 <img 
-                  src="https://images.unsplash.com/photo-1485827404703-89b55fcc595e?w=300&h=120&fit=crop"
+                  src="https://autolabproject.com/images/universities/vilavelha.png"
                   alt="University of Thessaly" 
                   className="max-h-full max-w-full object-contain"
                 />
