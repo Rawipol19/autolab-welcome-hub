@@ -103,7 +103,7 @@ const TxtPage = () => {
             <CardHeader>
               <CardTitle className="flex items-center gap-2">
                 <FileText className="h-5 w-5" />
-                Example Code (Information and Grade Output)
+                Example Code (OutPut File for sorter.cpp)
               </CardTitle>
             </CardHeader>
             <CardContent>

@@ -170,7 +170,7 @@ const CppPage = () => {
             <CardHeader>
               <CardTitle className="flex items-center gap-2">
                 <FileText className="h-5 w-5" />
-                Example Code (Part of the Tar File for Teachers)
+                Example Code: oracle.cpp (Part of the Tar File for Teachers)
               </CardTitle>
             </CardHeader>
             <CardContent>
@@ -307,7 +307,7 @@ int main() {
             <CardHeader>
               <CardTitle className="flex items-center gap-2">
                 <FileText className="h-5 w-5" />
-                Example Code (Student Assignment Test Cases Code)
+                Example Code: sorter.cpp (Student Assignment Test Cases Code)
               </CardTitle>
             </CardHeader>
             <CardContent>

@@ -173,7 +173,7 @@ const PythonPage = () => {
   <CardHeader>
     <CardTitle className="flex items-center gap-2">
       <FileText className="h-5 w-5" />
-      Example Code (Part of the Tar File for Teachers)
+      Example Code: Interactive_checker.py (Part of the Tar File for Teachers)
     </CardTitle>
   </CardHeader>
   <CardContent>
@@ -281,7 +281,7 @@ if __name__ == "__main__":
   <CardHeader>
     <CardTitle className="flex items-center gap-2">
       <FileText className="h-5 w-5" />
-      Example Code (Students Assignment Code)
+      Example Code: solvesCryptarithm.py (Students Assignment Code)
     </CardTitle>
   </CardHeader>
   <CardContent>
