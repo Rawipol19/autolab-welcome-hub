@@ -597,7 +597,7 @@ const Index = () => {
             <div className="flex flex-col items-center space-y-3 p-4 rounded-lg hover:bg-white/50 transition-all duration-300">
               <div className="h-16 w-32 flex items-center justify-center">
                 <img 
-                  src="https://images.unsplash.com/photo-1461749280684-dccba630e2f6?w=200&h=80&fit=crop"
+                  src="https://autolabproject.com/images/universities/cmu.png"
                   alt="Carnegie Mellon University" 
                   className="max-h-full max-w-full object-contain"
                 />
