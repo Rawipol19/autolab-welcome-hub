@@ -20,14 +20,18 @@ const Footer = () => {
   };
 
   const scrollToEvolution = () => {
-    const evolutionSection = document.querySelector('h2:has-text("Evolution from Carnegie Mellon to RAI-Based AutoLab")') || 
-                            document.querySelector('[data-testid="evolution-section"]') ||
-                            Array.from(document.querySelectorAll('h2')).find(h2 => 
-                              h2.textContent?.includes('Evolution from Carnegie Mellon'));
-    if (evolutionSection) {
-      evolutionSection.scrollIntoView({ behavior: 'smooth' });
-    }
-  };
+  const allH2s = document.querySelectorAll('h2');
+  const evolutionSection = Array.from(allH2s).find(h2 =>
+    h2.textContent?.trim().includes('Evolution from Carnegie Mellon')
+  ) || document.querySelector('[data-testid="evolution-section"]');
+
+  if (evolutionSection) {
+    evolutionSection.scrollIntoView({ behavior: 'smooth' });
+  } else {
+    console.warn('Evolution section not found.');
+  }
+};
+
 
   return (
     <footer className="bg-primary text-primary-foreground">
