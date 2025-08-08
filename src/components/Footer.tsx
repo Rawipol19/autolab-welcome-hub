@@ -19,10 +19,13 @@ const Footer = () => {
     window.location.href = path;
   };
 
-  const scrollToRAI = () => {
-    const raiSection = document.querySelector('#rai-section');
-    if (raiSection) {
-      raiSection.scrollIntoView({ behavior: 'smooth' });
+  const scrollToEvolution = () => {
+    const evolutionSection = document.querySelector('h2:has-text("Evolution from Carnegie Mellon to RAI-Based AutoLab")') || 
+                            document.querySelector('[data-testid="evolution-section"]') ||
+                            Array.from(document.querySelectorAll('h2')).find(h2 => 
+                              h2.textContent?.includes('Evolution from Carnegie Mellon'));
+    if (evolutionSection) {
+      evolutionSection.scrollIntoView({ behavior: 'smooth' });
     }
   };
 
@@ -51,7 +54,7 @@ const Footer = () => {
                 Home
               </button>
               <button 
-                onClick={scrollToRAI}
+                onClick={scrollToEvolution}
                 className="block text-primary-foreground/80 hover:text-primary-foreground transition-colors text-left"
               >
                 Features
