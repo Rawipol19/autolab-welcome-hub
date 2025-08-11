@@ -61,7 +61,7 @@ const GitHub = () => {
           <div className="flex items-center justify-between gap-4">
             <div>
               <h1 className="text-3xl font-bold">GitHub Repositories</h1>
-              <p className="mt-2 text-muted-foreground">
+              <p className="mt-2 text-primary-foreground">
                 Browse official repositories and open them on GitHub.
               </p>
             </div>
