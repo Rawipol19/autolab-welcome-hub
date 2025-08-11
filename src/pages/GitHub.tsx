@@ -1,5 +1,7 @@
 import { useEffect } from "react";
-import { Github } from "lucide-react";
+import { Github, Home } from "lucide-react";
+import { Link } from "react-router-dom";
+import { Button } from "@/components/ui/button";
 
 const repos = [
   { name: "RAID", url: "https://github.com/amirnd51/RAID" },
@@ -55,10 +57,20 @@ const GitHub = () => {
 
       <header className="bg-card text-card-foreground border-b border-border">
         <div className="mx-auto max-w-5xl px-6 py-10">
-          <h1 className="text-3xl font-bold">GitHub Repositories</h1>
-          <p className="mt-2 text-muted-foreground">
-            Browse official repositories and open them on GitHub.
-          </p>
+          <div className="flex items-center justify-between gap-4">
+            <div>
+              <h1 className="text-3xl font-bold">GitHub Repositories</h1>
+              <p className="mt-2 text-muted-foreground">
+                Browse official repositories and open them on GitHub.
+              </p>
+            </div>
+            <Link to="/" aria-label="Back to Home">
+              <Button variant="secondary">
+                <Home className="mr-2 h-4 w-4" aria-hidden="true" />
+                Back to Home
+              </Button>
+            </Link>
+          </div>
         </div>
       </header>
 
