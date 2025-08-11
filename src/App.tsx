@@ -26,6 +26,7 @@ import PdfPage from "./pages/fileTypes/outputFiles/PdfPage";
 import TxtPage from "./pages/fileTypes/outputFiles/TxtPage";
 import LogPage from "./pages/fileTypes/outputFiles/LogPage";
 import YmlPage from "./pages/fileTypes/YmlPage";
+import GitHub from "./pages/GitHub";
 
 const queryClient = new QueryClient();
 
@@ -57,6 +58,7 @@ const App = () => (
           <Route path="/file-types/output/pdf" element={<PdfPage />} />
           <Route path="/file-types/output/txt" element={<TxtPage />} />
           <Route path="/file-types/output/log" element={<LogPage />} />
+          <Route path="/github" element={<GitHub />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
         </Routes>

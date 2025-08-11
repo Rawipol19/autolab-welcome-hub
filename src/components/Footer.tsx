@@ -87,14 +87,12 @@ const Footer = () => {
           <div>
             <h3 className="text-lg font-semibold mb-4">Resources</h3>
             <div className="space-y-2 text-sm">
-              <a 
-                href="https://github.com/amirnd51/RAID" 
-                target="_blank" 
-                rel="noopener noreferrer"
-                className="block text-primary-foreground/80 hover:text-primary-foreground transition-colors"
+              <button 
+                onClick={() => handleFooterNavigation('/github')} 
+                className="block text-primary-foreground/80 hover:text-primary-foreground transition-colors text-left"
               >
                 GitHub Repository
-              </a>
+              </button>
               <a 
                 href="https://cse510.xlabub.com/slides/lecture2.pdf"
                 target="_blank"
