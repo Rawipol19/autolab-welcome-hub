@@ -1,4 +1,4 @@
-import { Helmet } from "react-helmet-async";
+import { useEffect } from "react";
 import { Github } from "lucide-react";
 
 const repos = [
@@ -6,26 +6,52 @@ const repos = [
 ];
 
 const GitHub = () => {
-  const jsonLd = {
-    "@context": "https://schema.org",
-    "@type": "ItemList",
-    name: "RAI Based AutoLab GitHub Repositories",
-    itemListElement: repos.map((r, i) => ({
-      "@type": "ListItem",
-      position: i + 1,
-      name: r.name,
-      url: r.url,
-    })),
-  };
+  useEffect(() => {
+    const title = "GitHub Repositories | RAI Based AutoLab";
+    document.title = title;
+
+    const newDesc = "Explore official RAI Based AutoLab GitHub repositories, including RAID.";
+    let meta = document.querySelector('meta[name="description"]') as HTMLMetaElement | null;
+    if (!meta) {
+      meta = document.createElement('meta');
+      meta.name = 'description';
+      document.head.appendChild(meta);
+    }
+    meta.setAttribute('content', newDesc);
+
+    let canonical = document.querySelector('link[rel="canonical"]') as HTMLLinkElement | null;
+    if (!canonical) {
+      canonical = document.createElement('link');
+      canonical.rel = 'canonical';
+      document.head.appendChild(canonical);
+    }
+    canonical.href = `${window.location.origin}/github`;
+
+    const jsonLd = {
+      "@context": "https://schema.org",
+      "@type": "ItemList",
+      name: "RAI Based AutoLab GitHub Repositories",
+      itemListElement: repos.map((r, i) => ({
+        "@type": "ListItem",
+        position: i + 1,
+        name: r.name,
+        url: r.url,
+      })),
+    };
+
+    const scriptId = 'ld-json-github';
+    let ld = document.getElementById(scriptId) as HTMLScriptElement | null;
+    if (!ld) {
+      ld = document.createElement('script');
+      ld.type = 'application/ld+json';
+      ld.id = scriptId;
+      document.head.appendChild(ld);
+    }
+    ld.text = JSON.stringify(jsonLd);
+  }, []);
 
   return (
     <>
-      <Helmet>
-        <title>GitHub Repositories | RAI Based AutoLab</title>
-        <meta name="description" content="Explore official RAI Based AutoLab GitHub repositories, including RAID." />
-        <link rel="canonical" href="/github" />
-        <script type="application/ld+json">{JSON.stringify(jsonLd)}</script>
-      </Helmet>
 
       <header className="bg-card text-card-foreground border-b border-border">
         <div className="mx-auto max-w-5xl px-6 py-10">
