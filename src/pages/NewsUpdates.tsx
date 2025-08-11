@@ -7,8 +7,8 @@ import { Button } from '@/components/ui/button';
 const NewsUpdates = () => {
   const updates = [
     {
-      version: "0.9.5.6",
-      date: "July 21, 2025",
+      version: "0.9.0.1",
+      date: "August 11, 2025",
       type: "Website Features Release",
       features: [
         "Complete UI/UX redesign with modern design system",
@@ -43,7 +43,7 @@ const NewsUpdates = () => {
       ]
     },
     {
-      version: "0.8.7.2",
+      version: "0.8.9.5",
       date: "July 8, 2025",
       type: "Feature Release",
       features: [
