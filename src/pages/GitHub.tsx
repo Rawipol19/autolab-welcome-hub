@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 
 const repos = [
-  { name: "RAID", url: "https://github.com/amirnd51/RAID" },
+  { name: "RAID/RAI", url: "https://github.com/amirnd51/RAID" },
 ];
 
 const GitHub = () => {
