@@ -56,7 +56,7 @@ const GitHub = () => {
   return (
     <>
 
-      <header className="bg-card text-card-foreground border-b border-border">
+      <header className="bg-primary text-primary-foreground">
         <div className="mx-auto max-w-5xl px-6 py-10">
           <div className="flex items-center justify-between gap-4">
             <div>
