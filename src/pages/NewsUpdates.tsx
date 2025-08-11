@@ -18,15 +18,15 @@ const NewsUpdates = () => {
         "Improved mobile experience with touch-friendly controls"
       ],
       improvements: [
-        "Achieved 60% faster page load times through optimized assets and reduced payloads",
+        "Maximize faster page load times through optimized assets and reduced payloads",
         "Implemented comprehensive SEO enhancements across all pages",
         "Introduced smooth page transitions for a more fluid user experience",
         "Refactored codebase for improved organization, readability, and long-term maintainability"
       ]
     },
     {
-      version: "0.9.0.0",
-      date: "July 10, 2025",
+      version: "0.8.9.9",
+      date: "July 25, 2025",
       type: "Major Release",
       features: [
         "Complete UI/UX redesign with modern design system",
@@ -44,7 +44,7 @@ const NewsUpdates = () => {
     },
     {
       version: "0.8.9.5",
-      date: "July 8, 2025",
+      date: "July 15, 2025",
       type: "Feature Release",
       features: [
         "Added comprehensive documentation pages",
