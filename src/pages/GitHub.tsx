@@ -6,6 +6,7 @@ import { Button } from "@/components/ui/button";
 const repos = [
   { name: "RAID/RAI", url: "https://github.com/amirnd51/RAID" },
   { name: "Autograder test file", url: "https://github.com/autolab/autograders-examples/tree/main/Cpp-InteractiveAutograderTemplate" },
+  { name: "Project Homepage website", url: "https://github.com/Rawipol19/autolab-welcome-hub.git" },
 ];
 
 const GitHub = () => {
