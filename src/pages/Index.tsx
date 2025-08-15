@@ -251,7 +251,7 @@ const Index = () => {
         <div className="mx-auto max-w-7xl px-6 py-2">
           <div className="text-center">
             <Badge variant="outline" className="bg-white/80 text-primary font-medium">
-              Version 0.9.0.1 • Updated 8/11/2025
+              Version 0.9.0.1 • Updated 8/15/2025
             </Badge>
           </div>
         </div>
