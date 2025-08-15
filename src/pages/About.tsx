@@ -88,9 +88,9 @@ const About = () => {
           {/* University Logos */}
           <div className="flex items-center justify-center gap-16 mb-16">
             <div className="text-center">
-              <div className="w-40 h-32 bg-white rounded-2xl shadow-lg flex items-center justify-center mb-4 mx-auto p-4">
+              <div className="w-80 h-64 bg-white rounded-2xl shadow-lg flex items-center justify-center mb-4 mx-auto p-4">
                 <img 
-                  src="/lovable-uploads/e9f9078c-92fc-4420-bd5c-b119d7d953e5.png" 
+                  src="https://autolabproject.com/images/universities/ubuffalo.png" 
                   alt="University at Buffalo Logo" 
                   className="max-w-full max-h-full object-contain"
                 />
@@ -100,9 +100,9 @@ const About = () => {
             </div>
 
             <div className="text-center">
-              <div className="w-40 h-32 bg-white rounded-2xl shadow-lg flex items-center justify-center mb-4 mx-auto p-6">
+              <div className="w-80 h-64 bg-white rounded-2xl shadow-lg flex items-center justify-center mb-4 mx-auto p-6">
                 <img 
-                  src="/lovable-uploads/3905c3d0-5069-469f-a267-29c26630e4c4.png" 
+                  src="https://autolabproject.com/images/universities/cmu.png" 
                   alt="Carnegie Mellon University Logo" 
                   className="max-w-full max-h-full object-contain"
                 />
