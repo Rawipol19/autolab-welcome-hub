@@ -65,7 +65,7 @@ const PdfPage = () => {
             <CardContent className="space-y-4">
               <div className="space-y-4">
                 <div className="flex items-start gap-3">
-                  <div className="w-6 h-6 rounded-full bg-primary text-primary-foreground flex items-center justify-center text-sm font-bold">1</div>
+                  <div className="w-7 h-7 rounded-full bg-primary text-primary-foreground flex items-center justify-center text-xs font-bold leading-none">1</div>
                   <div>
                     <h5 className="font-semibold">Summary Section</h5>
                     <p className="text-sm text-muted-foreground">Overview of overall performance and final score</p>
@@ -73,7 +73,7 @@ const PdfPage = () => {
                 </div>
                 
                 <div className="flex items-start gap-3">
-                  <div className="w-6 h-6 rounded-full bg-primary text-primary-foreground flex items-center justify-center text-sm font-bold">2</div>
+                  <div className="w-7 h-7 rounded-full bg-primary text-primary-foreground flex items-center justify-center text-xs font-bold leading-none">2</div>
                   <div>
                     <h5 className="font-semibold">Compilation Results</h5>
                     <p className="text-sm text-muted-foreground">Detailed compilation status and any errors encountered</p>
@@ -81,7 +81,7 @@ const PdfPage = () => {
                 </div>
                 
                 <div className="flex items-start gap-3">
-                  <div className="w-6 h-6 rounded-full bg-primary text-primary-foreground flex items-center justify-center text-sm font-bold">3</div>
+                  <div className="w-7 h-7 rounded-full bg-primary text-primary-foreground flex items-center justify-center text-xs font-bold leading-none">3</div>
                   <div>
                     <h5 className="font-semibold">Test Cases</h5>
                     <p className="text-sm text-muted-foreground">Individual test case results with expected vs actual output</p>
@@ -89,7 +89,7 @@ const PdfPage = () => {
                 </div>
                 
                 <div className="flex items-start gap-3">
-                  <div className="w-6 h-6 rounded-full bg-primary text-primary-foreground flex items-center justify-center text-sm font-bold">4</div>
+                  <div className="w-7 h-7 rounded-full bg-primary text-primary-foreground flex items-center justify-center text-xs font-bold leading-none">4</div>
                   <div>
                     <h5 className="font-semibold">Performance Analysis</h5>
                     <p className="text-sm text-muted-foreground">Execution time, memory usage, and optimization suggestions</p>

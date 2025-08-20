@@ -65,7 +65,7 @@ const LogPage = () => {
             <CardContent className="space-y-4">
               <div className="space-y-4">
                 <div className="flex items-start gap-3">
-                  <div className="w-6 h-6 rounded-full bg-primary text-primary-foreground flex items-center justify-center text-sm font-bold">1</div>
+                  <div className="w-7 h-7 rounded-full bg-primary text-primary-foreground flex items-center justify-center text-xs font-bold leading-none">1</div>
                   <div>
                     <h5 className="font-semibold">System Information</h5>
                     <p className="text-sm text-muted-foreground">Environment details and configuration</p>
@@ -73,7 +73,7 @@ const LogPage = () => {
                 </div>
                 
                 <div className="flex items-start gap-3">
-                  <div className="w-6 h-6 rounded-full bg-primary text-primary-foreground flex items-center justify-center text-sm font-bold">2</div>
+                  <div className="w-7 h-7 rounded-full bg-primary text-primary-foreground flex items-center justify-center text-xs font-bold leading-none">2</div>
                   <div>
                     <h5 className="font-semibold">Compilation Phase</h5>
                     <p className="text-sm text-muted-foreground">Compiler output, warnings, and errors</p>
@@ -81,7 +81,7 @@ const LogPage = () => {
                 </div>
                 
                 <div className="flex items-start gap-3">
-                  <div className="w-6 h-6 rounded-full bg-primary text-primary-foreground flex items-center justify-center text-sm font-bold">3</div>
+                  <div className="w-7 h-7 rounded-full bg-primary text-primary-foreground flex items-center justify-center text-xs font-bold leading-none">3</div>
                   <div>
                     <h5 className="font-semibold">Execution Phase</h5>
                     <p className="text-sm text-muted-foreground">Runtime logs and system interactions</p>
@@ -89,7 +89,7 @@ const LogPage = () => {
                 </div>
                 
                 <div className="flex items-start gap-3">
-                  <div className="w-6 h-6 rounded-full bg-primary text-primary-foreground flex items-center justify-center text-sm font-bold">4</div>
+                  <div className="w-7 h-7 rounded-full bg-primary text-primary-foreground flex items-center justify-center text-xs font-bold leading-none">4</div>
                   <div>
                     <h5 className="font-semibold">Cleanup & Summary</h5>
                     <p className="text-sm text-muted-foreground">Resource cleanup and final status</p>

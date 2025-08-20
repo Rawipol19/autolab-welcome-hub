@@ -74,7 +74,7 @@ const ZipPage = () => {
             <CardContent className="space-y-4">
               <div className="space-y-4">
                 <div className="flex items-start gap-3">
-                  <div className="w-6 h-6 rounded-full bg-primary text-primary-foreground flex items-center justify-center text-sm font-bold">1</div>
+                  <div className="w-7 h-7 rounded-full bg-primary text-primary-foreground flex items-center justify-center text-xs font-bold leading-none">1</div>
                   <div>
                     <h5 className="font-semibold">Archive Extraction</h5>
                     <p className="text-sm text-muted-foreground">Safely extract archive contents in isolated environment</p>
@@ -82,7 +82,7 @@ const ZipPage = () => {
                 </div>
                 
                 <div className="flex items-start gap-3">
-                  <div className="w-6 h-6 rounded-full bg-primary text-primary-foreground flex items-center justify-center text-sm font-bold">2</div>
+                  <div className="w-7 h-7 rounded-full bg-primary text-primary-foreground flex items-center justify-center text-xs font-bold leading-none">2</div>
                   <div>
                     <h5 className="font-semibold">Structure Analysis</h5>
                     <p className="text-sm text-muted-foreground">Analyze directory structure and identify main files</p>
@@ -90,7 +90,7 @@ const ZipPage = () => {
                 </div>
                 
                 <div className="flex items-start gap-3">
-                  <div className="w-6 h-6 rounded-full bg-primary text-primary-foreground flex items-center justify-center text-sm font-bold">3</div>
+                  <div className="w-7 h-7 rounded-full bg-primary text-primary-foreground flex items-center justify-center text-xs font-bold leading-none">3</div>
                   <div>
                     <h5 className="font-semibold">Build Process</h5>
                     <p className="text-sm text-muted-foreground">Execute build scripts and install dependencies</p>
@@ -98,7 +98,7 @@ const ZipPage = () => {
                 </div>
                 
                 <div className="flex items-start gap-3">
-                  <div className="w-6 h-6 rounded-full bg-primary text-primary-foreground flex items-center justify-center text-sm font-bold">4</div>
+                  <div className="w-7 h-7 rounded-full bg-primary text-primary-foreground flex items-center justify-center text-xs font-bold leading-none">4</div>
                   <div>
                     <h5 className="font-semibold">Comprehensive Testing</h5>
                     <p className="text-sm text-muted-foreground">Run all tests and generate detailed reports</p>
