@@ -259,34 +259,34 @@ const Index = () => {
 
       <section className="relative overflow-hidden bg-gradient-to-br from-primary/5 via-background to-secondary/5">
         <div className="absolute inset-0 bg-grid-black/[0.02] bg-[size:50px_50px]" />
-        <div className="relative mx-auto max-w-7xl px-6 py-24 sm:py-32 lg:px-8">
+        <div className="relative mx-auto max-w-7xl px-4 sm:px-6 py-16 sm:py-24 lg:py-32 lg:px-8">
           <div className="text-center">
-            <div className="flex items-center justify-center mb-8">
-              <div className="p-3 bg-white rounded-2xl shadow-lg">
+            <div className="flex items-center justify-center mb-6 sm:mb-8">
+              <div className="p-2 sm:p-3 bg-white rounded-xl sm:rounded-2xl shadow-lg">
                 <img 
                   src="/lovable-uploads/d73a6f39-361f-4c1f-8cf4-a7419e7ce0a8.png" 
                   alt="University at Buffalo Logo" 
-                  className="h-12 w-12"
+                  className="h-8 w-8 sm:h-12 sm:w-12"
                 />
               </div>
             </div>
-            <h1 className="text-4xl font-bold tracking-tight text-foreground sm:text-6xl bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">
+            <h1 className="text-3xl sm:text-4xl lg:text-6xl font-bold tracking-tight text-foreground bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">
               AUTOLAB
             </h1>
-            <p className="mt-2 text-xl text-primary font-semibold">
+            <p className="mt-2 text-lg sm:text-xl text-primary font-semibold">
               by University at Buffalo
             </p>
-            <p className="mt-4 text-lg font-medium text-secondary">
+            <p className="mt-3 sm:mt-4 text-base sm:text-lg font-medium text-secondary">
               RAI based Autolab
             </p>
-            <p className="mt-6 text-lg leading-8 text-muted-foreground max-w-3xl mx-auto">
+            <p className="mt-4 sm:mt-6 text-base sm:text-lg leading-relaxed text-muted-foreground max-w-3xl mx-auto px-4">
               The intelligent autograding system that revolutionizes how educators assess programming assignments. 
               Fast, secure, and comprehensive feedback for students and instructors.
             </p>
-            <div className="mt-10 flex items-center justify-center gap-x-6">
+            <div className="mt-8 sm:mt-10 flex flex-col sm:flex-row items-center justify-center gap-4 sm:gap-x-6 px-4">
               <Button 
                 size="lg" 
-                className="bg-primary hover:bg-primary/90 text-primary-foreground"
+                className="w-full sm:w-auto bg-primary hover:bg-primary/90 text-primary-foreground"
                 onClick={() => window.open('https://docs.autolabproject.com/', '_blank')}
               >
                 Get Started
@@ -294,7 +294,7 @@ const Index = () => {
               <Button 
                 variant="outline" 
                 size="lg" 
-                className="border-primary text-primary hover:bg-primary hover:text-primary-foreground"
+                className="w-full sm:w-auto border-primary text-primary hover:bg-primary hover:text-primary-foreground"
                 onClick={() => window.location.href = '/how-it-works'}
               >
                 Learn More
@@ -304,18 +304,18 @@ const Index = () => {
         </div>
       </section>
 
-      <section id="how-it-works" className="py-24 bg-secondary/5">
-        <div className="mx-auto max-w-7xl px-6 lg:px-8">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl font-bold tracking-tight text-foreground sm:text-4xl">
+      <section id="how-it-works" className="py-16 sm:py-24 bg-secondary/5">
+        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-12 sm:mb-16">
+            <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold tracking-tight text-foreground">
               How AutoLab Works
             </h2>
-            <p className="mt-4 text-lg text-muted-foreground">
+            <p className="mt-4 text-base sm:text-lg text-muted-foreground">
               Three simple steps to automated grading excellence
             </p>
           </div>
 
-          <div className="grid lg:grid-cols-2 gap-12 items-center">
+          <div className="grid lg:grid-cols-2 gap-8 sm:gap-12 items-center">
             <div className="space-y-4">
               {steps.map((step, index) => {
                 const StepIcon = step.icon;
@@ -347,18 +347,18 @@ const Index = () => {
               })}
             </div>
 
-            <div className="lg:pl-8">
+            <div className="lg:pl-8 mt-8 lg:mt-0">
               <Card className="border-primary/20 bg-gradient-to-br from-primary/5 to-secondary/5">
                 <CardHeader>
-                  <div className="flex items-center gap-4 mb-4">
-                    <div className="p-3 bg-primary rounded-xl">
+                  <div className="flex items-center gap-3 sm:gap-4 mb-4">
+                    <div className="p-2 sm:p-3 bg-primary rounded-xl">
                       {steps[selectedStep] && (() => {
                         const SelectedStepIcon = steps[selectedStep].icon;
-                        return <SelectedStepIcon className="h-8 w-8 text-primary-foreground" />;
+                        return <SelectedStepIcon className="h-6 w-6 sm:h-8 sm:w-8 text-primary-foreground" />;
                       })()}
                     </div>
                     <div>
-                      <CardTitle className="text-xl">{steps[selectedStep]?.title}</CardTitle>
+                      <CardTitle className="text-lg sm:text-xl">{steps[selectedStep]?.title}</CardTitle>
                       <Badge variant="secondary" className="mt-1">
                         Step {selectedStep + 1}
                       </Badge>
@@ -366,7 +366,7 @@ const Index = () => {
                   </div>
                 </CardHeader>
                 <CardContent>
-                  <p className="text-muted-foreground leading-relaxed">
+                  <p className="text-muted-foreground leading-relaxed text-sm sm:text-base">
                     {steps[selectedStep]?.detail}
                   </p>
                 </CardContent>
@@ -376,20 +376,20 @@ const Index = () => {
         </div>
       </section>
 
-      <section className="py-24 bg-gradient-to-br from-secondary/5 to-accent/5">
-        <div className="mx-auto max-w-7xl px-6 lg:px-8">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl font-bold tracking-tight text-foreground sm:text-4xl">
+      <section className="py-16 sm:py-24 bg-gradient-to-br from-secondary/5 to-accent/5">
+        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-12 sm:mb-16">
+            <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold tracking-tight text-foreground">
               Evolution from Carnegie Mellon to RAI-Based AutoLab
             </h2>
-            <p className="mt-4 text-lg text-muted-foreground max-w-4xl mx-auto">
+            <p className="mt-4 text-base sm:text-lg text-muted-foreground max-w-4xl mx-auto px-4">
               Our RAI-based AutoLab represents a revolutionary advancement over the traditional Carnegie Mellon Tango system. 
               While Tango relies on a basic Python job manager, our intelligent RAI architecture delivers superior performance, 
               scalability, and reliability through advanced AI-driven orchestration.
             </p>
           </div>
 
-          <div className="grid lg:grid-cols-2 gap-8 mb-16">
+          <div className="grid lg:grid-cols-2 gap-6 sm:gap-8 mb-12 sm:mb-16">
             <Card className="bg-card/50 backdrop-blur-sm border-primary/20">
               <CardHeader className="text-center">
                 <CardTitle className="text-xl text-primary flex items-center justify-center gap-2">
@@ -404,7 +404,7 @@ const Index = () => {
                 <img 
                   src="/lovable-uploads/50334043-1316-4add-918a-b8111f9fb3ed.png" 
                   alt="Traditional Autolab + Tango Architecture showing producer-consumer model"
-                  className="max-w-full h-auto rounded-lg border border-primary/20 shadow-md"
+                  className="w-full h-auto rounded-lg border border-primary/20 shadow-md"
                 />
               </CardContent>
             </Card>
@@ -422,8 +422,8 @@ const Index = () => {
               <CardContent className="flex justify-center">
                 <img 
                   src="/lovable-uploads/59bb43d2-ad0b-4f8e-bd18-2612bd877e03.png" 
-                  alt="Current Autolab + Tango + RAI Architecture with enhanced job management"
-                  className="max-w-full h-auto rounded-lg border border-primary/20 shadow-md"
+                  alt="RAI-Based Architecture with intelligent job orchestration and multi-protocol communication"
+                  className="w-full h-auto rounded-lg border border-primary/20 shadow-md"
                 />
               </CardContent>
             </Card>
@@ -443,133 +443,131 @@ const Index = () => {
             </div>
           </div>
 
-          <div className="space-y-12">
+          <div className="space-y-6 sm:space-y-8">
             {comparisonData.map((comparison, index) => (
-              <div key={index} className="relative">
-                <div className="text-center mb-8">
-                  <Badge variant="outline" className="text-lg px-4 py-2 bg-white/80 text-primary font-semibold">
-                    {comparison.category}
-                  </Badge>
-                </div>
-                
-                <div className="grid lg:grid-cols-2 gap-8 items-start">
-                  <Card className="h-full hover:shadow-lg transition-all duration-300 bg-gray-50/50 border-gray-300/50">
-                    <CardHeader>
-                      <div className="flex items-center gap-3 mb-3">
-                        <div className="p-2 bg-gray-500 rounded-lg">
-                          <Server className="h-6 w-6 text-white" />
+              <Card key={index} className="overflow-hidden bg-card/50 backdrop-blur-sm">
+                <CardHeader className="text-center border-b border-primary/10 p-4 sm:p-6">
+                  <CardTitle className="text-lg sm:text-xl font-bold text-primary">{comparison.category}</CardTitle>
+                </CardHeader>
+                <CardContent className="p-0">
+                  <div className="grid md:grid-cols-2">
+                    <div className="p-4 sm:p-6 border-r border-primary/10 md:border-r border-b md:border-b-0 border-primary/10">
+                      <div className="space-y-4">
+                        <div className="flex items-center gap-2 mb-3">
+                          <Server className="h-4 w-4 sm:h-5 sm:w-5 text-muted-foreground" />
+                          <h4 className="font-semibold text-base sm:text-lg">{comparison.oldAutolab.title}</h4>
                         </div>
-                        <div>
-                          <CardTitle className="text-lg text-gray-700">
-                            {comparison.oldAutolab.title}
-                          </CardTitle>
-                          <Badge variant="secondary" className="mt-1">
-                            Carnegie Mellon
-                          </Badge>
+                        <p className="text-xs sm:text-sm text-muted-foreground mb-4">{comparison.oldAutolab.description}</p>
+                        <ul className="space-y-2">
+                          {comparison.oldAutolab.features.map((feature, idx) => (
+                            <li key={idx} className="flex items-start gap-2 text-xs sm:text-sm">
+                              <div className="w-2 h-2 rounded-full bg-muted-foreground/50 mt-2 flex-shrink-0" />
+                              <span className="text-muted-foreground">{feature}</span>
+                            </li>
+                          ))}
+                        </ul>
+                      </div>
+                    </div>
+                    <div className="p-4 sm:p-6 bg-primary/5">
+                      <div className="space-y-4">
+                        <div className="flex items-center gap-2 mb-3">
+                          <Brain className="h-4 w-4 sm:h-5 sm:w-5 text-primary" />
+                          <h4 className="font-semibold text-base sm:text-lg text-primary">{comparison.newAutolab.title}</h4>
                         </div>
+                        <p className="text-xs sm:text-sm text-muted-foreground mb-4">{comparison.newAutolab.description}</p>
+                        <ul className="space-y-2">
+                          {comparison.newAutolab.features.map((feature, idx) => (
+                            <li key={idx} className="flex items-start gap-2 text-xs sm:text-sm">
+                              <div className="w-2 h-2 rounded-full bg-primary mt-2 flex-shrink-0" />
+                              <span className="text-foreground">{feature}</span>
+                            </li>
+                          ))}
+                        </ul>
                       </div>
-                      <CardDescription className="text-base">
-                        {comparison.oldAutolab.description}
-                      </CardDescription>
-                    </CardHeader>
-                    <CardContent>
-                      <div className="space-y-3">
-                        {comparison.oldAutolab.features.map((feature, featureIndex) => (
-                          <div key={featureIndex} className="flex items-start gap-3 p-3 bg-white/50 rounded-lg border border-gray-200">
-                            <div className="w-2 h-2 bg-gray-400 rounded-full mt-2 flex-shrink-0"></div>
-                            <span className="text-sm text-muted-foreground leading-relaxed">{feature}</span>
-                          </div>
-                        ))}
-                      </div>
-                    </CardContent>
-                  </Card>
-
-                  <div className="hidden lg:flex absolute left-1/2 top-1/2 transform -translate-x-1/2 -translate-y-1/2 z-10">
-                    <div className="p-3 bg-primary rounded-full shadow-lg">
-                      <ArrowRight className="h-6 w-6 text-primary-foreground" />
                     </div>
                   </div>
-
-                  <Card className="h-full hover:shadow-lg transition-all duration-300 bg-primary/5 border-primary/30">
-                    <CardHeader>
-                      <div className="flex items-center gap-3 mb-3">
-                        <div className="p-2 bg-primary rounded-lg">
-                          <Brain className="h-6 w-6 text-primary-foreground" />
-                        </div>
-                        <div>
-                          <CardTitle className="text-lg text-primary">
-                            {comparison.newAutolab.title}
-                          </CardTitle>
-                          <Badge variant="outline" className="mt-1 border-primary text-primary">
-                            University at Buffalo
-                          </Badge>
-                        </div>
-                      </div>
-                      <CardDescription className="text-base">
-                        {comparison.newAutolab.description}
-                      </CardDescription>
-                    </CardHeader>
-                    <CardContent>
-                      <div className="space-y-3">
-                        {comparison.newAutolab.features.map((feature, featureIndex) => (
-                          <div key={featureIndex} className="flex items-start gap-3 p-3 bg-white/50 rounded-lg border border-primary/20">
-                            <CheckCircle className="h-4 w-4 text-primary mt-1 flex-shrink-0" />
-                            <span className="text-sm text-muted-foreground leading-relaxed font-medium">{feature}</span>
-                          </div>
-                        ))}
-                      </div>
-                    </CardContent>
-                  </Card>
-                </div>
-              </div>
+                </CardContent>
+              </Card>
             ))}
           </div>
         </div>
       </section>
 
+      <section id="rai-section" className="py-16 sm:py-24 bg-gradient-to-br from-primary/5 to-accent/5">
+        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-12 sm:mb-16">
+            <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold tracking-tight text-foreground mb-4">
+              RAI Architecture: The Intelligence Behind AutoLab
+            </h2>
+            <p className="text-base sm:text-lg text-muted-foreground max-w-3xl mx-auto px-4">
+              Discover how our RAI (Resource Allocation Intelligence) system revolutionizes autograding through 
+              intelligent job management, seamless Docker integration, and comprehensive data orchestration.
+            </p>
+          </div>
 
-      <section className="py-24">
-        <div className="mx-auto max-w-7xl px-6 lg:px-8">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl font-bold tracking-tight text-foreground sm:text-4xl">
+          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8 mb-12 sm:mb-16">
+            {raiFeatures.map((feature, index) => {
+              const FeatureIcon = feature.icon;
+              return (
+                <Card key={index} className="bg-card/50 backdrop-blur-sm border-primary/20 hover:shadow-lg transition-all duration-300 hover:scale-105">
+                  <CardHeader>
+                    <div className="flex items-center gap-3 mb-4">
+                      <div className="p-2 sm:p-3 bg-primary rounded-lg">
+                        <FeatureIcon className="h-5 w-5 sm:h-6 sm:w-6 text-primary-foreground" />
+                      </div>
+                      <CardTitle className="text-base sm:text-lg text-primary">{feature.title}</CardTitle>
+                    </div>
+                  </CardHeader>
+                  <CardContent>
+                    <p className="text-xs sm:text-sm text-muted-foreground mb-4 leading-relaxed">{feature.description}</p>
+                    <ul className="space-y-2">
+                      {feature.benefits.map((benefit, benefitIndex) => (
+                        <li key={benefitIndex} className="flex items-start gap-2 text-xs sm:text-sm">
+                          <CheckCircle className="h-3 w-3 sm:h-4 sm:w-4 text-primary mt-1 flex-shrink-0" />
+                          <span className="text-muted-foreground leading-relaxed">{benefit}</span>
+                        </li>
+                      ))}
+                    </ul>
+                  </CardContent>
+                </Card>
+              );
+            })}
+          </div>
+        </div>
+      </section>
+
+      <section className="py-16 sm:py-24 bg-background">
+        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-12 sm:mb-16">
+            <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold tracking-tight text-foreground">
               Supported File Types
             </h2>
-            <p className="mt-4 text-lg text-muted-foreground">
+            <p className="mt-4 text-base sm:text-lg text-muted-foreground">
               AutoLab supports a wide range of programming languages and file formats
             </p>
           </div>
 
-          <div className="space-y-12">
-            {fileTypes.map((category, categoryIndex) => (
+          <div className="space-y-8 sm:space-y-12">
+            {fileTypes.map((fileTypeGroup, categoryIndex) => (
               <div key={categoryIndex}>
-                <h3 className="text-xl font-semibold text-foreground mb-6 text-center">
-                  {category.category}
+                <h3 className="text-lg sm:text-xl font-semibold text-foreground mb-4 sm:mb-6 text-center">
+                  {fileTypeGroup.category}
                 </h3>
-                <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4">
-                  {category.files.map((file, index) => (
+                <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-4 sm:gap-6">
+                  {fileTypeGroup.files.map((fileType, fileIndex) => (
                     <Card 
-                      key={index}
-                      className="group hover:shadow-lg transition-all duration-300 hover:scale-105 cursor-pointer"
-                      onClick={() => handleFileTypeClick(file.name, category.category)}
+                      key={fileIndex}
+                      className="cursor-pointer hover:shadow-md transition-all duration-200 hover:scale-105 border-primary/20"
+                      onClick={() => handleFileTypeClick(fileType.name, fileTypeGroup.category)}
                     >
-                      <CardContent className="p-6 text-center">
-                        <div className="w-12 h-12 flex items-center justify-center mx-auto mb-3 group-hover:scale-110 transition-transform">
-                          <img 
-                            src={file.logo} 
-                            alt={`${file.name} logo`}
-                            className="w-12 h-12 object-contain"
-                            onError={(e) => {
-                              const target = e.target as HTMLImageElement;
-                              target.style.display = 'none';
-                              const fallback = document.createElement('div');
-                              fallback.className = `w-12 h-12 rounded-lg ${file.color} flex items-center justify-center`;
-                              fallback.innerHTML = `<svg class="h-6 w-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path></svg>`;
-                              target.parentNode?.appendChild(fallback);
-                            }}
-                          />
+                      <CardContent className="p-4 sm:p-6 text-center">
+                        <div className="flex justify-center mb-3 sm:mb-4">
+                          <div className={`w-12 h-12 sm:w-16 sm:h-16 rounded-lg ${fileType.color} flex items-center justify-center`}>
+                            <img src={fileType.logo} alt={fileType.name} className="w-8 h-8 sm:w-10 sm:h-10" />
+                          </div>
                         </div>
-                        <h4 className="font-semibold text-foreground">{file.name}</h4>
-                        <p className="text-sm text-muted-foreground font-mono">{file.extension}</p>
+                        <h3 className="font-semibold text-sm sm:text-lg mb-1 sm:mb-2">{fileType.name}</h3>
+                        <p className="text-muted-foreground text-xs sm:text-sm">{fileType.extension}</p>
                       </CardContent>
                     </Card>
                   ))}

@@ -8,8 +8,8 @@ import { Link } from 'react-router-dom';
 const CPage = () => {
   return (
     <div className="min-h-screen bg-background">
-      <div className="mx-auto max-w-4xl px-6 py-12">
-        <div className="mb-8">
+      <div className="mx-auto max-w-4xl px-4 sm:px-6 py-8 sm:py-12">
+        <div className="mb-6 sm:mb-8">
           <Link to="/">
             <Button variant="ghost" className="mb-4">
               <ArrowLeft className="h-4 w-4 mr-2" />
@@ -17,13 +17,13 @@ const CPage = () => {
             </Button>
           </Link>
           
-          <div className="flex items-center gap-4 mb-6">
-            <div className="w-16 h-16 rounded-lg bg-white-600 flex items-center justify-center">
-              <img src="/logos/c.svg" alt="C" className="w-10 h-10" />
+          <div className="flex flex-col sm:flex-row sm:items-center gap-3 sm:gap-4 mb-6">
+            <div className="w-12 h-12 sm:w-16 sm:h-16 rounded-lg bg-white-600 flex items-center justify-center">
+              <img src="/logos/c.svg" alt="C" className="w-8 h-8 sm:w-10 sm:h-10" />
             </div>
             <div>
-              <h1 className="text-3xl font-bold text-foreground">C Files</h1>
-              <p className="text-muted-foreground">Learn how to submit C programming assignments</p>
+              <h1 className="text-2xl sm:text-3xl font-bold text-foreground">C Files</h1>
+              <p className="text-sm sm:text-base text-muted-foreground">Learn how to submit C programming assignments</p>
             </div>
           </div>
         </div>
@@ -118,44 +118,44 @@ const CPage = () => {
                 After compilation and testing, AutoLab generates various output files:
               </p>
               
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                 <Link to="/file-types/output/pdf">
-                  <div className="space-y-2 p-4 rounded-lg border hover:bg-muted/50 transition-colors cursor-pointer">
+                  <div className="space-y-2 p-3 sm:p-4 rounded-lg border hover:bg-muted/50 transition-colors cursor-pointer">
                     <div className="flex items-center gap-2">
-                      <div className="w-8 h-8 rounded bg-red-500 flex items-center justify-center">
+                      <div className="w-8 h-8 rounded bg-red-500 flex items-center justify-center flex-shrink-0">
                         <span className="text-white font-bold text-xs">PDF</span>
                       </div>
-                      <div>
-                        <h5 className="font-semibold">Compilation Report</h5>
-                        <p className="text-sm text-muted-foreground">Detailed compilation and test results</p>
+                      <div className="min-w-0">
+                        <h5 className="font-semibold text-sm sm:text-base">Compilation Report</h5>
+                        <p className="text-xs sm:text-sm text-muted-foreground">Detailed compilation and test results</p>
                       </div>
                     </div>
                   </div>
                 </Link>
                 
                 <Link to="/file-types/output/txt">
-                  <div className="space-y-2 p-4 rounded-lg border hover:bg-muted/50 transition-colors cursor-pointer">
+                  <div className="space-y-2 p-3 sm:p-4 rounded-lg border hover:bg-muted/50 transition-colors cursor-pointer">
                     <div className="flex items-center gap-2">
-                      <div className="w-8 h-8 rounded bg-gray-400 flex items-center justify-center">
+                      <div className="w-8 h-8 rounded bg-gray-400 flex items-center justify-center flex-shrink-0">
                         <span className="text-white font-bold text-xs">TXT</span>
                       </div>
-                      <div>
-                        <h5 className="font-semibold">Program Output</h5>
-                        <p className="text-sm text-muted-foreground">Console output and execution results</p>
+                      <div className="min-w-0">
+                        <h5 className="font-semibold text-sm sm:text-base">Program Output</h5>
+                        <p className="text-xs sm:text-sm text-muted-foreground">Console output and execution results</p>
                       </div>
                     </div>
                   </div>
                 </Link>
                 
                 <Link to="/file-types/output/log">
-                  <div className="space-y-2 p-4 rounded-lg border hover:bg-muted/50 transition-colors cursor-pointer">
+                  <div className="space-y-2 p-3 sm:p-4 rounded-lg border hover:bg-muted/50 transition-colors cursor-pointer">
                     <div className="flex items-center gap-2">
-                      <div className="w-8 h-8 rounded bg-amber-500 flex items-center justify-center">
+                      <div className="w-8 h-8 rounded bg-amber-500 flex items-center justify-center flex-shrink-0">
                         <span className="text-white font-bold text-xs">LOG</span>
                       </div>
-                      <div>
-                        <h5 className="font-semibold">Compilation Logs</h5>
-                        <p className="text-sm text-muted-foreground">Detailed compilation warnings and errors</p>
+                      <div className="min-w-0">
+                        <h5 className="font-semibold text-sm sm:text-base">Compilation Logs</h5>
+                        <p className="text-xs sm:text-sm text-muted-foreground">Detailed compilation warnings and errors</p>
                       </div>
                     </div>
                   </div>
