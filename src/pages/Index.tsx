@@ -198,8 +198,8 @@ const Index = () => {
     {
       category: "Archives & Documents",
       files: [
-        { name: "ZIP Archive", extension: ".zip", color: "bg-purple-500", logo: "/logos/zip.svg" },
-        { name: "TAR Archive", extension: ".tar", color: "bg-indigo-500", logo: "/logos/tar.svg" },
+        { name: "ZIP Archive", extension: ".zip", color: "bg-purple-500", logo: "https://cdn-icons-png.freepik.com/512/28/28814.png" },
+        { name: "TAR Archive", extension: ".tar", color: "bg-indigo-500", logo: "https://cdn-icons-png.flaticon.com/512/29/29575.png" },
         { name: "YAML Configuration", extension: ".yml", color: "bg-teal-500", logo: "/logos/yaml.svg" }
       ]
     }
