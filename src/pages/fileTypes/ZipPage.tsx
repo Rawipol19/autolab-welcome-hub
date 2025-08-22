@@ -18,8 +18,8 @@ const ZipPage = () => {
           </Link>
           
           <div className="flex items-center gap-4 mb-6">
-            <div className="w-16 h-16 rounded-lg bg-purple-500 flex items-center justify-center">
-              <span className="text-white font-bold text-xl">.zip</span>
+            <div className="w-16 h-16 rounded-lg bg-white-500 flex items-center justify-center">
+              <img src="https://cdn-icons-png.freepik.com/512/28/28814.png" alt="Zip" className="w-10 h-10" />
             </div>
             <div>
               <h1 className="text-3xl font-bold text-foreground">ZIP Archives</h1>

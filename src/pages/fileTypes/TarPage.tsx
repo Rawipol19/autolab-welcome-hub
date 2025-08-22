@@ -18,8 +18,8 @@ const TarPage = () => {
           </Link>
           
           <div className="flex items-center gap-4 mb-6">
-            <div className="w-16 h-16 rounded-lg bg-indigo-500 flex items-center justify-center">
-              <span className="text-white font-bold text-xl">.tar</span>
+            <div className="w-16 h-16 rounded-lg bg-white-500 flex items-center justify-center">
+              <img src="https://cdn-icons-png.flaticon.com/512/29/29575.png" alt="Tar" className="w-10 h-10" />
             </div>
             <div>
               <h1 className="text-3xl font-bold text-foreground">TAR Archives</h1>
