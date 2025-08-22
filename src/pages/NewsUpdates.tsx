@@ -7,6 +7,24 @@ import { Button } from '@/components/ui/button';
 const NewsUpdates = () => {
   const updates = [
     {
+      version: "0.9.0.2",
+      date: "August 22, 2025",
+      type: "Website Features Release",
+      features: [
+        "Update UI/UX design to be more modern and user-friendly",
+        "New responsive navigation and UI components for mobile and desktop",
+        "Enhanced github footer with more quick links and repository",
+        "Updating Zip and Tar file logo to look more clean and modern",
+        "Improved mobile experience with touch-friendly controls and auto scale"
+      ],
+      improvements: [
+        "Fix broken links and improve accessibility",
+        "Fix features footer link to point to correct page",
+        "Fix number scaling in the each of the supported file types pages",
+        "Including additional grapgh for comparing the original autolab and inproved RAI version"
+      ]
+    },
+    {
       version: "0.9.0.1",
       date: "August 11, 2025",
       type: "Website Features Release",
