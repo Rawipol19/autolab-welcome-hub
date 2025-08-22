@@ -185,22 +185,22 @@ const Index = () => {
     {
       category: "Programming Languages",
       files: [
-        { name: "Python", extension: ".py", color: "bg-blue-500", logo: "/logos/python.svg" },
-        { name: "Java", extension: ".java", color: "bg-orange-500", logo: "/logos/java.svg" },
-        { name: "C++", extension: ".cpp", color: "bg-green-500", logo: "/logos/cpp.svg" },
-        { name: "JavaScript", extension: ".js", color: "bg-yellow-500", logo: "/logos/javascript.svg" },
-        { name: "C", extension: ".c", color: "bg-gray-500", logo: "/logos/c.svg" },
-        { name: "Go", extension: ".go", color: "bg-cyan-500", logo: "/logos/go.svg" },
-        { name: "Rust", extension: ".rs", color: "bg-red-500", logo: "/logos/rust.svg" },
-        { name: "SML", extension: ".sml", color: "bg-pink-500", logo: "/logos/sml.svg" }
+        { name: "Python", extension: ".py", color: "bg-white-500", logo: "/logos/python.svg" },
+        { name: "Java", extension: ".java", color: "bg-white-500", logo: "/logos/java.svg" },
+        { name: "C++", extension: ".cpp", color: "bg-white-500", logo: "/logos/cpp.svg" },
+        { name: "JavaScript", extension: ".js", color: "bg-white-500", logo: "/logos/javascript.svg" },
+        { name: "C", extension: ".c", color: "bg-white-500", logo: "/logos/c.svg" },
+        { name: "Go", extension: ".go", color: "bg-white-500", logo: "/logos/go.svg" },
+        { name: "Rust", extension: ".rs", color: "bg-white-500", logo: "/logos/rust.svg" },
+        { name: "SML", extension: ".sml", color: "bg-white-500", logo: "/logos/sml.svg" }
       ]
     },
     {
       category: "Archives & Documents",
       files: [
-        { name: "ZIP Archive", extension: ".zip", color: "bg-purple-500", logo: "/logos/zip.svg" },
-        { name: "TAR Archive", extension: ".tar", color: "bg-indigo-500", logo: "/logos/tar.svg" },
-        { name: "YAML Configuration", extension: ".yml", color: "bg-teal-500", logo: "/logos/yaml.svg" }
+        { name: "ZIP Archive", extension: ".zip", color: "bg-white-500", logo: "https://cdn-icons-png.freepik.com/512/28/28814.png" },
+        { name: "TAR Archive", extension: ".tar", color: "bg-white-500", logo: "https://cdn-icons-png.flaticon.com/512/29/29575.png" },
+        { name: "YAML Configuration", extension: ".yml", color: "bg-white-500", logo: "/logos/yaml.svg" }
       ]
     }
   ];
@@ -489,49 +489,6 @@ const Index = () => {
                 </CardContent>
               </Card>
             ))}
-          </div>
-        </div>
-      </section>
-
-      <section id="rai-section" className="py-16 sm:py-24 bg-gradient-to-br from-primary/5 to-accent/5">
-        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-12 sm:mb-16">
-            <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold tracking-tight text-foreground mb-4">
-              RAI Architecture: The Intelligence Behind AutoLab
-            </h2>
-            <p className="text-base sm:text-lg text-muted-foreground max-w-3xl mx-auto px-4">
-              Discover how our RAI (Resource Allocation Intelligence) system revolutionizes autograding through 
-              intelligent job management, seamless Docker integration, and comprehensive data orchestration.
-            </p>
-          </div>
-
-          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8 mb-12 sm:mb-16">
-            {raiFeatures.map((feature, index) => {
-              const FeatureIcon = feature.icon;
-              return (
-                <Card key={index} className="bg-card/50 backdrop-blur-sm border-primary/20 hover:shadow-lg transition-all duration-300 hover:scale-105">
-                  <CardHeader>
-                    <div className="flex items-center gap-3 mb-4">
-                      <div className="p-2 sm:p-3 bg-primary rounded-lg">
-                        <FeatureIcon className="h-5 w-5 sm:h-6 sm:w-6 text-primary-foreground" />
-                      </div>
-                      <CardTitle className="text-base sm:text-lg text-primary">{feature.title}</CardTitle>
-                    </div>
-                  </CardHeader>
-                  <CardContent>
-                    <p className="text-xs sm:text-sm text-muted-foreground mb-4 leading-relaxed">{feature.description}</p>
-                    <ul className="space-y-2">
-                      {feature.benefits.map((benefit, benefitIndex) => (
-                        <li key={benefitIndex} className="flex items-start gap-2 text-xs sm:text-sm">
-                          <CheckCircle className="h-3 w-3 sm:h-4 sm:w-4 text-primary mt-1 flex-shrink-0" />
-                          <span className="text-muted-foreground leading-relaxed">{benefit}</span>
-                        </li>
-                      ))}
-                    </ul>
-                  </CardContent>
-                </Card>
-              );
-            })}
           </div>
         </div>
       </section>
