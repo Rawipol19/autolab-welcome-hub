@@ -35,8 +35,8 @@ const Footer = () => {
 
   return (
     <footer className="bg-primary text-primary-foreground">
-      <div className="mx-auto max-w-7xl px-4 sm:px-6 py-12 sm:py-16 lg:px-8">
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6 sm:gap-8">
+      <div className="mx-auto max-w-7xl px-6 py-16 lg:px-8">
+        <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
           {/* RAI Based AutoLab */}
           <div>
             <h3 className="text-lg font-semibold mb-4">RAI Based AutoLab</h3>

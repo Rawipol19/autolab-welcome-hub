@@ -55,8 +55,8 @@ const About = () => {
     <div className="min-h-screen bg-background">
       {/* Header */}
       <header className="border-b bg-white/95 backdrop-blur supports-[backdrop-filter]:bg-white/60">
-        <div className="mx-auto max-w-7xl px-4 sm:px-6 py-3 sm:py-4">
-          <div className="flex items-center gap-3 sm:gap-4">
+        <div className="mx-auto max-w-7xl px-6 py-4">
+          <div className="flex items-center gap-4">
             <Button
               variant="ghost"
               size="sm"
@@ -67,48 +67,48 @@ const About = () => {
               Back to Home
             </Button>
             <div className="h-6 w-px bg-border" />
-            <h1 className="text-lg sm:text-xl font-semibold text-foreground">About AutoLab</h1>
+            <h1 className="text-xl font-semibold text-foreground">About AutoLab</h1>
           </div>
         </div>
       </header>
 
       {/* Hero Section */}
-      <section className="py-12 sm:py-16 bg-gradient-to-br from-primary/5 via-background to-secondary/5">
-        <div className="mx-auto max-w-7xl px-4 sm:px-6">
-          <div className="text-center mb-8 sm:mb-12">
-            <h1 className="text-2xl sm:text-4xl lg:text-5xl font-bold tracking-tight text-foreground">
+      <section className="py-16 bg-gradient-to-br from-primary/5 via-background to-secondary/5">
+        <div className="mx-auto max-w-7xl px-6">
+          <div className="text-center mb-12">
+            <h1 className="text-4xl font-bold tracking-tight text-foreground sm:text-5xl">
               About RAI-Enhanced AutoLab
             </h1>
-            <p className="mt-4 text-base sm:text-lg text-muted-foreground max-w-3xl mx-auto px-4">
+            <p className="mt-4 text-lg text-muted-foreground max-w-3xl mx-auto">
               A collaborative research project between leading universities to revolutionize 
               automated code assessment through Responsible AI technology.
             </p>
           </div>
 
           {/* University Logos */}
-          <div className="flex flex-col lg:flex-row items-center justify-center gap-8 lg:gap-16 mb-12 sm:mb-16">
+          <div className="flex items-center justify-center gap-16 mb-16">
             <div className="text-center">
-              <div className="w-64 h-48 sm:w-80 sm:h-64 bg-white rounded-xl sm:rounded-2xl shadow-lg flex items-center justify-center mb-3 sm:mb-4 mx-auto p-3 sm:p-4">
+              <div className="w-80 h-64 bg-white rounded-2xl shadow-lg flex items-center justify-center mb-4 mx-auto p-4">
                 <img 
                   src="https://autolabproject.com/images/universities/ubuffalo.png" 
                   alt="University at Buffalo Logo" 
                   className="max-w-full max-h-full object-contain"
                 />
               </div>
-              <h3 className="font-semibold text-foreground text-sm sm:text-base">University at Buffalo</h3>
-              <p className="text-xs sm:text-sm text-muted-foreground">SUNY</p>
+              <h3 className="font-semibold text-foreground">University at Buffalo</h3>
+              <p className="text-sm text-muted-foreground">SUNY</p>
             </div>
 
             <div className="text-center">
-              <div className="w-64 h-48 sm:w-80 sm:h-64 bg-white rounded-xl sm:rounded-2xl shadow-lg flex items-center justify-center mb-3 sm:mb-4 mx-auto p-4 sm:p-6">
+              <div className="w-80 h-64 bg-white rounded-2xl shadow-lg flex items-center justify-center mb-4 mx-auto p-6">
                 <img 
                   src="https://autolabproject.com/images/universities/cmu.png" 
                   alt="Carnegie Mellon University Logo" 
                   className="max-w-full max-h-full object-contain"
                 />
               </div>
-              <h3 className="font-semibold text-foreground text-sm sm:text-base">Carnegie Mellon University</h3>
-              <p className="text-xs sm:text-sm text-muted-foreground">Pittsburgh, PA</p>
+              <h3 className="font-semibold text-foreground">Carnegie Mellon University</h3>
+              <p className="text-sm text-muted-foreground">Pittsburgh, PA</p>
             </div>
           </div>
         </div>
