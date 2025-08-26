@@ -166,9 +166,9 @@ const JavaPage = () => {
 
           <Card>
             <CardHeader>
-              <CardTitle className="flex items-center gap-2 text-lg sm:text-xl">
-                <FileText className="h-4 w-4 sm:h-5 sm:w-5 flex-shrink-0" />
-                <span className="text-sm sm:text-base font-semibold">Example Code (Student Assignment Test Cases Code)</span>
+              <CardTitle className="flex items-center gap-2">
+                <FileText className="h-5 w-5" />
+                Example Code (Student Assignment Test Cases Code)
               </CardTitle>
             </CardHeader>
             <CardContent>
