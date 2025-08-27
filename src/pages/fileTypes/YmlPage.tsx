@@ -59,7 +59,7 @@ const YmlPage = () => {
             <CardHeader>
               <CardTitle className="flex items-center gap-2 text-lg sm:text-xl">
                 <FileText className="h-4 w-4 sm:h-5 sm:w-5 flex-shrink-0" />
-                Example Code (Build file for sorter.cpp)
+                <span className="text-sm sm:text-base font-semibold">Example Code (Build file for sorter.cpp)</span>
               </CardTitle>
             </CardHeader>
             <CardContent>
