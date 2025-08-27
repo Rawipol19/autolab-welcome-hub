@@ -72,40 +72,59 @@ const TarPage = () => {
             </CardHeader>
             <CardContent className="space-y-4">
               <div className="space-y-4">
+                
                 <div className="flex items-start gap-3">
-                  <div className="w-7 h-7 rounded-full bg-primary text-primary-foreground flex items-center justify-center text-xs font-bold leading-none">1</div>
+                  <div className="w-7 aspect-square rounded-full bg-primary text-primary-foreground flex items-center justify-center text-xs font-bold flex-shrink-0">
+                    1
+                  </div>
                   <div>
                     <h5 className="font-semibold">Archive Extraction</h5>
-                    <p className="text-sm text-muted-foreground">Extract TAR archive contents while preserving file permissions</p>
+                    <p className="text-sm text-muted-foreground">
+                      Extract TAR archive contents while preserving file permissions
+                    </p>
                   </div>
                 </div>
-                
+
                 <div className="flex items-start gap-3">
-                  <div className="w-7 h-7 rounded-full bg-primary text-primary-foreground flex items-center justify-center text-xs font-bold leading-none">2</div>
+                  <div className="w-7 aspect-square rounded-full bg-primary text-primary-foreground flex items-center justify-center text-xs font-bold flex-shrink-0">
+                    2
+                  </div>
                   <div>
                     <h5 className="font-semibold">File Structure Analysis</h5>
-                    <p className="text-sm text-muted-foreground">Analyze directory structure and identify project files</p>
+                    <p className="text-sm text-muted-foreground">
+                      Analyze directory structure and identify project files
+                    </p>
                   </div>
                 </div>
-                
+
                 <div className="flex items-start gap-3">
-                  <div className="w-7 h-7 rounded-full bg-primary text-primary-foreground flex items-center justify-center text-xs font-bold leading-none">3</div>
+                  <div className="w-7 aspect-square rounded-full bg-primary text-primary-foreground flex items-center justify-center text-xs font-bold flex-shrink-0">
+                    3
+                  </div>
                   <div>
                     <h5 className="font-semibold">Build & Compilation</h5>
-                    <p className="text-sm text-muted-foreground">Execute build scripts and compile source code as needed</p>
+                    <p className="text-sm text-muted-foreground">
+                      Execute build scripts and compile source code as needed
+                    </p>
                   </div>
                 </div>
-                
+
                 <div className="flex items-start gap-3">
-                  <div className="w-7 h-7 rounded-full bg-primary text-primary-foreground flex items-center justify-center text-xs font-bold leading-none">4</div>
+                  <div className="w-7 aspect-square rounded-full bg-primary text-primary-foreground flex items-center justify-center text-xs font-bold flex-shrink-0">
+                    4
+                  </div>
                   <div>
                     <h5 className="font-semibold">Testing & Validation</h5>
-                    <p className="text-sm text-muted-foreground">Run comprehensive tests and validate project requirements</p>
+                    <p className="text-sm text-muted-foreground">
+                      Run comprehensive tests and validate project requirements
+                    </p>
                   </div>
                 </div>
+
               </div>
             </CardContent>
           </Card>
+
 
           <Card>
             <CardHeader>
