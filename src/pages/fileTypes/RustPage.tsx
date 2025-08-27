@@ -70,42 +70,56 @@ const RustPage = () => {
               </CardTitle>
             </CardHeader>
             <CardContent className="space-y-4">
-              <p className="text-muted-foreground">
-                When you submit Rust files, AutoLab will:
-              </p>
-              
               <div className="space-y-4">
+                
                 <div className="flex items-start gap-3">
-                  <div className="w-7 h-7 rounded-full bg-primary text-primary-foreground flex items-center justify-center text-xs font-bold leading-none">1</div>
+                  <div className="w-7 aspect-square rounded-full bg-primary text-primary-foreground flex items-center justify-center text-xs font-bold flex-shrink-0">
+                    1
+                  </div>
                   <div>
                     <h5 className="font-semibold">Syntax Validation</h5>
-                    <p className="text-sm text-muted-foreground">Check for Rust syntax errors and borrow checker compliance</p>
+                    <p className="text-sm text-muted-foreground">
+                      Check for Rust syntax errors and borrow checker compliance
+                    </p>
                   </div>
                 </div>
-                
+
                 <div className="flex items-start gap-3">
-                  <div className="w-7 h-7 rounded-full bg-primary text-primary-foreground flex items-center justify-center text-xs font-bold leading-none">2</div>
+                  <div className="w-7 aspect-square rounded-full bg-primary text-primary-foreground flex items-center justify-center text-xs font-bold flex-shrink-0">
+                    2
+                  </div>
                   <div>
                     <h5 className="font-semibold">Dependency Resolution</h5>
-                    <p className="text-sm text-muted-foreground">Install dependencies specified in Cargo.toml</p>
+                    <p className="text-sm text-muted-foreground">
+                      Install dependencies specified in Cargo.toml
+                    </p>
                   </div>
                 </div>
-                
+
                 <div className="flex items-start gap-3">
-                  <div className="w-7 h-7 rounded-full bg-primary text-primary-foreground flex items-center justify-center text-xs font-bold leading-none">3</div>
+                  <div className="w-7 aspect-square rounded-full bg-primary text-primary-foreground flex items-center justify-center text-xs font-bold flex-shrink-0">
+                    3
+                  </div>
                   <div>
                     <h5 className="font-semibold">Compilation</h5>
-                    <p className="text-sm text-muted-foreground">Compile using cargo build with optimization flags</p>
+                    <p className="text-sm text-muted-foreground">
+                      Compile using cargo build with optimization flags
+                    </p>
                   </div>
                 </div>
-                
+
                 <div className="flex items-start gap-3">
-                  <div className="w-7 h-7 rounded-full bg-primary text-primary-foreground flex items-center justify-center text-xs font-bold leading-none">4</div>
+                  <div className="w-7 aspect-square rounded-full bg-primary text-primary-foreground flex items-center justify-center text-xs font-bold flex-shrink-0">
+                    4
+                  </div>
                   <div>
                     <h5 className="font-semibold">Test Execution</h5>
-                    <p className="text-sm text-muted-foreground">Run cargo test and custom test cases</p>
+                    <p className="text-sm text-muted-foreground">
+                      Run cargo test and custom test cases
+                    </p>
                   </div>
                 </div>
+
               </div>
             </CardContent>
           </Card>

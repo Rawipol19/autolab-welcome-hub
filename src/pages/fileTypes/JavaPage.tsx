@@ -71,37 +71,55 @@ const JavaPage = () => {
             </CardHeader>
             <CardContent className="space-y-4">
               <div className="space-y-4">
+                
                 <div className="flex items-start gap-3">
-                  <div className="w-7 h-7 rounded-full bg-primary text-primary-foreground flex items-center justify-center text-xs font-bold leading-none">1</div>
+                  <div className="w-7 aspect-square rounded-full bg-primary text-primary-foreground flex items-center justify-center text-xs font-bold flex-shrink-0">
+                    1
+                  </div>
                   <div>
                     <h5 className="font-semibold">Compilation Check</h5>
-                    <p className="text-sm text-muted-foreground">Compile Java source files using javac compiler</p>
+                    <p className="text-sm text-muted-foreground">
+                      Compile Java source files using javac compiler
+                    </p>
                   </div>
                 </div>
-                
+
                 <div className="flex items-start gap-3">
-                  <div className="w-7 h-7 rounded-full bg-primary text-primary-foreground flex items-center justify-center text-xs font-bold leading-none">2</div>
+                  <div className="w-7 aspect-square rounded-full bg-primary text-primary-foreground flex items-center justify-center text-xs font-bold flex-shrink-0">
+                    2
+                  </div>
                   <div>
                     <h5 className="font-semibold">Classpath Setup</h5>
-                    <p className="text-sm text-muted-foreground">Configure classpath for external libraries and dependencies</p>
+                    <p className="text-sm text-muted-foreground">
+                      Configure classpath for external libraries and dependencies
+                    </p>
                   </div>
                 </div>
-                
+
                 <div className="flex items-start gap-3">
-                  <div className="w-7 h-7 rounded-full bg-primary text-primary-foreground flex items-center justify-center text-xs font-bold leading-none">3</div>
+                  <div className="w-7 aspect-square rounded-full bg-primary text-primary-foreground flex items-center justify-center text-xs font-bold flex-shrink-0">
+                    3
+                  </div>
                   <div>
                     <h5 className="font-semibold">Unit Testing</h5>
-                    <p className="text-sm text-muted-foreground">Execute JUnit tests and custom test cases</p>
+                    <p className="text-sm text-muted-foreground">
+                      Execute JUnit tests and custom test cases
+                    </p>
                   </div>
                 </div>
-                
+
                 <div className="flex items-start gap-3">
-                  <div className="w-7 h-7 rounded-full bg-primary text-primary-foreground flex items-center justify-center text-xs font-bold leading-none">4</div>
+                  <div className="w-7 aspect-square rounded-full bg-primary text-primary-foreground flex items-center justify-center text-xs font-bold flex-shrink-0">
+                    4
+                  </div>
                   <div>
                     <h5 className="font-semibold">Code Quality Analysis</h5>
-                    <p className="text-sm text-muted-foreground">Check coding standards and detect potential issues</p>
+                    <p className="text-sm text-muted-foreground">
+                      Check coding standards and detect potential issues
+                    </p>
                   </div>
                 </div>
+
               </div>
             </CardContent>
           </Card>

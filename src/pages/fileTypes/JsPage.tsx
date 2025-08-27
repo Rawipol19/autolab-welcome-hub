@@ -72,40 +72,59 @@ const JsPage = () => {
             </CardHeader>
             <CardContent className="space-y-4">
               <div className="space-y-4">
+                
                 <div className="flex items-start gap-3">
-                  <div className="w-7 h-7 rounded-full bg-primary text-primary-foreground flex items-center justify-center text-xs font-bold leading-none">1</div>
+                  <div className="w-7 aspect-square rounded-full bg-primary text-primary-foreground flex items-center justify-center text-xs font-bold flex-shrink-0">
+                    1
+                  </div>
                   <div>
                     <h5 className="font-semibold">Syntax Validation</h5>
-                    <p className="text-sm text-muted-foreground">Parse JavaScript syntax and check for errors</p>
+                    <p className="text-sm text-muted-foreground">
+                      Parse JavaScript syntax and check for errors
+                    </p>
                   </div>
                 </div>
-                
+
                 <div className="flex items-start gap-3">
-                  <div className="w-7 h-7 rounded-full bg-primary text-primary-foreground flex items-center justify-center text-xs font-bold leading-none">2</div>
+                  <div className="w-7 aspect-square rounded-full bg-primary text-primary-foreground flex items-center justify-center text-xs font-bold flex-shrink-0">
+                    2
+                  </div>
                   <div>
                     <h5 className="font-semibold">Dependency Installation</h5>
-                    <p className="text-sm text-muted-foreground">Install npm packages from package.json if provided</p>
+                    <p className="text-sm text-muted-foreground">
+                      Install npm packages from package.json if provided
+                    </p>
                   </div>
                 </div>
-                
+
                 <div className="flex items-start gap-3">
-                  <div className="w-7 h-7 rounded-full bg-primary text-primary-foreground flex items-center justify-center text-xs font-bold leading-none">3</div>
+                  <div className="w-7 aspect-square rounded-full bg-primary text-primary-foreground flex items-center justify-center text-xs font-bold flex-shrink-0">
+                    3
+                  </div>
                   <div>
                     <h5 className="font-semibold">Test Execution</h5>
-                    <p className="text-sm text-muted-foreground">Run Jest/Mocha tests and custom test cases</p>
+                    <p className="text-sm text-muted-foreground">
+                      Run Jest/Mocha tests and custom test cases
+                    </p>
                   </div>
                 </div>
-                
+
                 <div className="flex items-start gap-3">
-                  <div className="w-7 h-7 rounded-full bg-primary text-primary-foreground flex items-center justify-center text-xs font-bold leading-none">4</div>
+                  <div className="w-7 aspect-square rounded-full bg-primary text-primary-foreground flex items-center justify-center text-xs font-bold flex-shrink-0">
+                    4
+                  </div>
                   <div>
                     <h5 className="font-semibold">Performance Analysis</h5>
-                    <p className="text-sm text-muted-foreground">Measure execution time and memory usage</p>
+                    <p className="text-sm text-muted-foreground">
+                      Measure execution time and memory usage
+                    </p>
                   </div>
                 </div>
+
               </div>
             </CardContent>
           </Card>
+
 
           <Card>
             <CardHeader>

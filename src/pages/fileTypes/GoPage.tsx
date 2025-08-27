@@ -71,37 +71,55 @@ const GoPage = () => {
             </CardHeader>
             <CardContent className="space-y-4">
               <div className="space-y-4">
+                
                 <div className="flex items-start gap-3">
-                  <div className="w-7 h-7 rounded-full bg-primary text-primary-foreground flex items-center justify-center text-xs font-bold leading-none">1</div>
+                  <div className="w-7 aspect-square rounded-full bg-primary text-primary-foreground flex items-center justify-center text-xs font-bold flex-shrink-0">
+                    1
+                  </div>
                   <div>
                     <h5 className="font-semibold">Compilation Check</h5>
-                    <p className="text-sm text-muted-foreground">Compile Go source files using go build command</p>
+                    <p className="text-sm text-muted-foreground">
+                      Compile Go source files using go build command
+                    </p>
                   </div>
                 </div>
-                
+
                 <div className="flex items-start gap-3">
-                  <div className="w-7 h-7 rounded-full bg-primary text-primary-foreground flex items-center justify-center text-xs font-bold leading-none">2</div>
+                  <div className="w-7 aspect-square rounded-full bg-primary text-primary-foreground flex items-center justify-center text-xs font-bold flex-shrink-0">
+                    2
+                  </div>
                   <div>
                     <h5 className="font-semibold">Dependency Management</h5>
-                    <p className="text-sm text-muted-foreground">Download and verify module dependencies</p>
+                    <p className="text-sm text-muted-foreground">
+                      Download and verify module dependencies
+                    </p>
                   </div>
                 </div>
-                
+
                 <div className="flex items-start gap-3">
-                  <div className="w-7 h-7 rounded-full bg-primary text-primary-foreground flex items-center justify-center text-xs font-bold leading-none">3</div>
+                  <div className="w-7 aspect-square rounded-full bg-primary text-primary-foreground flex items-center justify-center text-xs font-bold flex-shrink-0">
+                    3
+                  </div>
                   <div>
                     <h5 className="font-semibold">Unit Testing</h5>
-                    <p className="text-sm text-muted-foreground">Execute go test with comprehensive test coverage</p>
+                    <p className="text-sm text-muted-foreground">
+                      Execute go test with comprehensive test coverage
+                    </p>
                   </div>
                 </div>
-                
+
                 <div className="flex items-start gap-3">
-                  <div className="w-7 h-7 rounded-full bg-primary text-primary-foreground flex items-center justify-center text-xs font-bold leading-none">4</div>
+                  <div className="w-7 aspect-square rounded-full bg-primary text-primary-foreground flex items-center justify-center text-xs font-bold flex-shrink-0">
+                    4
+                  </div>
                   <div>
                     <h5 className="font-semibold">Performance Benchmarking</h5>
-                    <p className="text-sm text-muted-foreground">Run benchmark tests and performance analysis</p>
+                    <p className="text-sm text-muted-foreground">
+                      Run benchmark tests and performance analysis
+                    </p>
                   </div>
                 </div>
+
               </div>
             </CardContent>
           </Card>

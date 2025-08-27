@@ -64,37 +64,55 @@ const LogPage = () => {
             </CardHeader>
             <CardContent className="space-y-4">
               <div className="space-y-4">
+                
                 <div className="flex items-start gap-3">
-                  <div className="w-7 h-7 rounded-full bg-primary text-primary-foreground flex items-center justify-center text-xs font-bold leading-none">1</div>
+                  <div className="w-7 aspect-square rounded-full bg-primary text-primary-foreground flex items-center justify-center text-xs font-bold flex-shrink-0">
+                    1
+                  </div>
                   <div>
                     <h5 className="font-semibold">System Information</h5>
-                    <p className="text-sm text-muted-foreground">Environment details and configuration</p>
+                    <p className="text-sm text-muted-foreground">
+                      Environment details and configuration
+                    </p>
                   </div>
                 </div>
-                
+
                 <div className="flex items-start gap-3">
-                  <div className="w-7 h-7 rounded-full bg-primary text-primary-foreground flex items-center justify-center text-xs font-bold leading-none">2</div>
+                  <div className="w-7 aspect-square rounded-full bg-primary text-primary-foreground flex items-center justify-center text-xs font-bold flex-shrink-0">
+                    2
+                  </div>
                   <div>
                     <h5 className="font-semibold">Compilation Phase</h5>
-                    <p className="text-sm text-muted-foreground">Compiler output, warnings, and errors</p>
+                    <p className="text-sm text-muted-foreground">
+                      Compiler output, warnings, and errors
+                    </p>
                   </div>
                 </div>
-                
+
                 <div className="flex items-start gap-3">
-                  <div className="w-7 h-7 rounded-full bg-primary text-primary-foreground flex items-center justify-center text-xs font-bold leading-none">3</div>
+                  <div className="w-7 aspect-square rounded-full bg-primary text-primary-foreground flex items-center justify-center text-xs font-bold flex-shrink-0">
+                    3
+                  </div>
                   <div>
                     <h5 className="font-semibold">Execution Phase</h5>
-                    <p className="text-sm text-muted-foreground">Runtime logs and system interactions</p>
+                    <p className="text-sm text-muted-foreground">
+                      Runtime logs and system interactions
+                    </p>
                   </div>
                 </div>
-                
+
                 <div className="flex items-start gap-3">
-                  <div className="w-7 h-7 rounded-full bg-primary text-primary-foreground flex items-center justify-center text-xs font-bold leading-none">4</div>
+                  <div className="w-7 aspect-square rounded-full bg-primary text-primary-foreground flex items-center justify-center text-xs font-bold flex-shrink-0">
+                    4
+                  </div>
                   <div>
                     <h5 className="font-semibold">Cleanup & Summary</h5>
-                    <p className="text-sm text-muted-foreground">Resource cleanup and final status</p>
+                    <p className="text-sm text-muted-foreground">
+                      Resource cleanup and final status
+                    </p>
                   </div>
                 </div>
+
               </div>
             </CardContent>
           </Card>

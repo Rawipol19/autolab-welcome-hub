@@ -64,37 +64,55 @@ const TxtPage = () => {
             </CardHeader>
             <CardContent className="space-y-4">
               <div className="space-y-4">
+                
                 <div className="flex items-start gap-3">
-                  <div className="w-7 h-7 rounded-full bg-primary text-primary-foreground flex items-center justify-center text-xs font-bold leading-none">1</div>
+                  <div className="w-7 aspect-square rounded-full bg-primary text-primary-foreground flex items-center justify-center text-xs font-bold flex-shrink-0">
+                    1
+                  </div>
                   <div>
                     <h5 className="font-semibold">Execution Header</h5>
-                    <p className="text-sm text-muted-foreground">Timestamp and environment information</p>
+                    <p className="text-sm text-muted-foreground">
+                      Timestamp and environment information
+                    </p>
                   </div>
                 </div>
-                
+
                 <div className="flex items-start gap-3">
-                  <div className="w-7 h-7 rounded-full bg-primary text-primary-foreground flex items-center justify-center text-xs font-bold leading-none">2</div>
+                  <div className="w-7 aspect-square rounded-full bg-primary text-primary-foreground flex items-center justify-center text-xs font-bold flex-shrink-0">
+                    2
+                  </div>
                   <div>
                     <h5 className="font-semibold">Program Output</h5>
-                    <p className="text-sm text-muted-foreground">Raw output from your program execution</p>
+                    <p className="text-sm text-muted-foreground">
+                      Raw output from your program execution
+                    </p>
                   </div>
                 </div>
-                
+
                 <div className="flex items-start gap-3">
-                  <div className="w-7 h-7 rounded-full bg-primary text-primary-foreground flex items-center justify-center text-xs font-bold leading-none">3</div>
+                  <div className="w-7 aspect-square rounded-full bg-primary text-primary-foreground flex items-center justify-center text-xs font-bold flex-shrink-0">
+                    3
+                  </div>
                   <div>
                     <h5 className="font-semibold">Test Results</h5>
-                    <p className="text-sm text-muted-foreground">Output comparison with expected results</p>
+                    <p className="text-sm text-muted-foreground">
+                      Output comparison with expected results
+                    </p>
                   </div>
                 </div>
-                
+
                 <div className="flex items-start gap-3">
-                  <div className="w-7 h-7 rounded-full bg-primary text-primary-foreground flex items-center justify-center text-xs font-bold leading-none">4</div>
+                  <div className="w-7 aspect-square rounded-full bg-primary text-primary-foreground flex items-center justify-center text-xs font-bold flex-shrink-0">
+                    4
+                  </div>
                   <div>
                     <h5 className="font-semibold">Execution Summary</h5>
-                    <p className="text-sm text-muted-foreground">Final status and performance metrics</p>
+                    <p className="text-sm text-muted-foreground">
+                      Final status and performance metrics
+                    </p>
                   </div>
                 </div>
+
               </div>
             </CardContent>
           </Card>
