@@ -148,7 +148,7 @@ const TarPage = () => {
           <Card>
   <CardHeader>
     <CardTitle className="flex items-center gap-2">
-      <FileText className="h-5 w-5" />
+      <FileText className="h-4 w-4 sm:h-5 sm:w-5 flex-shrink-0" />
       Tar File Component: Interactive_checker.py
     </CardTitle>
   </CardHeader>
@@ -256,7 +256,7 @@ if __name__ == "__main__":
 <Card>
             <CardHeader>
               <CardTitle className="flex items-center gap-2">
-                <FileText className="h-5 w-5" />
+                <FileText className="h-4 w-4 sm:h-5 sm:w-5 flex-shrink-0" />
                 Tar File Component: oracle.cpp 
               </CardTitle>
             </CardHeader>
@@ -393,7 +393,7 @@ int main() {
           <Card>
             <CardHeader>
               <CardTitle className="flex items-center gap-2">
-                <FileText className="h-5 w-5" />
+                <FileText className="h-4 w-4 sm:h-5 sm:w-5 flex-shrink-0" />
                 Student Code: sorter.cpp
               </CardTitle>
             </CardHeader>
