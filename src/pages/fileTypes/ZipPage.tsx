@@ -73,37 +73,55 @@ const ZipPage = () => {
             </CardHeader>
             <CardContent className="space-y-4">
               <div className="space-y-4">
+                
                 <div className="flex items-start gap-3">
-                  <div className="w-7 h-7 rounded-full bg-primary text-primary-foreground flex items-center justify-center text-xs font-bold leading-none">1</div>
+                  <div className="w-7 aspect-square rounded-full bg-primary text-primary-foreground flex items-center justify-center text-xs font-bold flex-shrink-0">
+                    1
+                  </div>
                   <div>
                     <h5 className="font-semibold">Archive Extraction</h5>
-                    <p className="text-sm text-muted-foreground">Safely extract archive contents in isolated environment</p>
+                    <p className="text-sm text-muted-foreground">
+                      Safely extract archive contents in isolated environment
+                    </p>
                   </div>
                 </div>
-                
+
                 <div className="flex items-start gap-3">
-                  <div className="w-7 h-7 rounded-full bg-primary text-primary-foreground flex items-center justify-center text-xs font-bold leading-none">2</div>
+                  <div className="w-7 aspect-square rounded-full bg-primary text-primary-foreground flex items-center justify-center text-xs font-bold flex-shrink-0">
+                    2
+                  </div>
                   <div>
                     <h5 className="font-semibold">Structure Analysis</h5>
-                    <p className="text-sm text-muted-foreground">Analyze directory structure and identify main files</p>
+                    <p className="text-sm text-muted-foreground">
+                      Analyze directory structure and identify main files
+                    </p>
                   </div>
                 </div>
-                
+
                 <div className="flex items-start gap-3">
-                  <div className="w-7 h-7 rounded-full bg-primary text-primary-foreground flex items-center justify-center text-xs font-bold leading-none">3</div>
+                  <div className="w-7 aspect-square rounded-full bg-primary text-primary-foreground flex items-center justify-center text-xs font-bold flex-shrink-0">
+                    3
+                  </div>
                   <div>
                     <h5 className="font-semibold">Build Process</h5>
-                    <p className="text-sm text-muted-foreground">Execute build scripts and install dependencies</p>
+                    <p className="text-sm text-muted-foreground">
+                      Execute build scripts and install dependencies
+                    </p>
                   </div>
                 </div>
-                
+
                 <div className="flex items-start gap-3">
-                  <div className="w-7 h-7 rounded-full bg-primary text-primary-foreground flex items-center justify-center text-xs font-bold leading-none">4</div>
+                  <div className="w-7 aspect-square rounded-full bg-primary text-primary-foreground flex items-center justify-center text-xs font-bold flex-shrink-0">
+                    4
+                  </div>
                   <div>
                     <h5 className="font-semibold">Comprehensive Testing</h5>
-                    <p className="text-sm text-muted-foreground">Run all tests and generate detailed reports</p>
+                    <p className="text-sm text-muted-foreground">
+                      Run all tests and generate detailed reports
+                    </p>
                   </div>
                 </div>
+
               </div>
             </CardContent>
           </Card>
