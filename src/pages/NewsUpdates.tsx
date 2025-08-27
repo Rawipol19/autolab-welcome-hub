@@ -7,6 +7,20 @@ import { Button } from '@/components/ui/button';
 const NewsUpdates = () => {
   const updates = [
     {
+      version: "0.9.0.3",
+      date: "August 27, 2025",
+      type: "Website Features Release",
+      features: [
+        "Update UI/UX design to be capable with all mobile devices",
+        "New scaling system for all screen sizes",
+        "Update all supported file types pages scaling to be more readable on mobile"
+      ],
+      improvements: [
+        "Fix number bubble in all pages displayed a weird shape on mobile",
+        "Fix scaling system in all mobile devices"
+      ]
+    },
+    {
       version: "0.9.0.2",
       date: "August 22, 2025",
       type: "Website Features Release",
