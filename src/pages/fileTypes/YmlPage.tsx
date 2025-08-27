@@ -106,43 +106,61 @@ commands:
           <Card>
             <CardHeader>
               <CardTitle className="flex items-center gap-2">
-                <Upload className="h-5 w-5" />
+                <Play className="h-5 w-5" />
                 YAML Structure
               </CardTitle>
             </CardHeader>
             <CardContent className="space-y-4">
               <div className="space-y-4">
+                
                 <div className="flex items-start gap-3">
-                  <div className="w-7 h-7 rounded-full bg-primary text-primary-foreground flex items-center justify-center text-xs font-bold leading-none">1</div>
+                  <div className="w-7 aspect-square rounded-full bg-primary text-primary-foreground flex items-center justify-center text-xs font-bold flex-shrink-0">
+                    1
+                  </div>
                   <div>
                     <h5 className="font-semibold">Environment Setup</h5>
-                    <p className="text-sm text-muted-foreground">Runtime environment and dependency specifications</p>
+                    <p className="text-sm text-muted-foreground">
+                      Runtime environment and dependency specifications
+                    </p>
                   </div>
                 </div>
-                
+
                 <div className="flex items-start gap-3">
-                  <div className="w-7 h-7 rounded-full bg-primary text-primary-foreground flex items-center justify-center text-xs font-bold leading-none">2</div>
+                  <div className="w-7 aspect-square rounded-full bg-primary text-primary-foreground flex items-center justify-center text-xs font-bold flex-shrink-0">
+                    2
+                  </div>
                   <div>
                     <h5 className="font-semibold">Build Instructions</h5>
-                    <p className="text-sm text-muted-foreground">Compilation commands and build parameters</p>
+                    <p className="text-sm text-muted-foreground">
+                      Compilation commands and build parameters
+                    </p>
                   </div>
                 </div>
-                
+
                 <div className="flex items-start gap-3">
-                  <div className="w-7 h-7 rounded-full bg-primary text-primary-foreground flex items-center justify-center text-xs font-bold leading-none">3</div>
+                  <div className="w-7 aspect-square rounded-full bg-primary text-primary-foreground flex items-center justify-center text-xs font-bold flex-shrink-0">
+                    3
+                  </div>
                   <div>
                     <h5 className="font-semibold">Test Configuration</h5>
-                    <p className="text-sm text-muted-foreground">Test cases, input data, and expected outputs</p>
+                    <p className="text-sm text-muted-foreground">
+                      Test cases, input data, and expected outputs
+                    </p>
                   </div>
                 </div>
-                
+
                 <div className="flex items-start gap-3">
-                  <div className="w-7 h-7 rounded-full bg-primary text-primary-foreground flex items-center justify-center text-xs font-bold leading-none">4</div>
+                  <div className="w-7 aspect-square rounded-full bg-primary text-primary-foreground flex items-center justify-center text-xs font-bold flex-shrink-0">
+                    4
+                  </div>
                   <div>
                     <h5 className="font-semibold">Scoring Rules</h5>
-                    <p className="text-sm text-muted-foreground">Point allocation and grading criteria</p>
+                    <p className="text-sm text-muted-foreground">
+                      Point allocation and grading criteria
+                    </p>
                   </div>
                 </div>
+
               </div>
             </CardContent>
           </Card>
